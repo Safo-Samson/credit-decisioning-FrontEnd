@@ -1,0 +1,27 @@
+
+.horizontal-container {
+    display: flex; /* This enables Flexbox layout */
+    flex-direction: row; /* By default, Flexbox arranges items in a row */
+    background-color: #006A4C;
+    padding: 10px;
+    /* margin-right: 20px; */
+}
+  
+.bank-logo{
+    width: 50px; /* Adjust the width of the logo as needed */
+    height: 40px; /* Adjust the height of the logo as needed */
+    margin-right: 10px; /* Add some spacing between the logo and the items */
+    margin-bottom: 5px
+}
+
+
+.logo-text {
+    text-transform: uppercase; /* Convert text to uppercase */
+  }
+
+  .logo-container {
+    display: flex; /* Nested flex container to align logo and text horizontally */
+    flex-direction: column; /* Arrange logo and text in a column */
+    align-items: center; /* Center items horizontally */
+    margin-left: 30px;
+  }

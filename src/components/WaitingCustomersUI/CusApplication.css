@@ -85,6 +85,8 @@
 
 .details-page {
 	margin-right: 30px;
+	text-decoration: bolder;
+	color: black;
 }
 
 .details-page-extended {
@@ -93,5 +95,5 @@
 
 p {
 	color: black;
-	text: bolder;
+	text-decoration: bolder;
 }

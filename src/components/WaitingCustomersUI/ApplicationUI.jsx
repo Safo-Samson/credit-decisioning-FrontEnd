@@ -1,5 +1,5 @@
-import "../components/ApplicationUi.css";
-import CusApplication from "./CusApplication";
+import '../WaitingCustomersUI/ApplicationUI.css';
+import CusApplication from "../WaitingCustomersUI/CusApplication";
 const AppUI = () => {
 	const customers = [
 		{
@@ -45,7 +45,6 @@ const AppUI = () => {
 	];
 	return (
 		<>
-			<div className="logo">llyoyds banks</div>
 			<CusApplication
 				title={customers[0].name}
 				AccountNo={customers[0].AccountNo}

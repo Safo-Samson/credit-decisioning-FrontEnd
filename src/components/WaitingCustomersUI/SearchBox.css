@@ -1,0 +1,35 @@
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    padding: 4px;
+    margin-right: 10px; /* Optional: Add some spacing between the search box and other components in the horizontal container */
+    margin-left: 40px;
+   
+  }
+  
+  input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    padding-left: 30px; /* Adjust the left padding to make space for the icon */
+  }
+  
+  .search-icon {
+    margin-left: 8px;
+    color: #a79d9d;
+    position: absolute; /* Position the icon absolutely inside the search-box */
+    
+  }
+
+  .profile-icon{
+    margin: 25px 8px 10px 30px;
+    color: #ffffff;
+    font-size: larger;
+
+  }
+  

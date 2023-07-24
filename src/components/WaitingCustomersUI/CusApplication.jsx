@@ -10,7 +10,7 @@ const CusApplication = (probs) => {
 
 			<div className="details-page-extended">
 				<p>Date Applied:</p>
-				<span>{probs.dateApplied.toLocaleString()}</span>
+				<span><p>{probs.dateApplied.toLocaleString()}</p></span>
 			</div>
 
 			<div className="customer-item__description">
