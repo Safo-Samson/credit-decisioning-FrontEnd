@@ -4,23 +4,23 @@ const VerticalContainer = () => {
   return (
     <div className="vertical-container">
 
-      <div class="button-container">
+      <div className="button-container">
           <button className="button">Waiting </button>
-         <div class="line"></div>
+         <div className="line"></div>
       </div> 
 
-      <div class="button-container">
+      <div className="button-container">
           <button className="button">Accepted </button>
-         <div class="line"></div>
+         <div className="line"></div>
       </div> 
 
-      <div class="button-container">
+      <div className="button-container">
          
       <button className="button">Rejected</button>
-         <div class="line"></div>
+         <div className="line"></div>
       </div> 
 
-      <div class="button-container">
+      <div className="button-container">
       <button className="button">Help</button>
       </div> 
       
