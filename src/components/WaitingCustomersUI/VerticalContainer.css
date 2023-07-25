@@ -39,6 +39,7 @@
     margin-bottom: 100px;
     border: 1px solid transparent;
     background-color: #3caf7794;
+    color: white;
 }
 
 .logout-button:hover {
