@@ -1,5 +1,7 @@
 import '../WaitingCustomersUI/ApplicationUI.css';
 import CusApplication from "../WaitingCustomersUI/CusApplication";
+import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+
 const AppUI = () => {
 	const customers = [
 		{
@@ -39,13 +41,17 @@ const AppUI = () => {
 			name: "Sevgi Unal",
 			amount: 3450,
 			dateApplied: new Date(2021, 5, 12),
-			loanType: "Personal Loan",
+			loanType: "Car Loan",
 			AccountNo: "234532",
 		},
 	];
+
 	return (
-		<>
-			<CusApplication
+		<div className='app-container'>
+			<VerticalContainer />
+			
+			<div className='remaining-content'>
+           <CusApplication
 				title={customers[0].name}
 				AccountNo={customers[0].AccountNo}
 				dateApplied={customers[0].dateApplied}
@@ -77,7 +83,9 @@ const AppUI = () => {
 				loanType={customers[3].loanType}
 				name={customers[3].name}
 			/>
-		</>
+			</div>
+			
+		</div>
 	);
 };
 

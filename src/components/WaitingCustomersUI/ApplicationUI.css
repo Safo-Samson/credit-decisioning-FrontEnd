@@ -1,3 +1,18 @@
 body{
-	color: #F5F5F5;
+	display: flex;
+	
+}
+
+.app-container {
+	display: flex;
+}
+
+/* .vertical-container {
+	height: 100vh;
+} */
+
+.remaining-content {
+	/* Use 90% of the remaining width */
+	flex: 1;
+	/* Add any additional styling you need for the remaining content */
 }

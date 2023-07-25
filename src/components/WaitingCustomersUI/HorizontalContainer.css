@@ -4,7 +4,6 @@
     flex-direction: row; /* By default, Flexbox arranges items in a row */
     background-color: #006A4C;
     padding: 10px;
-    /* margin-right: 20px; */
 }
   
 .bank-logo{
@@ -25,3 +24,21 @@
     align-items: center; /* Center items horizontally */
     margin-left: 30px;
   }
+
+  /* Responsive styles for phones and small screens(up to 767px) */
+@media (max-width:1280px) {
+  .horizontal-container {
+    flex-direction: column; /* Stack items vertically on phones */
+    padding: 5px; /* Reduce padding for phones */
+  }
+
+  .bank-logo {
+    margin-right: 0; /* Remove margin between logo and items on phones */
+    margin-bottom: 10px; /* Add more space between the logo and the items */
+  }
+
+  .logo-container {
+    margin-left: 0; /* Remove margin-left for phones */
+    align-items: flex-start; /* Align items to the left on phones */
+  }
+}

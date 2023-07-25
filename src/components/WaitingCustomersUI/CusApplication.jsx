@@ -1,22 +1,48 @@
 import "./CusApplication.css";
-const CusApplication = (probs) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCreditCard, faUser,faCar ,faHouse} from '@fortawesome/free-solid-svg-icons';
+import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+
+const CusApplication = (props) => {
+ let loanIcon;
+	if (props.loanType === "Credit Card") {
+		loanIcon = <FontAwesomeIcon icon={faCreditCard} />;
+	} else if (props.loanType === "Personal Loan") {
+		loanIcon = <FontAwesomeIcon icon={faUser} />;
+	}
+	else if (props.loanType === "Mortgage") { 
+		loanIcon = <FontAwesomeIcon icon={faHouse} />;
+	}
+	else if (props.loanType === "Car Loan") { 
+		loanIcon = <FontAwesomeIcon icon={faCar} />;
+	}
+
 	return (
 		<div className="customer-item">
-			<div className="details-page"> {probs.name}</div>
+			<div className="icon-type" >
+				{loanIcon}
+			</div>
+
+			<div className="details-page"> {props.name}</div>
 			<div className="details-page">
-				<p>Account No:</p>
-				<span>{probs.AccountNo}</span>
+				<b>Account No:</b> <br></br>
+				{props.AccountNo}
 			</div>
 
 			<div className="details-page-extended">
-				<p>Date Applied:</p>
-				<span><p>{probs.dateApplied.toLocaleString()}</p></span>
+				<b>Date Applied:</b><br></br>
+				{props.dateApplied.toLocaleString()}
 			</div>
 
-			<div className="customer-item__description">
-				<h3>{probs.loanType}</h3>
-				<h3>£{probs.amount}</h3>
+			<div className="details-page">
+			<b>Amount:  </b> <br></br>
+			£{props.amount}
 			</div>
+
+			<div className="details-page">
+			<h3>{props.loanType}</h3>
+				</div>
+			
 		</div>
 	);
 };

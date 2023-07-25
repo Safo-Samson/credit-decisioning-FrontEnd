@@ -2,7 +2,6 @@
 import './HorizontalContainer.css';
 import horseLogo from  '../../assets/horseLogo.jpeg';
 import SearchBox from './SearchBox';
-
 const HorizontalContainer = () => {
   return (
     <div className="horizontal-container">
