@@ -7,7 +7,6 @@
     visibility: block;
     position: relative;
     height: 100vh;
-
 }
 
 .button-container {
@@ -26,11 +25,24 @@
     cursor: pointer;
     outline: none;
     margin-right: 50px;
-    /* position: relative; */
+    position: relative;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
     background-color: #45a049;
+}
+
+.logout-button {
+    margin-top: auto ;
+    /* Push the logout button to the bottom */
+    margin-bottom: 100px;
+    border: 1px solid transparent;
+    background-color: #3caf7794;
+}
+
+.logout-button:hover {
+    border-color: #ffffff;
 }
 
 .line {
@@ -42,4 +54,9 @@
     height: 1px;
     background-color: #ffffff;
     margin-bottom: 7px;
+}
+
+.button.clicked {
+    background-color: #ff0000;
+    /* Change to red when clicked */
 }

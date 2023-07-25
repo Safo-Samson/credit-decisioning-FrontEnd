@@ -14,7 +14,8 @@ const VerticalContainer = () => {
          <div class="line"></div>
       </div> 
 
-      <div class="button-container">  
+      <div class="button-container">
+         
       <button className="button">Rejected</button>
          <div class="line"></div>
       </div> 
@@ -22,6 +23,11 @@ const VerticalContainer = () => {
       <div class="button-container">
       <button className="button">Help</button>
       </div> 
+      
+     
+    
+        <button className="logout-button">Logout</button>
+        <div className="line"></div>
       
      
 
