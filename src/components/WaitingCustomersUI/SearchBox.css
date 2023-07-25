@@ -34,7 +34,7 @@
 
   }
 
-  @media (max-width: 128px) {
+  @media (max-width: 1280px) {
     .horizontal-container {
       flex-direction: column; /* Stack items vertically on phones */
       padding: 5px; /* Reduce padding for phones */

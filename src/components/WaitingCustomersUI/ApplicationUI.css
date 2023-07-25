@@ -7,10 +7,6 @@ body{
 	display: flex;
 }
 
-/* .vertical-container {
-	height: 100vh;
-} */
-
 .remaining-content {
 	/* Use 90% of the remaining width */
 	flex: 1;

@@ -16,6 +16,7 @@
 
 .logo-text {
     text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Make text bold */
   }
 
   .logo-container {
