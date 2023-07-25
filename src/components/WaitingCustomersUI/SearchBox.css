@@ -35,6 +35,7 @@
   }
 
   @media (max-width: 1280px) {
+
     .horizontal-container {
       flex-direction: column; /* Stack items vertically on phones */
       padding: 5px; /* Reduce padding for phones */
@@ -47,10 +48,20 @@
   
     input {
       padding-left: 20px; /* Adjust left padding for phones */
+      width: 800px;
     }
   
     .profile-icon {
       margin: 10px 8px 10px 10px; /* Adjust margins for phones */
     }
+
+            .search-icon {
+              margin-left: 8px;
+              color: #a79d9d;
+              position: absolute;
+              margin-right: 8px;
+              /* Position the icon absolutely inside the search-box */
+      
+            }
   }
   
