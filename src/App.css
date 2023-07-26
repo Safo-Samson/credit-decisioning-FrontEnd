@@ -1,4 +1,4 @@
-:root {
+:root{
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -10,4 +10,4 @@
 * {
   font-family: "Inter-Bold", Helvetica;
   
-} 
+}
