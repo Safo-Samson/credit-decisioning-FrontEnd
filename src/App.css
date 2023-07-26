@@ -1,8 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-:root{
+:root {
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -14,4 +10,4 @@
 * {
   font-family: "Inter-Bold", Helvetica;
   
-} */
+} 

@@ -50,8 +50,9 @@ import './App.css';
 function App() {
 	return (
 		<>
-			<HorizontalContainer />
-			<AppUI customers={customers} />
+			{/* <HorizontalContainer />
+			<AppUI customers={customers} /> */}
+			<LoginForm />
 		</>
 	);
 }
