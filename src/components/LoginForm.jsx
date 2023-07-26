@@ -2,17 +2,22 @@ import React, {useState} from "react";
 import lloydsLogo from '../assets/lloydsLogo.jpeg'
 import './LoginForm.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import CusApplication from "./WaitingCustomersUI/CusApplication";
+import { useNavigate } from "react-router-dom";
+import AppUI from "./WaitingCustomersUI/ApplicationUI";
 
 function LoginForm(){
 
     const [advisorID, setID] = useState('');
     const [password, setPass] = useState('');
+    const navigate = useNavigate();
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(advisorID);
         console.log(password);
+        navigate("/AppUI")
     }
 
 
