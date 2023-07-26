@@ -56,7 +56,7 @@ function App() {
 					path="AppUI"
 					element={
 						<>
-							<HorizontalContainer />, <AppUI customers={customers} />
+							<HorizontalContainer /> <AppUI customers={customers} />
 						</>
 					}
 				/>
