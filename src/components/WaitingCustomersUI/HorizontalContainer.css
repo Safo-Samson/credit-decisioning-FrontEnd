@@ -10,6 +10,8 @@
 	height: 40px; /* Adjust the height of the logo as needed */
 	margin-right: 10px;
 	margin-bottom: 5px;
+	top: 3px;
+	left: 25px;
 }
 .profile-icon {
 	margin: 25px 8px 10px 30px;
