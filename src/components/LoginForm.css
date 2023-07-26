@@ -1,10 +1,11 @@
-:root {
+#whole-page{
 	text-align: center;
-	display: flex;
+  display: flex;
 	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
 	background-color: #2a684f; 
+
 }
 
 
@@ -21,15 +22,17 @@
     padding: 10px 42px;
     position: absolute;
     transform: translateX(-50%); 
+
+    
   }
   
-input{
+  .login-form input{
     background-color: #D9D9D9C2;
     height: 47px;
     width: 460px;
     border-radius: 4px;
   }
-label{
+.login-form label{
     color: black;
     text-align: left;
   }
@@ -43,7 +46,7 @@ label{
 }
 
 
-button {
+.login-form button {
     align-items: center;
     border-radius: 8px;
     display: inline-flex;
@@ -60,7 +63,7 @@ button {
 
   }
 
-img{
+.logo{
     height: 97px;
     left: 70%;
     top: -250px;

@@ -30,7 +30,7 @@ function LoginForm(){
     return (
         <>
         
-        <div className="auth-form-container">
+        <div className="auth-form-container" id = "whole-page">
             <img className="logo" src={lloydsLogo} alt="Logo" />
             <h1 className="header"> LLOYDS BANK  </h1>
             <form className = 'login-form' onSubmit = {handleSubmit}noValidate>
