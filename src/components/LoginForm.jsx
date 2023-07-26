@@ -30,7 +30,8 @@ function LoginForm(){
     return (
         <>
         
-        <div className="auth-form-container" id = "whole-page">
+        <div className="auth-form-container" >
+            <div className="logo-header">
             <img className="logo" src={lloydsLogo} alt="Logo" />
             <h1 className="header"> LLOYDS BANK  </h1>
             <form className = 'login-form' onSubmit = {handleSubmit}noValidate>
@@ -43,6 +44,7 @@ function LoginForm(){
                 </div>
                 <button>Login </button>
             </form>
+            </div>
         </div>
         {error && <p className="error-message">{error}</p>}
         </>

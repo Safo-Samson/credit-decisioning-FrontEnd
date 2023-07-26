@@ -1,11 +1,12 @@
-#whole-page{
+.auth-form-container{
 	text-align: center;
   display: flex;
 	min-height: 100vh;
+  min-width: 500%;
 	align-items: center;
 	justify-content: center;
-	background-color: #2a684f; 
-
+  background-color: #2a684f;
+	
 }
 
 
@@ -21,7 +22,7 @@
     left: 50%;
     padding: 10px 42px;
     position: absolute;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 
     
   }
