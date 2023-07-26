@@ -8,17 +8,17 @@ const VerticalContainer = () => {
 				<div className="line"></div>
 			</div>
 
-			<div className="button-container">
+			<div className="button-container2">
 				<button className="v-button">Accepted </button>
 				<div className="line"></div>
 			</div>
 
-			<div className="button-container">
+			<div className="button-container3">
 				<button className="v-button">Rejected</button>
 				<div className="line"></div>
 			</div>
 
-			<div className="button-container">
+			<div className="button-container4">
 				<button className="v-button">Help</button>
 				<div className="line"></div>
 			</div>
