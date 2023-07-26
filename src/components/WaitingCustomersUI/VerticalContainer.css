@@ -1,62 +1,63 @@
 .vertical-container {
-	display: flex;
-	flex-direction: column;
-	background-color: #2d8259;
-	padding: 10px;
-	/* width: 34%; */
-	visibility: block;
-	position: relative;
-	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #2D8259;
+    padding: 10px;
+    /* width: 34%; */
+    visibility: block;
+    position: relative;
+    height: 100vh;
 }
 
-.button-container .button-container2 .button-container3 .button-container4 {
-	position: relative;
-	display: inline-block;
+.button-container {
+    position: relative;
+    display: inline-block;
 }
 
-.v-button {
-	margin-bottom: 10px;
-	padding: 10px 20px;
-	font-size: 16px;
-	border: none;
-	border-radius: 5px;
-	background-color: #2d8259;
-	color: #ffffff;
-	cursor: pointer;
-	outline: none;
-	margin-right: 50px;
-	position: relative;
-	transition: background-color 0.3s ease;
+.button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2D8259;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    margin-right: 50px;
+    position: relative;
+    transition: background-color 0.3s ease;
 }
 
-.v-button:hover {
-	background-color: #45a049;
+.button:hover {
+    background-color: #45a049;
 }
 
 .logout-button {
-	margin-top: auto;
-	/* Push the logout button to the bottom */
-	margin-bottom: 100px;
-	border: 1px solid transparent;
-	background-color: #3caf7794;
-	color: white;
-	cursor: pointer;
+    margin-top: auto ;
+    /* Push the logout button to the bottom */
+    margin-bottom: 100px;
+    border: 1px solid transparent;
+    background-color: #3caf7794;
+    color: white;
 }
 
 .logout-button:hover {
-	border-color: #ffffff;
+    border-color: #ffffff;
 }
 
-.line{
-	bottom: -1px;
-	left: 0;
-	width: 100%;
-	height: 1px;
-	background-color: white;
-	margin-bottom: 7px;
+.line {
+    position: absolute;
+    bottom: -1px;
+    /* Adjust the distance between button and line */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    margin-bottom: 7px;
 }
 
-.v-button.clicked {
-	background-color: #ff0000;
-	/* Change to red when clicked */
+.button.clicked {
+    background-color: #ff0000;
+    /* Change to red when clicked */
 }
