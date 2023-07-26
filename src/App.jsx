@@ -1,5 +1,9 @@
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
+import LoginForm from "./components/LoginForm";
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 const customers = [
 	{
@@ -43,16 +47,14 @@ const customers = [
 		AccountNo: "234532",
 	},
 ];
-import LoginForm from "./components/LoginForm";
-import { useState } from "react";
-import './App.css';
 
 function App() {
 	return (
 		<>
-			{/* <HorizontalContainer />
-			<AppUI customers={customers} /> */}
-			<LoginForm />
+			<Routes>
+				<Route path='/' element= {<LoginForm />} />
+				<Route path= 'AppUI' element= {<><HorizontalContainer/>, <AppUI customers={customers}/> </> }/>
+		   </Routes>
 		</>
 	);
 }
