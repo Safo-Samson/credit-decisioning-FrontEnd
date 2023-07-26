@@ -1,9 +1,8 @@
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
 import LoginForm from "./components/LoginForm";
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 const customers = [
 	{
@@ -52,9 +51,16 @@ function App() {
 	return (
 		<>
 			<Routes>
-				<Route path='/' element= {<LoginForm />} />
-				<Route path= 'AppUI' element= {<><HorizontalContainer/>, <AppUI customers={customers}/> </> }/>
-		   </Routes>
+				<Route path="/" element={<LoginForm />} />
+				<Route
+					path="AppUI"
+					element={
+						<>
+							<HorizontalContainer /> <AppUI customers={customers} />
+						</>
+					}
+				/>
+			</Routes>
 		</>
 	);
 }
