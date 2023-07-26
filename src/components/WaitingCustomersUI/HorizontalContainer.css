@@ -1,46 +1,49 @@
-
 .horizontal-container {
-    display: flex; /* This enables Flexbox layout */
-    flex-direction: row; /* By default, Flexbox arranges items in a row */
-    background-color: #006A4C;
-    padding: 10px;
-}
-  
-.bank-logo{
-    width: 50px; /* Adjust the width of the logo as needed */
-    height: 40px; /* Adjust the height of the logo as needed */
-    margin-right: 10px; /* Add some spacing between the logo and the items */
-    margin-bottom: 5px
+	display: flex; /* This enables Flexbox layout */
+	flex-direction: row; /* By default, Flexbox arranges items in a row */
+	background-color: #006a4c;
+	padding: 10px;
 }
 
+.bank-logo {
+	width: 50px; /* Adjust the width of the logo as needed */
+	height: 40px; /* Adjust the height of the logo as needed */
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.profile-icon {
+	margin: 25px 8px 10px 30px;
+	color: #ffffff;
+	font-size: larger;
+}
 
 .logo-text {
-    text-transform: uppercase; /* Convert text to uppercase */
-    font-weight: bold; /* Make text bold */
-    color: white;
-  }
+	text-transform: uppercase; /* Convert text to uppercase */
+	font-weight: bold; /* Make text bold */
+	color: white;
+}
 
-  .logo-container {
-    display: flex; /* Nested flex container to align logo and text horizontally */
-    flex-direction: column; /* Arrange logo and text in a column */
-    align-items: center; /* Center items horizontally */
-    margin-left: 30px;
-  }
+.logo-container {
+	display: flex; /* Nested flex container to align logo and text horizontally */
+	flex-direction: column; /* Arrange logo and text in a column */
+	align-items: center; /* Center items horizontally */
+	margin-left: 30px;
+}
 
-  /* Responsive styles for phones and small screens(up to 767px) */
-@media (max-width:1280px) {
-  .horizontal-container {
-    flex-direction: column; /* Stack items vertically on phones */
-    padding: 5px; /* Reduce padding for phones */
-  }
+/* Responsive styles for phones and small screens(up to 767px) */
+@media (max-width: 1280px) {
+	.horizontal-container {
+		flex-direction: column; /* Stack items vertically on phones */
+		padding: 5px; /* Reduce padding for phones */
+	}
 
-  .bank-logo {
-    margin-right: 0; /* Remove margin between logo and items on phones */
-    margin-bottom: 10px; /* Add more space between the logo and the items */
-  }
+	.bank-logo {
+		margin-right: 0; /* Remove margin between logo and items on phones */
+		margin-bottom: 10px; /* Add more space between the logo and the items */
+	}
 
-  .logo-container {
-    margin-left: 0; /* Remove margin-left for phones */
-    align-items: flex-start; /* Align items to the left on phones */
-  }
+	.logo-container {
+		margin-left: 0; /* Remove margin-left for phones */
+		align-items: flex-start; /* Align items to the left on phones */
+	}
 }
