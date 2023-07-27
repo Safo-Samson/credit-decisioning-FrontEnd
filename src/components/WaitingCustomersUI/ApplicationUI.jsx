@@ -7,14 +7,13 @@ const AppUI = (props) => {
 	return (
 		<div className='app-container'>
 			
-			<VerticalContainer />
+			<VerticalContainer customers={props.customers} />
 			
 			<div className='remaining-content'>
 
 				{props.customers.map((customer) =>
 					<CusApplication
 					key={customer.id} // very important to add key
-					title={customer.name}
 					AccountNo={customer.AccountNo}
 					dateApplied={customer.dateApplied}
 					amount={customer.amount}

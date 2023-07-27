@@ -47,6 +47,22 @@ const customers = [
 		loanType: "Car Loan",
 		AccountNo: "234532",
 	},
+	{
+		id: "e6",
+		name: "Saffron Zainchkovkaya",
+		amount: 34450,
+		dateApplied: new Date(2021, 5, 12),
+		loanType: "Mortgage",
+		AccountNo: "232532",
+	},
+		{
+		id: "e7",
+		name: "DaLma Rita",
+		amount: 347450,
+		dateApplied: new Date(2021, 5, 12),
+		loanType: "Mortgage",
+		AccountNo: "222532",
+	},
 ];
 
 function App() {
