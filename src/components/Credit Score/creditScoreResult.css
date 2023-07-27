@@ -1,0 +1,88 @@
+
+
+.credit-container{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.credit-remaining-content {
+    /* Use 90% of the remaining width */
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.text-line {
+    position: absolute;
+    bottom: -1px;
+    /* Adjust the distance between button and line */
+    left: 0;
+    width: 15%;
+    height: 1px;
+    background-color: #000000;
+    margin-bottom: 7px;
+    margin-top: 70px;
+}
+
+.text-container {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.in-text {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000000;
+    margin-right: 50px;
+    position: relative;
+
+}
+
+.deets-icon{
+ color: #ffffff;
+  font-size: 2rem;
+  margin: 0 70px;
+  background-color: #006a4c94;
+  border-radius: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+    
+}
+
+.back-button {
+    margin-top: 40% ;
+    margin-bottom: 100px;
+    border: 1px solid transparent;
+    background-color: #A1A1A1;
+    color: white;
+    border-radius: 3px;
+    padding:10px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    /* position: absolute; */
+    width: 160px;
+}
+
+.back-button:hover {
+    border-color: #006a4c94;
+     background-color: #006a4c94;
+}
+
+.vertical-line {
+  width: 1px; /* Width of the line */
+  height: 95%; /* Height of the line (80% of the page) */
+  background-color: black; /* Color of the line */
+  position: absolute;
+  top: 0;
+  left: 340px; 
+  margin-top: 170px;
+
+}

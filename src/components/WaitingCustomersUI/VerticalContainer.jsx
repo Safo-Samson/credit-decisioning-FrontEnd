@@ -17,7 +17,6 @@ const VerticalContainer = (props) => {
   return (
     <div className="vertical-container">
 
-         {/* The button to toggle visibility */}
       {/* The button to toggle visibility */}
       <button className={`toggle-button ${isVisible ? 'visible' : 'hidden'}`} onClick={toggleVisibility}>
         {isVisible ? <FontAwesomeIcon icon={faCircleChevronLeft} /> : <FontAwesomeIcon icon={faCircleChevronRight} />}
