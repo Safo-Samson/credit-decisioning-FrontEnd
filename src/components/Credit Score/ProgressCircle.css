@@ -1,0 +1,48 @@
+.progress-circle-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* margin: 20%; */
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.progress-circle-track {
+  fill: none;
+  stroke: #f2f2f2;
+  stroke-width: 7;
+}
+
+.progress-circle-indicator {
+  fill: none;
+  stroke: #006A4C;
+  stroke-width: 7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.9s;
+}
+
+.progress-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -10%);
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: #666666;
+  text-align: center;
+}
+
+.progress-h1 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000; /* Black color */
+  text-align: center;
+  margin-bottom: 10px; /* Add some space below the h1 */
+}
