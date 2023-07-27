@@ -1,19 +1,25 @@
 import { useState } from "react";
 import './ReviewInformation.css'
-function ReviewInformation(){
+import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+function ReviewInformation(props){
     const [firstName, setFirst ]= useState('');
     const [lastName, setLast ]= useState('');
     const [loanType, setType] = useState('');
     const [loanAmount, setAmount] = useState('');
     const [date, setValue] = useState('');
+    
 
 
     return(
 
-        <>
+
+        <div className="review-main-container">
+        
         <div className="review-information-container">
             <h4 className="Review-text">Review Details</h4>
+            
             <form className="form-container">
+                
                 <div className="firstRow">
                 <div className="firstName">
                 <label htmlFor="firstName"> First Name</label>
@@ -45,8 +51,7 @@ function ReviewInformation(){
 
 
         </div>
-        
-        </>
+        </div>
     )
 }
 

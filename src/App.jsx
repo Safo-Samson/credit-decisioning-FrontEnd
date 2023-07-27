@@ -4,6 +4,8 @@ import LoginForm from "./components/LoginForm";
 import ReviewInformation from "./components/ReviewInformation/ReviewInformation"
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import VerticalContainer from "./components/WaitingCustomersUI/VerticalContainer";
+
 
 
 const customers = [
@@ -78,7 +80,7 @@ function App() {
 						</>
 					}
 				/>
-				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation/></>} />
+				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation /></>} />
 			</Routes>
 		</>
 	);
