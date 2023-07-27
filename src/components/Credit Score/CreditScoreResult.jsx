@@ -8,8 +8,6 @@ import ProgressCircle from "./ProgressCircle";
 const CreditScoreResult = (props) => {
   return (
     <div className="credit-container">
-      <VerticalContainer customers={props.customers} />
-
       <div className="credit-remaining-content">
         <div className="deets-icon">
           <FontAwesomeIcon icon={faIdBadge} />
@@ -45,7 +43,6 @@ const CreditScoreResult = (props) => {
           </div>
 
           <button className="back-button">Back</button>
-          <div class="vertical-line"></div>
         </div>
       </div>
 

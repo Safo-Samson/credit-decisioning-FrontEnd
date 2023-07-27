@@ -1,6 +1,8 @@
+import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
 import CreditScoreResult from "./components/Credit Score/CreditScoreResult";
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
+import VerticalContainer from "./components/WaitingCustomersUI/VerticalContainer";
 
 const customers = [
   {
@@ -65,8 +67,10 @@ function App() {
   return (
     <>
       <HorizontalContainer />
+
       {/* <AppUI customers={customers} /> */}
-      <CreditScoreResult customers={customers} />
+      {/* <CreditScoreResult customers={customers} /> */}
+      <CreditScoreContainer customers={customers} />
     </>
   );
 }
