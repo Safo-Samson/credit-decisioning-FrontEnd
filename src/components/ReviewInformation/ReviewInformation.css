@@ -24,7 +24,7 @@
     background-color: white;
     top: 15%;
     left: 48%;
-    padding: 10px 42px;
+    padding-top: 50px;
     position: absolute;
     transform: translateX(-50%);
     gap: 47px;
@@ -36,6 +36,7 @@
     gap: 58px; 
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 50px;
     
     
 }
