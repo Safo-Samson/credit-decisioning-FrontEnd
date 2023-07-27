@@ -8,6 +8,27 @@
     height: 100vh;
 }
 
+.toggle-button {
+    padding: 8px 12px;
+    background-color: #006A4C;
+    color:  #2D8259;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.toggle-button.visible {
+    background-color: #ffffff;
+}
+
+.toggle-button.hidden {
+    background-color: #ffffff;
+}
 .button-container {
     position: relative;
     display: inline-block;
