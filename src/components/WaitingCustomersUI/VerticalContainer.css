@@ -29,12 +29,12 @@
 .toggle-button.hidden {
     background-color: #ffffff;
 }
-.button-container {
+.vert-button-container {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
-.button {
+.vert-button {
     margin-bottom: 10px;
     padding: 10px 20px;
     font-size: 16px;
@@ -67,7 +67,7 @@
     font-weight: bold;
 }
 
-.button:hover {
+.vert-button:hover {
     background-color: #45a049;
 }
 

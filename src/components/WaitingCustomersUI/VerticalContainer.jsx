@@ -16,36 +16,40 @@ const VerticalContainer = (props) => {
 
   return (
     <div className="vertical-container">
-
-         {/* The button to toggle visibility */}
       {/* The button to toggle visibility */}
-      <button className={`toggle-button ${isVisible ? 'visible' : 'hidden'}`} onClick={toggleVisibility}>
-        {isVisible ? <FontAwesomeIcon icon={faCircleChevronLeft} /> : <FontAwesomeIcon icon={faCircleChevronRight} />}
+      {/* The button to toggle visibility */}
+      <button
+        className={`toggle-button ${isVisible ? "visible" : "hidden"}`}
+        onClick={toggleVisibility}>
+        {isVisible ? (
+          <FontAwesomeIcon icon={faCircleChevronLeft} />
+        ) : (
+          <FontAwesomeIcon icon={faCircleChevronRight} />
+        )}
       </button>
-
-
 
       {isVisible && ( // Show VerticalContainer only when isVisible is true
         <div>
-          <div className="button-container">
-            <button className="button">
-              Waiting <span className="customer-count">{props.customers.length}</span>
+          <div className="vert-button-container">
+            <button className="vert-button">
+              Waiting{" "}
+              <span className="customer-count">{props.customers.length}</span>
             </button>
             <div className="line"></div>
           </div>
 
-          <div className="button-container">
-            <button className="button">Accepted</button>
+          <div className="vert-button-container">
+            <button className="vert-button">Accepted</button>
             <div className="line"></div>
           </div>
 
-          <div className="button-container">
-            <button className="button">Rejected</button>
+          <div className="vert-button-container">
+            <button className="vert-button">Rejected</button>
             <div className="line"></div>
           </div>
 
-          <div className="button-container">
-            <button className="button">Help</button>
+          <div className="vert-button-container">
+            <button className="vert-button">Help</button>
           </div>
         </div>
       )}
@@ -56,8 +60,6 @@ const VerticalContainer = (props) => {
           <div className="line"></div>
         </>
       )}
-      
-
     </div>
   );
 };
