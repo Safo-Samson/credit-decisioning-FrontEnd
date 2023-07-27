@@ -1,11 +1,10 @@
 import './VerticalContainer.css';
 
-const VerticalContainer = () => {
+const VerticalContainer = (props) => {
   return (
     <div className="vertical-container">
-
       <div className="button-container">
-          <button className="button">Waiting </button>
+        <button className="button">Waiting     <span className="customer-count">{props.customers.length}</span></button>
          <div className="line"></div>
       </div> 
 
@@ -23,8 +22,6 @@ const VerticalContainer = () => {
       <div className="button-container">
       <button className="button">Help</button>
       </div> 
-      
-     
     
         <button className="logout-button">Logout</button>
         <div className="line"></div>
