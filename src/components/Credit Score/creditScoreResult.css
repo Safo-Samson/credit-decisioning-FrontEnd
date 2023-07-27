@@ -3,6 +3,7 @@
 .credit-container{
     display: flex;
     background-color: rgb(255, 255, 255);
+   
 }
 
 .credit-remaining-content {
@@ -10,6 +11,8 @@
     flex: 1;
     margin-top: 20px;
     margin-left: 20px;
+     margin-right: 80px;
+     
 }
 
 .text-line {

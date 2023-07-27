@@ -15,28 +15,32 @@ const CreditScoreResult = (props) => {
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className="text-container in-text">
-            FirstName<br></br>
+            <b>First Name</b>
+            <br></br>
             {props.customers[0].name}
             <br></br>
             <div className="text-line "></div>
           </div>
 
           <div className="text-container in-text">
-            FirstName<br></br>
+            <b>Last Name</b>
+            <br></br>
             {props.customers[0].name}
             <br></br>
             <div className="text-line "></div>
           </div>
 
           <div className="text-container in-text">
-            Account No.<br></br>
+            <b>Account No.</b>
+            <br></br>
             {props.customers[0].AccountNo}
             <br></br>
             <div className="text-line "></div>
           </div>
 
           <div className="text-container in-text">
-            Date Applied<br></br>
+            <b>Date Applied</b>
+            <br></br>
             {props.customers[0].dateApplied.toLocaleString()}
             <br></br>
             <div className="text-line "></div>
