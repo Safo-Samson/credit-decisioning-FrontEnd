@@ -3,12 +3,32 @@
     flex-direction: column;
     background-color: #2D8259;
     padding: 10px;
-    /* width: 34%; */
     visibility: block;
     position: relative;
     height: 100vh;
 }
 
+.toggle-button {
+    padding: 8px 12px;
+    background-color: #006A4C;
+    color:  #2D8259;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.toggle-button.visible {
+    background-color: #ffffff;
+}
+
+.toggle-button.hidden {
+    background-color: #ffffff;
+}
 .button-container {
     position: relative;
     display: inline-block;
@@ -27,6 +47,24 @@
     margin-right: 50px;
     position: relative;
     transition: background-color 0.3s ease;
+    /* made relative to position the customer count*/
+    position: relative;
+}
+
+.customer-count {
+    position: absolute;
+    top: 9px;
+    right: -40px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .button:hover {
@@ -40,6 +78,13 @@
     border: 1px solid transparent;
     background-color: #3caf7794;
     color: white;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
 
 .logout-button:hover {

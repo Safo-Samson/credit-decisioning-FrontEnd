@@ -1,8 +1,5 @@
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
-import LoginForm from "./components/LoginForm";
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
 
 const customers = [
 	{
