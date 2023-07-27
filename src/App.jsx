@@ -1,8 +1,10 @@
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
 import LoginForm from "./components/LoginForm";
+import ReviewInformation from "./components/ReviewInformation/ReviewInformation"
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+
 
 const customers = [
 	{
@@ -60,6 +62,7 @@ function App() {
 						</>
 					}
 				/>
+				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation/></>} />
 			</Routes>
 		</>
 	);
