@@ -11,7 +11,7 @@
 
 }
 .credit-result-display{
-    display: flex;
+  display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5rem;
@@ -19,6 +19,7 @@
 	border-radius: 12px;
 	background-color: #ffffff;
 	margin-left: 25px;
+  width: 85%;
 }
 
 .gen-container {
