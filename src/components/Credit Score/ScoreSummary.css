@@ -9,9 +9,10 @@
   border-radius: 12px;
   background-color: #1f744b;
   margin-left: 25px;
-  margin-top: 500px;
+  margin-top: 180px;
   width: 80%;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .summary-display-container hr{
