@@ -5,27 +5,23 @@ import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
 const AppUI = (props) => {
 	
 	return (
-		<div className='app-container'>
-			
-			<VerticalContainer customers={props.customers} />
-			
-			<div className='remaining-content'>
+    <div className="app-container">
+      <VerticalContainer customers={props.customers} />
 
-				{props.customers.map((customer) =>
-					<CusApplication
-					key={customer.id} // very important to add key
-					AccountNo={customer.AccountNo}
-					dateApplied={customer.dateApplied}
-					amount={customer.amount}
-					loanType={customer.loanType}
-					name={customer.name}
-					
-					/>)};
-				
-			</div>
-			
-		</div>
-	);
+      <div className="remaining-content">
+        {props.customers.map((customer) => (
+          <CusApplication
+            key={customer.id} // very important to add key
+            AccountNo={customer.AccountNo}
+            dateApplied={customer.dateApplied}
+            amount={customer.amount}
+            loanType={customer.loanType}
+            name={customer.name}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default AppUI;
