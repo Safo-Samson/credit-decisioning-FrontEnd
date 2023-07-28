@@ -2,8 +2,9 @@ import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
 import "./CreditScoreResult.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
-import CreditScoreSemiCircle from "./CreditScoreSemiCircle";
+import CreditScoreSemiCircle from "./ProgressSemiCircle";
 import ProgressCircle from "./ProgressCircle";
+import ProgressSemiCircle from "./ProgressSemiCircle";
 
 const CreditScoreResult = (props) => {
   return (
@@ -50,7 +51,8 @@ const CreditScoreResult = (props) => {
         </div>
       </div>
 
-      <ProgressCircle progress={70} />
+      <ProgressSemiCircle progress={84} />
+      <ProgressCircle progress={92} />
     </div>
   );
 };

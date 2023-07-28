@@ -1,5 +1,6 @@
 import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
 import CreditScoreResult from "./components/Credit Score/CreditScoreResult";
+import ProgressSemiCircle from "./components/Credit Score/ProgressSemiCircle";
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
 import VerticalContainer from "./components/WaitingCustomersUI/VerticalContainer";
