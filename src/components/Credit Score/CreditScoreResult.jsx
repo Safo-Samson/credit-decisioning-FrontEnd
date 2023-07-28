@@ -52,7 +52,6 @@ const CreditScoreResult = (props) => {
             <button className="back-button">Back</button>
           </div>
         </div>
-
         <div className="progress-containers">
           <ProgressSemiCircle progress={84} />
           <ProgressCircle progress={92} />

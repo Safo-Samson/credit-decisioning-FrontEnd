@@ -2,7 +2,7 @@
 
 .credit-container{
     display: flex;
-    background-color: rgb(168, 16, 206);
+    background-color: rgb(255, 255, 255);
     /* flex-direction: row; */
 }
 
@@ -20,13 +20,8 @@
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next row */
   justify-content: center; /* Center items horizontally */
-  /* gap: 70px;  */
   column-gap: 63px;
-  row-gap: 0px;
 }
-
-
-
 
 .text-line {
     position: absolute;
