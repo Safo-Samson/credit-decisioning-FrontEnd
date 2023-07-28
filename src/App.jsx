@@ -69,9 +69,9 @@ function App() {
     <>
       <HorizontalContainer />
 
-      {/* <AppUI customers={customers} /> */}
+      <AppUI customers={customers} />
       {/* <CreditScoreResult customers={customers} /> */}
-      <CreditScoreContainer customers={customers} />
+      {/* <CreditScoreContainer customers={customers} /> */}
     </>
   );
 }
