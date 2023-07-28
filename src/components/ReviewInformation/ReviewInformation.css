@@ -5,6 +5,7 @@
     min-height: 100vh;
     min-width: 100%;
     background-color: #EFEDEA;
+    transform: translateX(0%);
       
 }
 .Review-text{
@@ -43,7 +44,6 @@
 .date{
     display: flex;
     flex-direction: column; /* Display label and input field in a column */
-    gap: 58px; 
     justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
@@ -74,6 +74,7 @@
     font-family: "Roboto-Regular", Helvetica;
     font-size: 14px;
     font-weight: 400;
+    
   
 }
 
@@ -88,6 +89,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .closeBTN{
