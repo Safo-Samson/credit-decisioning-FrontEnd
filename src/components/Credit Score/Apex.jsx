@@ -82,7 +82,7 @@ const Apex = ({ progress }) => {
 
 	return (
 		<div className="apex-container">
-			<h1 className="progress-semicircle-h1">Credit Score</h1>
+			<h1 className="apex-semicircle-h1">Credit Score</h1>
 			<Chart options={options} series={series} type="radialBar" height="402" />
 		</div>
 	);
