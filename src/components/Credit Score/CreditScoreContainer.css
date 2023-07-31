@@ -1,17 +1,15 @@
-
-.score-header{
-    text-align: center;
-    /* font-family: Roboto; */
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400px;
-    line-height: 140%;
-    top: 20%;
-    color: rgb(0, 0, 0);
-
+.score-header {
+	text-align: center;
+	/* font-family: Roboto; */
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400px;
+	line-height: 140%;
+	top: 20%;
+	color: rgb(0, 0, 0);
 }
-.credit-result-display{
-  display: flex;
+.credit-result-display {
+	display: flex;
 	justify-content: space-between;
 	/* align-items: center; */
 	padding: 0.5rem;
@@ -19,7 +17,7 @@
 	border-radius: 12px;
 	background-color: #ffffff;
 	margin-left: 25px;
-  width: 85%;
+	width: 85%;
 }
 
 .gen-container {
@@ -29,6 +27,6 @@
 .gen-remaining-content {
 	/* Use 90% of the remaining width */
 	flex: 1;
+	background-color: #efedea;
 	/* Add any additional styling you need for the remaining content */
 }
-
