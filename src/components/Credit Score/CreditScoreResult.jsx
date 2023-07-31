@@ -27,8 +27,8 @@ const CreditScoreResult = (props) => {
 				<div className="credit-remaining-content">
 					<div className="progress-containers">
 						{/* <ProgressSemiCircle progress={84} /> */}
-						<Apex progress={32.2} />
-						<ApexCircle progress={32} />
+						<Apex progress={82.2} />
+						<ApexCircle progress={42} />
 						{/* <ProgressCircle progress={92} /> */}
 						<ScoreSummary />
 					</div>
@@ -41,8 +41,8 @@ const CreditScoreResult = (props) => {
 								<>
 									<b>Accepted!</b>
 									<div className="gold-icon">
-                    				<FontAwesomeIcon icon={faCoins} />
-                					</div>
+										<FontAwesomeIcon icon={faCoins} />
+									</div>
 								</>
 							}
 							handleClose={toggleAcceptPopup}
@@ -61,7 +61,7 @@ const CreditScoreResult = (props) => {
 								</>
 							}
 							handleClose={toggleRejectPopUp}
-							type= "rejected"
+							type="rejected"
 						/>
 					)}
 				</div>
