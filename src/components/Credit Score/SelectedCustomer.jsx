@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
 
 const SelectedCustomer = ({ customers }) => {
+  const handleBack = (e) => {
+    e.preventDefault();
+    navigate("/");
+
+}
   return (
     <>
       <div
