@@ -33,13 +33,16 @@
     width: 85%;
     height: 80%;
     background-color: white;
-    top: 15%;
+    top: 7%;
     left: 48%;
     padding-top: 50px;
+    padding-left: 90px;
     position: absolute;
     transform: translateX(-50%);
     gap: 47px;
+    border-radius: 5px;
 }
+
 
 .firstName .lastName .loanType .loanAmount {
     display: flex;
@@ -51,11 +54,11 @@
     
     
 }
-.date{
+.dateApplied{
     display: flex;
     flex-direction: column; /* Display label and input field in a column */
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 50px;
 }
 
@@ -79,6 +82,11 @@
     display: inline-block;
 }
 
+.loanAmount input{
+    height: 10px;
+    width: 101px;
+}
+
 .form-container label{
     color: #4f4f52;
     font-family: "Roboto-Regular", Helvetica;
@@ -93,8 +101,8 @@
     height: 48px;
     flex-shrink: 0;
     color: #FFF;
-    text-align: center;
-    font-family: Roboto;
+    /* text-align: center; */
+    align-items: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -103,12 +111,15 @@
     bottom: 20px;
     display: flex;
     justify-content: space-evenly;
+    border-radius: 5px;
 }
 
 .closeBTN{
     background-color: #B8B3B3;
+    margin-left: 387px;
 }
 
 .calculateBTN{
     background-color: #006A4C;
+    margin-left: 713px;
 }
