@@ -1,3 +1,4 @@
+import Apex from "./Apex";
 import "./CreditScoreResult.css";
 
 import ProgressCircle from "./ProgressCircle";
