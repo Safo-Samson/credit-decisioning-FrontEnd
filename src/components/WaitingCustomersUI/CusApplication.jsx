@@ -2,9 +2,11 @@ import "./CusApplication.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faUser,faCar ,faHouse} from '@fortawesome/free-solid-svg-icons';
 import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+import { useNavigate } from "react-router-dom";
 
 const CusApplication = (props) => {
  let loanIcon;
+ 
 	if (props.loanType === "Credit Card") {
 		loanIcon = <FontAwesomeIcon icon={faCreditCard} />;
 	} else if (props.loanType === "Personal Loan") {
@@ -17,8 +19,16 @@ const CusApplication = (props) => {
 		loanIcon = <FontAwesomeIcon icon={faCar} />;
 	}
 
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+
+        navigate("/");
+
+    }
+
 	return (
-		<div className="customer-item">
+		<div className="customer-item" onClick={handleClick}>
 			<div className="icon-type" >
 				{loanIcon}
 			</div>
