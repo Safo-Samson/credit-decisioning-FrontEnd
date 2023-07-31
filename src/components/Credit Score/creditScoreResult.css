@@ -44,9 +44,3 @@
 	position: relative;
 	transition: background-color 0.3s ease;
 }
-
-.creditScore {
-	background-color: #2d8259;
-	align-items: center;
-	/* width: 500px; */
-}
