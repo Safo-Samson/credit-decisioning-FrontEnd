@@ -1,4 +1,5 @@
 import Apex from "./Apex";
+import ApexCircle from "./ApexCircle";
 import "./CreditScoreResult.css";
 
 import ProgressCircle from "./ProgressCircle";
@@ -24,8 +25,9 @@ const CreditScoreResult = (props) => {
 				<div className="credit-remaining-content">
 					<div className="progress-containers">
 						{/* <ProgressSemiCircle progress={84} /> */}
-						<Apex progress={72.2} />
-						<ProgressCircle progress={92} />
+						<Apex progress={32.2} />
+						<ApexCircle progress={32} />
+						{/* <ProgressCircle progress={92} /> */}
 						<ScoreSummary />
 					</div>
 					<button className="confirm-accept" onClick={toggleAcceptPopup}>
