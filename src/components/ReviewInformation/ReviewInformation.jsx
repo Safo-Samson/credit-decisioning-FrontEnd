@@ -14,7 +14,10 @@ function ReviewInformation(props){
 
 
         <div className="review-main-container">
-        
+        <VerticalContainer customers = {props.customers} />
+
+        <div className="test-container">
+
         <div className="review-information-container">
             <h4 className="Review-text">Review Details</h4>
             
@@ -47,10 +50,8 @@ function ReviewInformation(props){
                 <button className="closeBTN">Close</button>
                 <button className="calculateBTN">Calculate Score</button>
             </form>
-
-
-
-        </div>
+            </div>
+     </div>
         </div>
     )
 }

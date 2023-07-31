@@ -80,7 +80,7 @@ function App() {
 						</>
 					}
 				/>
-				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation /></>} />
+				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation customers={customers}/></>} />
 			</Routes>
 		</>
 	);

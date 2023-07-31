@@ -1,4 +1,13 @@
+.review-main-container{
+    display: flex;
+}
+
+.test-container{
+    flex:1;
+}
+
 .review-information-container{
+
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -19,6 +28,7 @@
 
 }
 .form-container{
+
 
     width: 85%;
     height: 80%;
