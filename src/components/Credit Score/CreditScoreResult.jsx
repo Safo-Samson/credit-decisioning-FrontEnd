@@ -10,8 +10,8 @@ const CreditScoreResult = (props) => {
 			<div className="credit-container">
 				<div className="credit-remaining-content">
 					<div className="progress-containers">
-						<ProgressSemiCircle progress={84} />
-						<ProgressCircle progress={92} />
+						<ProgressSemiCircle progress={64} />
+						<ProgressCircle progress={22} />
 						<ScoreSummary />
 					</div>
 					<button className="confirm-accept">accept</button>
