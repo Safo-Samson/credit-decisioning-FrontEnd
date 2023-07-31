@@ -39,6 +39,7 @@ const CreditScoreResult = (props) => {
 								</>
 							}
 							handleClose={toggleAcceptPopup}
+							type="accepted"
 						/>
 					)}
 
@@ -53,6 +54,7 @@ const CreditScoreResult = (props) => {
 								</>
 							}
 							handleClose={toggleRejectPopUp}
+							type= "rejected"
 						/>
 					)}
 				</div>
