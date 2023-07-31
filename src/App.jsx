@@ -1,8 +1,12 @@
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
 import LoginForm from "./components/LoginForm";
+import ReviewInformation from "./components/ReviewInformation/ReviewInformation"
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import VerticalContainer from "./components/WaitingCustomersUI/VerticalContainer";
+
+
 
 const customers = [
   {
@@ -64,21 +68,22 @@ const customers = [
 ];
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route
-          path="AppUI"
-          element={
-            <>
-              <HorizontalContainer /> <AppUI customers={customers} />
-            </>
-          }
-        />
-      </Routes>
-    </>
-  );
+	return (
+		<>
+			<Routes>
+				<Route path="/" element={<LoginForm />} />
+				<Route
+					path="AppUI"
+					element={
+						<>
+							<HorizontalContainer /> <AppUI customers={customers} />
+						</>
+					}
+				/>
+				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation customers={customers}/></>} />
+			</Routes>
+		</>
+	);
 }
 
 export default App;
