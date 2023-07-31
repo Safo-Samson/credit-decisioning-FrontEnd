@@ -1,64 +1,63 @@
 /* ScoreSummary.css */
 
 .summary-display-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  margin: 1rem 0;
-  border-radius: 12px;
-  background-color: #1f744b;
-  margin-left: 25px;
-  margin-top: 180px;
-  width: 80%;
-  flex-direction: column;
-  margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	margin: 1rem 0;
+	border-radius: 12px;
+	background-color: #1f744b;
+	margin-left: 25px;
+	margin-top: 10px;
+	width: 80%;
+	flex-direction: column;
+	margin-bottom: 50px;
 }
 
-.summary-display-container hr{
-    color:red;
-    width: 100%;
+.summary-display-container hr {
+	color: red;
+	width: 100%;
 }
 
 .summary-display-container.accepted {
-  background-color: #2d8259; /* Green background color for accepted */
+	background-color: #2d8259; /* Green background color for accepted */
 }
 
 .summary-display-container.rejected {
-  background-color: #df1212; /* Red background color for rejected */
+	background-color: #df1212; /* Red background color for rejected */
 }
 
 .summary-button {
-  margin-bottom: 20px;
-  padding: 10px 70px;
-  font-size: 16px;
-  border: none;
-  background-color: #ffffff;
-  color: #2d8259;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  transition: background-color 0.3s ease;
+	margin-bottom: 20px;
+	padding: 10px 70px;
+	font-size: 16px;
+	border: none;
+	background-color: #ffffff;
+	color: #2d8259;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	transition: background-color 0.3s ease;
 }
 
 .summary-button:hover {
-  border: 2px solid #45a049;
-  background-color: #45a049;
-  color: #ffffff;
+	border: 2px solid #45a049;
+	background-color: #45a049;
+	color: #ffffff;
 }
 
 .loan-decision {
-  margin-bottom: 20px;
-  font-weight: bolder;
-  font-size: larger;
-  color: #ffffff; /* Default text color for loan decision */
+	margin-bottom: 20px;
+	font-weight: bolder;
+	font-size: larger;
+	color: #ffffff; /* Default text color for loan decision */
 }
 
 .loan-decision.accepted {
-  color: #ffffff; 
+	color: #ffffff;
 }
 
 .loan-decision.rejected {
-  color: #f5f5f5; 
-
+	color: #f5f5f5;
 }

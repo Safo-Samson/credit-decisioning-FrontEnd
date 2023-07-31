@@ -1,6 +1,7 @@
 import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
 import AppUI from "./components/WaitingCustomersUI/ApplicationUI";
 import HorizontalContainer from "./components/WaitingCustomersUI/HorizontalContainer";
+import Apex from "./components/Credit Score/Apex";
 
 const customers = [
 	{
@@ -68,6 +69,7 @@ function App() {
 
 			{/* <AppUI customers={customers} /> */}
 			<CreditScoreContainer customers={customers} />
+			{/* <Apex progress={93.7} /> */}
 		</>
 	);
 }
