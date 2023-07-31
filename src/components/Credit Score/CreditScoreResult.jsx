@@ -4,14 +4,19 @@ import ProgressCircle from "./ProgressCircle";
 import ProgressSemiCircle from "./ProgressSemiCircle";
 import ScoreSummary from "./ScoreSummary";
 import { useState } from "react";
-import AcceptPopup from "../AcceptPopUp";
+import Popup from "../PopUp";
 
 const CreditScoreResult = (props) => {
-	const [isOpen, setIsOpen] = useState(false)
+	const [acceptOpen, setAcceptOpen] = useState(false)
+	const [rejectOpen, setRejectOpen] = useState(false)
 
 	const toggleAcceptPopup = () => {
-		setIsOpen(!isOpen);
+		setAcceptOpen(!acceptOpen);
 	  }
+
+	const toggleRejectPopUp = () =>{
+		setRejectOpen(!rejectOpen);
+	}
 	return (
 		<>
 			<div className="credit-container">
@@ -22,13 +27,16 @@ const CreditScoreResult = (props) => {
 						<ScoreSummary />
 					</div>
 					<button className="confirm-accept" onClick={toggleAcceptPopup}>Accept</button>
-					{isOpen && <AcceptPopup
+					{acceptOpen && <Popup
       						content={<>
         			<b>Accepted!</b>
-        			<button>Test button</button>
       				</>}  handleClose={toggleAcceptPopup}/>}
 					
-					<button className="confirm-reject">Reject</button>
+					<button className="confirm-reject" onClick={toggleRejectPopUp}>Reject</button>
+					{rejectOpen && <Popup
+      						content={<>
+        			<b>Rejected!</b>
+      				</>}  handleClose={toggleRejectPopUp}/>}
 				</div>
 			</div>
 		</>
