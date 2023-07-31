@@ -19,14 +19,17 @@
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    width: 682px;
+    height: 406px;
+    border-radius: 5px;
   }
    
   .close-icon {
     content: 'x';
     cursor: pointer;
-    position: fixed;
-    right: calc(15% - 30px);
-    top: calc(100vh - 85vh - 33px);
+    position: absolute;
+    right: 10px;
+    top: 10px;
     background: #ededed;
     width: 25px;
     height: 25px;
@@ -37,3 +40,16 @@
     font-size: 20px;
   }
   
+  .box.accepted{
+    color: #006A4D;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
