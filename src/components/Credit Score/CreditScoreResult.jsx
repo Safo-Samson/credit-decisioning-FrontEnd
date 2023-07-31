@@ -6,6 +6,8 @@ import ProgressSemiCircle from "./ProgressSemiCircle";
 import ScoreSummary from "./ScoreSummary";
 import { useState } from "react";
 import Popup from "../PopUp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoins } from "@fortawesome/free-solid-svg-icons";
 
 const CreditScoreResult = (props) => {
 	const [acceptOpen, setAcceptOpen] = useState(false);
@@ -36,6 +38,9 @@ const CreditScoreResult = (props) => {
 							content={
 								<>
 									<b>Accepted!</b>
+									<div className="gold-icon">
+                    				<FontAwesomeIcon icon={faCoins} />
+                					</div>
 								</>
 							}
 							handleClose={toggleAcceptPopup}
