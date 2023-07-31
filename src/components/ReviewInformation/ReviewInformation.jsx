@@ -2,6 +2,8 @@ import { useState } from "react";
 import './ReviewInformation.css'
 import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
 
 function ReviewInformation(props){
     const [firstName, setFirst ]= useState('');
@@ -34,6 +36,9 @@ function ReviewInformation(props){
             <h4 className="Review-text">Review Details</h4>
             
             <form className="form-container">
+                <div className="prof-icon">
+                    <FontAwesomeIcon icon={faIdBadge} />
+                </div>
                 
                 <div className="firstRow">
                     <div className="firstName">

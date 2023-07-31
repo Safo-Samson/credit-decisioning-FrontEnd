@@ -123,3 +123,17 @@
     background-color: #006A4C;
     margin-left: 713px;
 }
+
+.prof-icon{
+    position: absolute;
+    top: 5px; /* Adjust the top value to position the icon higher or lower */
+    left: -40px;
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 50px;
+    background-color: #006a4c94;
+    border-radius: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px; 
+}
