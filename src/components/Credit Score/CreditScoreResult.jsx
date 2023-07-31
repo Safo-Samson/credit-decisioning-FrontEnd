@@ -30,13 +30,15 @@ const CreditScoreResult = (props) => {
 					{acceptOpen && <Popup
       						content={<>
         			<b>Accepted!</b>
-      				</>}  handleClose={toggleAcceptPopup}/>}
+      				</>}  handleClose={toggleAcceptPopup}
+					type = "accepted"/>}
 					
 					<button className="confirm-reject" onClick={toggleRejectPopUp}>Reject</button>
 					{rejectOpen && <Popup
       						content={<>
         			<b>Rejected!</b>
-      				</>}  handleClose={toggleRejectPopUp}/>}
+      				</>}  handleClose={toggleRejectPopUp}
+					type = "rejected"/>}
 				</div>
 			</div>
 		</>
