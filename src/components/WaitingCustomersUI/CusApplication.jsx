@@ -23,7 +23,7 @@ const CusApplication = (props) => {
 
 	const handleClick = () => {
 
-        navigate("/");
+        navigate("/ReviewInformation");
 
     }
 

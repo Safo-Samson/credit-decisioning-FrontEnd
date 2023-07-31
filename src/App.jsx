@@ -5,6 +5,8 @@ import ReviewInformation from "./components/ReviewInformation/ReviewInformation"
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import VerticalContainer from "./components/WaitingCustomersUI/VerticalContainer";
+import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer"
+
 
 
 
@@ -81,6 +83,7 @@ function App() {
 					}
 				/>
 				<Route path = "/ReviewInformation" element={<><HorizontalContainer /> <ReviewInformation customers={customers}/></>} />
+				<Route path = "/CreditScore" element= {<><HorizontalContainer/><CreditScoreContainer customers={customers}/></>}/>
 			</Routes>
 		</>
 	);

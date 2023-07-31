@@ -2,6 +2,7 @@ import './VerticalContainer.css';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 
 const VerticalContainer = (props) => {
@@ -12,6 +13,17 @@ const VerticalContainer = (props) => {
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate("/");
+
+}
+const handleWaiting = (e) => {
+  e.preventDefault();
+  navigate("/AppUI");
+
+}
 
 
   return (
@@ -32,7 +44,7 @@ const VerticalContainer = (props) => {
       {isVisible && ( // Show VerticalContainer only when isVisible is true
         <div>
           <div className="vert-button-container">
-            <button className="vert-button">
+            <button className="vert-button" onClick={handleWaiting}>
               Waiting{" "}
               <span className="customer-count">{props.customers.length}</span>
             </button>
@@ -57,7 +69,7 @@ const VerticalContainer = (props) => {
 
       {isVisible && (
         <>
-          <button className="logout-button">Logout</button>
+          <button className="logout-button" onClick={handleClick}>Logout</button>
           <div className="line"></div>
         </>
       )}

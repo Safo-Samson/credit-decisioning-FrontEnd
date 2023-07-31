@@ -1,12 +1,22 @@
 import { useState } from "react";
 import './ReviewInformation.css'
 import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+import { useNavigate } from "react-router-dom";
+
 function ReviewInformation(props){
     const [firstName, setFirst ]= useState('');
     const [lastName, setLast ]= useState('');
     const [loanType, setType] = useState('');
     const [loanAmount, setAmount] = useState('');
     const [date, setValue] = useState('');
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        navigate("/CreditScore");
+
+    }
+
     
 
 
@@ -48,7 +58,7 @@ function ReviewInformation(props){
                 </div>
                 </div>
                 <button className="closeBTN">Close</button>
-                <button className="calculateBTN">Calculate Score</button>
+                <button className="calculateBTN" onClick={handleClick}>Calculate Score</button>
             </form>
             </div>
      </div>
