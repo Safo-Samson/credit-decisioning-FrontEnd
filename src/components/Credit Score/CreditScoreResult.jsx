@@ -39,7 +39,7 @@ const CreditScoreResult = (props) => {
 								<>
 									<b>Accepted!</b>
 									<div className="gold-icon">
-                    				<FontAwesomeIcon icon={faCoins} />
+                    				<FontAwesomeIcon icon={faCoins}/>
                 					</div>
 								</>
 							}

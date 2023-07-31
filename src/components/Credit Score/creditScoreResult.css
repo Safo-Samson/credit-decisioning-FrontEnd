@@ -44,3 +44,10 @@
 	position: relative;
 	transition: background-color 0.3s ease;
 }
+.gold-icon{
+	position: absolute;
+	top: 250px;
+	left: 320px;
+	width: 83px;
+	height: 86px;;
+}
