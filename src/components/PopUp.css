@@ -52,3 +52,10 @@
     justify-content: center;
     
   }
+  .box.rejected{
+    color: #006A4D;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+  }

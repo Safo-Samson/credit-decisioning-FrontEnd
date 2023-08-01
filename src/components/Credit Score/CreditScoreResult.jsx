@@ -10,9 +10,11 @@ import Popup from "../PopUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 
+
 const CreditScoreResult = (props) => {
 	const [acceptOpen, setAcceptOpen] = useState(false);
 	const [rejectOpen, setRejectOpen] = useState(false);
+	const [comments, setComments ]= useState('');
 
 	const toggleAcceptPopup = () => {
 		setAcceptOpen(!acceptOpen);
@@ -57,7 +59,15 @@ const CreditScoreResult = (props) => {
 						<Popup
 							content={
 								<>
-									<b>Rejected!</b>
+									<b>Reject</b>
+									<div className="comments">
+										<div className="comments-text">
+                    					<label htmlFor="comments-text"> Additional Comments (Optional)</label>
+										</div>
+										<div className="comments-input">
+                   						 	<input value={comments} onChange={(e)=>setComments(e.target.value)}type="comments"placeholder="" id= "comments" name="comments"/>
+										</div>
+									</div>
 								</>
 							}
 							handleClose={toggleRejectPopUp}

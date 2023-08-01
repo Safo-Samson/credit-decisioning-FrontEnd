@@ -19,7 +19,6 @@
 }
 .Review-text{
     text-align: center;
-    font-family: Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -28,8 +27,6 @@
 
 }
 .form-container{
-
-
     width: 85%;
     height: 80%;
     background-color: white;
