@@ -1,41 +1,33 @@
 import Chart from "react-apexcharts";
-import "./Apex.css";
+import "./ApexCircle.css";
 
-const Apex = ({ progress }) => {
-	let progressText;
-
+const ApexCircle = ({ progress }) => {
 	const getColorBasedOnProgress = (progress) => {
 		if (progress < 40) {
-			progressText = "Poor";
 			return "#FF0000"; // Red
 		} else if (progress >= 40 && progress < 52) {
-			progressText = "Bad";
 			return "#FFA500"; // Orange
 		} else if (progress >= 52 && progress < 63) {
-			progressText = "Good";
 			return "#FFFF00"; // Yellow
 		} else if (progress >= 63 && progress < 74) {
-			progressText = "Very Good";
 			return "#0000FF"; // Blue
 		} else {
-			progressText = "Excellent";
 			return "#008000"; // Green
 		}
 	};
 
 	const progressColor = getColorBasedOnProgress(progress);
-
 	const options = {
 		plotOptions: {
 			radialBar: {
-				startAngle: -95,
-				endAngle: 95,
+				startAngle: -195,
+				endAngle: 195,
 				hollow: {
 					size: "70%",
 				},
 				track: {
 					background: "#f2f2f2",
-					strokeWidth: "100%",
+					strokeWidth: "270%",
 					opacity: 100, // to show  the background semi cirlcde
 					margin: 9, //controllin the width
 				},
@@ -44,36 +36,36 @@ const Apex = ({ progress }) => {
 					name: {
 						show: true,
 						color: "#oooooo",
-						fontSize: "55px",
+						fontSize: "28px",
 						fontWeight: 900,
-						offsetY: -30,
+						offsetY: -2, //percentage positioning
 					},
 					value: {
 						offsetY: 8,
-						fontSize: "20px",
+						fontSize: "17px",
 						color: "#666666", // Set the color based on the progress value
-						formatter: () => progressText, // Set the progress text
+						formatter: () => "Affordability", // Set the progress text
 					},
 				},
 			},
 		},
 		fill: {
-			colors: [progressColor], // Set the color based on the progress value
+			colors: progressColor, // always green
 		},
 		stroke: {
 			lineCap: "square",
 		},
-		labels: [Math.floor((progress / 10) * 100)],
+		labels: [`${progress}%`],
 	};
 
-	const series = [progress];
+	const series = [progress - 8];
 
 	return (
-		<div className="apex-container">
-			<h1 className="apex-semicircle-h1">Credit Score</h1>
-			<Chart options={options} series={series} type="radialBar" height="402" />
+		<div className="apex-circle-container">
+			<h1 className="apex-circle-h1">Affordability</h1>
+			<Chart options={options} series={series} type="radialBar" height="302" />
 		</div>
 	);
 };
 
-export default Apex;
+export default ApexCircle;

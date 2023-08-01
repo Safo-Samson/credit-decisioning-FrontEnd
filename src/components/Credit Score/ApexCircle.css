@@ -1,4 +1,4 @@
-.apex-semicircle-h1 {
+.apex-circle-h1 {
 	font-size: 25px;
 	font-weight: bold;
 	color: #000000; /* Black color */
@@ -6,8 +6,9 @@
 	margin-bottom: 10px; /* Add some space below the h1 */
 }
 
-.apex-container {
+.apex-circle-container {
 	position: relative;
 
 	margin-top: 90px;
+	margin-left: 140px;
 }

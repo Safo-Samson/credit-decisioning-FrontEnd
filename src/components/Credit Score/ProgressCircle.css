@@ -1,49 +1,50 @@
 .progress-circle-container {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  /* margin: 20%; */
-   margin-top: 90px;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	/* margin: 20%; */
+	margin-top: 90px;
 }
 
 .progress-circle {
-  transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 .progress-circle-track {
-  fill: none;
-  stroke: #f2f2f2;
-  stroke-width: 7;
+	fill: none;
+	stroke: #f2f2f2;
+	stroke-width: 7;
 }
 
 .progress-circle-indicator {
-  fill: none;
-  stroke: #006A4C;
-  stroke-width: 7;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 1.9s;
+	fill: none;
+	stroke: #006a4c;
+	stroke-width: 7;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 1.9s;
 }
 
 .progress-percentage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -10%);
-  font-size: 28px;
-  font-weight: bold;
-  color: #000000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%, -10%);
+	font-size: 28px;
+	font-weight: bold;
+	color: #000000;
+	margin-top: 80px;
 }
 
 .progress-text {
-  font-size: 13px;
-  color: #666666;
-  text-align: center;
+	font-size: 13px;
+	color: #666666;
+	text-align: center;
 }
 
 .progress-h1 {
-  font-size: 15px;
-  font-weight: bold;
-  color: #000000; /* Black color */
-  text-align: center;
-  margin-bottom: 10px; /* Add some space below the h1 */
+	font-size: 25px;
+	font-weight: bold;
+	color: #000000; /* Black color */
+	text-align: center;
+	margin-bottom: 50px; /* Add some space below the h1 */
 }

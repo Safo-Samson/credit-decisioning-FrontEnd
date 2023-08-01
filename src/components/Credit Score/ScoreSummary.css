@@ -25,7 +25,7 @@
 }
 
 .summary-display-container.rejected {
-	background-color: #df1212; /* Red background color for rejected */
+	background-color: #6d2c2c; /* Red background color for rejected */
 }
 
 .summary-button {
@@ -60,4 +60,11 @@
 
 .loan-decision.rejected {
 	color: #f5f5f5;
+}
+
+.negatives{
+	color: #481468;
+	border: 1px solid black;
+	width: 303px;
+	height: 289px;
 }

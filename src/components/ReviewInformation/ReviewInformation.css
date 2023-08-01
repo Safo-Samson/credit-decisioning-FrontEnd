@@ -1,0 +1,136 @@
+.review-main-container{
+    display: flex;
+}
+
+.test-container{
+    flex:1;
+}
+
+.review-information-container{
+
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #EFEDEA;
+    transform: translateX(0%);
+      
+}
+.Review-text{
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    top: 20%;
+
+}
+.form-container{
+    width: 85%;
+    height: 80%;
+    background-color: white;
+    top: 7%;
+    left: 48%;
+    padding-top: 50px;
+    padding-left: 90px;
+    position: absolute;
+    transform: translateX(-50%);
+    gap: 47px;
+    border-radius: 5px;
+}
+
+
+.firstName .lastName .loanType .loanAmount {
+    display: flex;
+    flex-direction: column; /* Display label and input field in a column */
+    gap: 58px; 
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    
+    
+}
+.dateApplied{
+    display: flex;
+    flex-direction: column; /* Display label and input field in a column */
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin-top: 50px;
+}
+
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    
+}
+.secondRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-container input{
+    background-color: white;
+    height: 10px;
+    width: 252px;
+    border: none; 
+    border-bottom: 1px solid black;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.loanAmount input{
+    height: 10px;
+    width: 101px;
+}
+
+.form-container label{
+    color: #4f4f52;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    
+  
+}
+
+.form-container button{
+    width: 218px;
+    height: 48px;
+    flex-shrink: 0;
+    color: #FFF;
+    /* text-align: center; */
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.closeBTN{
+    background-color: #B8B3B3;
+    margin-left: 387px;
+}
+
+.calculateBTN{
+    background-color: #006A4C;
+    margin-left: 713px;
+}
+
+.prof-icon{
+    position: absolute;
+    top: 5px; /* Adjust the top value to position the icon higher or lower */
+    left: -40px;
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 50px;
+    background-color: #006a4c94;
+    border-radius: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px; 
+}
