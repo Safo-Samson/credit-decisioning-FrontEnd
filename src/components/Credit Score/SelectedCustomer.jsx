@@ -2,7 +2,7 @@ import "./SelectedCustomer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
 
-const SelectedCustomer = ({ customers }) => {
+const SelectedCustomer = (props) => {
 	const handleBack = (e) => {
 		e.preventDefault();
 		navigate("/");
@@ -24,35 +24,31 @@ const SelectedCustomer = ({ customers }) => {
 				<div className="text-container in-text">
 					<b>First Name</b>
 					<br></br>
-					{customers[0].name}
+					{props.firstName}
 					<br></br>
 					<div className="text-line "></div>
 				</div>
-
 				<div className="text-container in-text">
 					<b>Last Name</b>
 					<br></br>
-					{customers[0].name}
+					{props.lastName}
 					<br></br>
 					<div className="text-line "></div>
 				</div>
-
 				<div className="text-container in-text">
 					<b>Account No.</b>
 					<br></br>
-					{customers[0].AccountNo}
+					{props.account}
 					<br></br>
 					<div className="text-line "></div>
 				</div>
-
 				<div className="text-container in-text">
 					<b>Date Applied</b>
 					<br></br>
-					{customers[0].dateApplied.toLocaleString()}
+					{props.date.toLocaleString()}
 					<br></br>
 					<div className="text-line "></div>
 				</div>
-
 				<button className="back-button">Back</button>
 			</div>
 		</>

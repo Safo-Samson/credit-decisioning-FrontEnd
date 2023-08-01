@@ -16,6 +16,7 @@ const AppUI = (props) => {
 						amount={customer.amount}
 						loanType={customer.loanType}
 						name={customer.name}
+						creditScore={customer.creditScore}
 					/>
 				))}
 			</div>
