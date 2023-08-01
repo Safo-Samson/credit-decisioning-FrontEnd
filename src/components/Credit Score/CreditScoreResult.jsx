@@ -21,7 +21,9 @@ const CreditScoreResult = (props) => {
 	};
 
 	const toggleRejectPopUp = () => {
-		setRejectOpen(!rejectOpen);
+		if (!acceptOpen) {
+			setRejectOpen(!rejectOpen);
+		  }
 	};
 	return (
 		<>

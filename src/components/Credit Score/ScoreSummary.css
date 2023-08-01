@@ -91,11 +91,12 @@
 
 }
 
-/* .summary-title{
+.summary-title{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-} */
+	
+} 
 /* 
 .summary-rest{
 	display: flex;
