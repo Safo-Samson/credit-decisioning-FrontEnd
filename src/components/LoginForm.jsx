@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 import lloydsLogo from '../assets/lloydsLogo.jpeg'
 import './LoginForm.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import CusApplication from "./WaitingCustomersUI/CusApplication";
 import { useNavigate } from "react-router-dom";
-import AppUI from "./WaitingCustomersUI/ApplicationUI";
+
 
 function LoginForm(){
 

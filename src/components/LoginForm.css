@@ -65,11 +65,11 @@
   }
 
 .logo{
-    height: 97px;
+    height:89px;
     left: 70%;
     top: -250px;
     position: relative;
-    width: 160px;
+    width: 160px; /*474 */
     transform: translateX(-50%); 
 
 }
