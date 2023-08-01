@@ -82,7 +82,7 @@ function App() {
 				);
 
 				// Take the first 7 customers from the sorted data
-				const firstSevenCustomers = sortedCustomers.slice(490, 500);
+				const firstSevenCustomers = sortedCustomers.slice(450, 500);
 				setCustomers(firstSevenCustomers);
 			})
 			.catch((error) => {
