@@ -1,11 +1,13 @@
 import "./SelectedCustomer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const SelectedCustomer = (props) => {
+	const navigate = useNavigate();
 	const handleBack = (e) => {
 		e.preventDefault();
-		navigate("/");
+		navigate("/AppUI");
 	};
 	return (
 		<>
@@ -49,7 +51,9 @@ const SelectedCustomer = (props) => {
 					<br></br>
 					<div className="text-line "></div>
 				</div>
-				<button className="back-button">Back</button>
+				<button className="back-button" onClick={handleBack}>
+					Back
+				</button>
 			</div>
 		</>
 	);

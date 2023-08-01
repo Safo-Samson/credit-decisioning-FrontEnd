@@ -8,7 +8,6 @@ import { useState } from "react";
 import Popup from "../PopUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "react-router-dom";
 
 const CreditScoreResult = ({ creditScore }) => {
 	const [acceptOpen, setAcceptOpen] = useState(false);
@@ -22,8 +21,6 @@ const CreditScoreResult = ({ creditScore }) => {
 	const toggleRejectPopUp = () => {
 		setRejectOpen(!rejectOpen);
 	};
-
-	const location = useLocation();
 
 	return (
 		<>
