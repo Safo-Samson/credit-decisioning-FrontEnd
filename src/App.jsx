@@ -62,6 +62,16 @@ const customers = [
 	},
 ];
 
+function getWaitingCustomers() {
+	fetch("http://77.91.124.124:5000/front-user/1560796043")
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			console.log(data);
+		});
+}
+
 function App() {
 	return (
 		<>
