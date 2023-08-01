@@ -29,6 +29,8 @@ function LoginForm(){
         <>
         
         <div className="auth-form-container" >
+            
+
             <div className="logo-header">
             <img className="logo" src={lloydsLogo} alt="Logo" />
             <h1 className="header"> LLOYDS BANK  </h1>
@@ -43,8 +45,10 @@ function LoginForm(){
                 <button>Login </button>
             </form>
             </div>
+        
         </div>
         {error && <p className="error-message">{error}</p>}
+       
         </>
         
     )
