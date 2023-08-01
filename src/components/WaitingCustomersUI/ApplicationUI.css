@@ -34,12 +34,12 @@ body {
 	cursor: not-allowed;
 }
 
-.pagination button.prev {
+.pagination button.prev-pagination {
 	background-color: #006a4c;
 	color: #ffffff;
 }
 
-.pagination button.next {
+.pagination button.next-pagination {
 	background-color: #006a4c;
 	color: #ffffff;
 }

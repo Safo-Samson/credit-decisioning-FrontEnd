@@ -9,7 +9,7 @@ const AppUI = (props) => {
 
 	const [currentPage, setCurrentPage] = useState(1);
 
-	// Calculate the starting and ending index of customers for the current page
+	// Calculating the starting and ending index of customers for the current page
 	const startIndex = (currentPage - 1) * customersPerPage;
 	const endIndex = Math.min(
 		startIndex + customersPerPage,
@@ -46,7 +46,7 @@ const AppUI = (props) => {
 
 				<div className="pagination">
 					<button
-						className="prev"
+						className="prev-pagination"
 						disabled={currentPage === 1}
 						onClick={handlePrevPage}
 					>
@@ -54,7 +54,7 @@ const AppUI = (props) => {
 					</button>
 					<span>{`Page ${currentPage} of ${totalPages}`}</span>
 					<button
-						className="next"
+						className="next-pagination"
 						disabled={currentPage === totalPages}
 						onClick={handleNextPage}
 					>
