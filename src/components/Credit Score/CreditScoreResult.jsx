@@ -19,7 +19,9 @@ const CreditScoreResult = ({ creditScore }) => {
 	};
 
 	const toggleRejectPopUp = () => {
-		setRejectOpen(!rejectOpen);
+		if (!acceptOpen) {
+			setRejectOpen(!rejectOpen);
+		  }
 	};
 
 	return (
