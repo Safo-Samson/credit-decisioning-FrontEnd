@@ -75,8 +75,14 @@ function App() {
 				return response.json();
 			})
 			.then((data) => {
+				// Sort the data based on the date in ascending order
 				console.log(data);
-				const firstSevenCustomers = data.slice(0, 9);
+				const sortedCustomers = data.sort(
+					(a, b) => new Date(a.dateApplied) - new Date(b.dateApplied),
+				);
+
+				// Take the first 7 customers from the sorted data
+				const firstSevenCustomers = sortedCustomers.slice(490, 500);
 				setCustomers(firstSevenCustomers);
 			})
 			.catch((error) => {

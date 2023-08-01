@@ -24,7 +24,16 @@ const CusApplication = (props) => {
 	const navigate = useNavigate();
 
 	const handleClick = () => {
-		navigate("/ReviewInformation");
+		navigate("/ReviewInformation", {
+			state: {
+				firstName: props.name,
+				loanType: props.loanType,
+				AccountNo: props.AccountNo,
+				dateApplied: props.dateApplied,
+				amount: props.amount,
+				creditScore: props.creditScore,
+			},
+		});
 	};
 
 	return (
