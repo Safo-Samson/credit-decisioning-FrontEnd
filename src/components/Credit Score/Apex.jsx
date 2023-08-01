@@ -5,6 +5,7 @@ const Apex = ({ progress }) => {
 	let progressText;
 
 	const getColorBasedOnProgress = (progress) => {
+		progress = Math.floor((progress / 999) * 100); //converting the score to 100
 		if (progress < 40) {
 			progressText = "Poor";
 			return "#FF0000"; // Red
@@ -63,10 +64,11 @@ const Apex = ({ progress }) => {
 		stroke: {
 			lineCap: "square",
 		},
-		labels: [Math.floor((progress / 10) * 100)],
+		// labels: [Math.floor((progress / 10) * 100)],
+		labels: [Math.floor(progress)],
 	};
 
-	const series = [progress];
+	const series = [(progress / 999) * 100];
 
 	return (
 		<div className="apex-container">

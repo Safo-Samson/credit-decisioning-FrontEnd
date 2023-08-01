@@ -1,7 +1,6 @@
 import Apex from "./Apex";
 import ApexCircle from "./ApexCircle";
 import "./CreditScoreResult.css";
-
 import ProgressCircle from "./ProgressCircle";
 import ProgressSemiCircle from "./ProgressSemiCircle";
 import ScoreSummary from "./ScoreSummary";
@@ -10,13 +9,12 @@ import Popup from "../PopUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 
-
-const CreditScoreResult = (props) => {
+const CreditScoreResult = ({ creditScore }) => {
 	const [acceptOpen, setAcceptOpen] = useState(false);
 	const [rejectOpen, setRejectOpen] = useState(false);
-	const [comments, setComments ]= useState('');
+	const [comments, setComments] = useState("");
 
-	const toggleAcceptPopup = () => {
+	const toggleAcceptPopup = (props) => {
 		setAcceptOpen(!acceptOpen);
 	};
 
@@ -25,13 +23,14 @@ const CreditScoreResult = (props) => {
 			setRejectOpen(!rejectOpen);
 		  }
 	};
+
 	return (
 		<>
 			<div className="credit-container">
 				<div className="credit-remaining-content">
 					<div className="progress-containers">
 						{/* <ProgressSemiCircle progress={84} /> */}
-						<Apex progress={82.2} />
+						<Apex progress={creditScore} />
 						<ApexCircle progress={42} />
 						{/* <ProgressCircle progress={92} /> */}
 						<ScoreSummary />
@@ -64,10 +63,20 @@ const CreditScoreResult = (props) => {
 									<b>Reject</b>
 									<div className="comments">
 										<div className="comments-text">
-                    					<label htmlFor="comments-text"> Additional Comments (Optional)</label>
+											<label htmlFor="comments-text">
+												{" "}
+												Additional Comments (Optional)
+											</label>
 										</div>
 										<div className="comments-input">
-                   						 	<input value={comments} onChange={(e)=>setComments(e.target.value)}type="comments"placeholder="" id= "comments" name="comments"/>
+											<input
+												value={comments}
+												onChange={(e) => setComments(e.target.value)}
+												type="comments"
+												placeholder=""
+												id="comments"
+												name="comments"
+											/>
 										</div>
 									</div>
 								</>
