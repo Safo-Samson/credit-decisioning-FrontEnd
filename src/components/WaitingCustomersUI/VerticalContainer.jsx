@@ -23,6 +23,11 @@ const VerticalContainer = (props) => {
 		navigate("/AppUI");
 	};
 
+	const handleAccepted = (e) => {
+		e.preventDefault();
+		navigate("/AcceptedUI")
+	}
+
 	return (
 		<div className="vertical-container">
 			{/* The button to toggle visibility */}

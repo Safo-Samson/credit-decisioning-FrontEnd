@@ -32,6 +32,7 @@ const CusApplication = (props) => {
 				dateApplied: props.dateApplied,
 				amount: props.amount,
 				creditScore: props.creditScore,
+				birthDate: props.birthDate,
 			},
 		});
 	};

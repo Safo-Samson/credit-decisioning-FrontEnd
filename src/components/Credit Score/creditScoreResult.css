@@ -87,3 +87,14 @@
 	opacity: 0.5;
 	
   }
+
+  .confirmRejectBtn{
+
+	background-color: #2d8259;
+	color: #ffffff;
+	width: 218px;
+	height: 48px;
+	font-size: 16px;
+	margin-top: 27px;
+
+  }
