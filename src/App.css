@@ -1,16 +1,41 @@
-
 * {
 	font-family: "Inter-Bold", Helvetica;
 
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.6;
 
-
-	
 	/* does nothing but its important*/
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+}
+
+/* Add this CSS for the loading spinner */
+.loading-spinner {
+	border: 9px solid rgba(0, 106, 76, 0.3);
+	border-radius: 50%;
+	border-top: 4px solid #006a4c;
+	width: 90px;
+	height: 90px;
+	animation: spin linear infinite;
+	margin: 90px auto;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.waiting-loading {
+	font-size: 20px;
+	margin-left: 42%;
+	margin-top: 20%;
+	color: #006a4c;
+	font-size: 30px;
 }
