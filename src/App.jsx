@@ -10,6 +10,7 @@ import AcceptedUI from "./components/WaitingCustomersUI/AcceptedUI"
 
 function App() {
 	const [customers, setCustomers] = useState([]);
+	const [isLoading, setLoading] = useState(true);
 
 	function getWaitingCustomers() {
 		fetch("http://77.91.124.124:5000/waiting-users")
@@ -18,7 +19,7 @@ function App() {
 			})
 			.then((data) => {
 				// Sort the data based on the date in ascending order
-				console.log(data);
+
 				const sortedCustomers = data.sort(
 					(a, b) => new Date(a.dateApplied) - new Date(b.dateApplied),
 				);
@@ -26,10 +27,12 @@ function App() {
 				// Take the first 7 customers from the sorted data
 				const firstSevenCustomers = sortedCustomers.slice(450, 500);
 				setCustomers(firstSevenCustomers);
+				console.log(firstSevenCustomers);
 			})
 			.catch((error) => {
 				console.error("Error fetching data:", error);
 			});
+		setLoading(false);
 	}
 
 	useEffect(() => {
@@ -44,7 +47,14 @@ function App() {
 					path="AppUI"
 					element={
 						<>
-							<HorizontalContainer /> <AppUI customers={customers} />
+							<HorizontalContainer />{" "}
+							{!isLoading && customers.length > 0 && (
+								<AppUI customers={customers} />
+							)}
+							{!isLoading && customers.length === 0 && (
+								<p>No waiting customers</p>
+							)}
+							{isLoading && <p>Fetching customer info...</p>}
 						</>
 					}
 				/>
