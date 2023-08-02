@@ -8,11 +8,14 @@ import { useState } from "react";
 import Popup from "../PopUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const CreditScoreResult = ({ creditScore }) => {
 	const [acceptOpen, setAcceptOpen] = useState(false);
 	const [rejectOpen, setRejectOpen] = useState(false);
 	const [comments, setComments] = useState("");
+	const navigate = useNavigate();
+
 
 	const toggleAcceptPopup = (props) => {
 		if (!rejectOpen) {
@@ -26,6 +29,11 @@ const CreditScoreResult = ({ creditScore }) => {
 			setRejectOpen(!rejectOpen);
 		  }
 	};
+	const handleRejectConfirmation = () => {
+	
+		navigate("/AppUI");
+	  };
+	  
 
 	return (
 		<>
@@ -85,6 +93,10 @@ const CreditScoreResult = ({ creditScore }) => {
 												name="comments"
 											/>
 										</div>
+										<button className="confirmRejectBtn" onClick={handleRejectConfirmation}>
+											Reject
+										</button>
+
 									</div>
 								</>
 							}

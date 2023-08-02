@@ -12,33 +12,30 @@ function ReviewInformation(props) {
 		e.preventDefault();
 		navigate("/CreditScore", {
 			state: {
-				firstName: firstName,
-				lastName: lastName,
-				loanType: loanType,
+                // firstName: firstName,
+				// lastName: lastName,
+                loanType: loanType,
 				AccountNo: AccountNo,
-				dateApplied: date,
+				dateApplied: dateApplied,
 				creditScore: creditScore,
+               
 			},
 		});
 	};
 
 	const location = useLocation();
 
-	const [firstName, setFirst] = useState(
-		location.state?.firstName || "undefined",
-	);
-	const [lastName, setLast] = useState(
-		location.state?.firstName || "undefined",
-	);
 	const [loanType, setType] = useState(location.state?.loanType || "undefined");
 
 	const [loanAmount, setAmount] = useState(
 		location.state?.amount || "undefined",
 	);
-	const [date, setValue] = useState(location.state?.dateApplied || "undefined");
+	const [dateApplied, setValue] = useState(location.state?.dateApplied || "undefined");
 
 	const [AccountNo, setAccount] = useState(location.state?.AccountNo || "none");
 	const [creditScore, setScore] = useState(location.state?.creditScore);
+
+    const [birthDate, setBirth] = useState(location.state?.birthDate);
 
 	return (
 		<div className="review-main-container">
@@ -54,28 +51,18 @@ function ReviewInformation(props) {
 						</div>
 
 						<div className="firstRow">
-							<div className="firstName">
-								<label htmlFor="firstName"> First Name</label>
+							<div className="AccountNo">
+								<label htmlFor="AccountNo"> Account Number</label>
 								<input
-									value={firstName}
-									onChange={(e) => setFirst(e.target.value)}
-									type="firstName"
+									value={AccountNo}
+									onChange={(e) => setAccount(e.target.value)}
+									type="AccountNo"
 									placeholder=""
-									id="firstName"
-									name="firstName"
+									id="AccountNo"
+									name="AccountNo"
 								/>
 							</div>
-							<div className="lastName">
-								<label htmlFor="lastName"> Last Name</label>
-								<input
-									value={lastName}
-									onChange={(e) => setLast(e.target.value)}
-									type="lastName"
-									placeholder=""
-									id="lastName"
-									name="lastName"
-								/>
-							</div>
+
 							<div className="loanType">
 								<label htmlFor="loanType"> Loan Type</label>
 								<input
@@ -85,6 +72,18 @@ function ReviewInformation(props) {
 									placeholder=""
 									id="loanType"
 									name="loanType"
+								/>
+							</div>
+                            <div className="birthDate">
+								<label htmlFor="birthDate"> Birth date</label>
+								<input
+                                
+									value={birthDate}
+									onChange={(e) => setBirth(e.target.value)}
+									type="date"
+									placeholder=""
+									id="birthDate"
+									name="birthDate"
 								/>
 							</div>
 							<div className="loanAmount">
@@ -102,14 +101,14 @@ function ReviewInformation(props) {
 
 						<div className="secondRow">
 							<div className="dateApplied">
-								<label htmlFor="date"> Date Applied </label>
+								<label htmlFor="dateApplied"> dateApplied Applied </label>
 								<input
-									value={date}
+									value={dateApplied}
 									onChange={(e) => setValue(e.target.value)}
 									type="date"
 									placeholder=""
-									id="date"
-									name="date"
+									id="dateApplied"
+									name="dateApplied"
 								/>
 							</div>
 						</div>

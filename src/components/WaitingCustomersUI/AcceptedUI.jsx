@@ -41,7 +41,6 @@ const AppUI = (props) => {
 						loanType={customer.loanType}
 						name={customer.name}
 						creditScore={customer.creditScore}
-						birthDate = {customer.birthDate}
 					/>
 				))}
 
