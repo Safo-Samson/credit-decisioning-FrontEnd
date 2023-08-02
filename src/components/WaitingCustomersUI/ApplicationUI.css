@@ -1,6 +1,5 @@
-body{
+body {
 	display: flex;
-	
 }
 
 .app-container {
@@ -11,4 +10,36 @@ body{
 	/* Use 90% of the remaining width */
 	flex: 1;
 	/* Add any additional styling you need for the remaining content */
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.pagination button {
+	padding: 8px 16px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 0 5px;
+	width: 100px;
+}
+
+.pagination button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.pagination button.prev-pagination {
+	background-color: #006a4c;
+	color: #ffffff;
+}
+
+.pagination button.next-pagination {
+	background-color: #006a4c;
+	color: #ffffff;
 }

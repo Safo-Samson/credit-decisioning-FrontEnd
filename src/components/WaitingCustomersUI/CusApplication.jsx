@@ -40,7 +40,7 @@ const CusApplication = (props) => {
 		<div className="customer-item" onClick={handleClick}>
 			<div className="icon-type">{loanIcon}</div>
 
-			<div className="details-page"> {props.name}</div>
+			<div className="details-page-name "> {props.name}</div>
 			<div className="details-page">
 				<b>Account No:</b> <br></br>
 				{props.AccountNo}
@@ -58,7 +58,7 @@ const CusApplication = (props) => {
 
 			<div className="details-page">
 				<b>Loan Type:</b> <br></br>
-				<h3>{props.loanType}</h3>
+				{props.loanType}
 			</div>
 		</div>
 	);
