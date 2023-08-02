@@ -15,7 +15,10 @@ const CreditScoreResult = ({ creditScore }) => {
 	const [comments, setComments] = useState("");
 
 	const toggleAcceptPopup = (props) => {
-		setAcceptOpen(!acceptOpen);
+		if (!rejectOpen) {
+			setAcceptOpen(!acceptOpen);
+		  }
+		
 	};
 
 	const toggleRejectPopUp = () => {
@@ -29,13 +32,14 @@ const CreditScoreResult = ({ creditScore }) => {
 			<div className="credit-container">
 				<div className="credit-remaining-content">
 					<div className="progress-containers">
-						{/* <ProgressSemiCircle progress={84} /> */}
+						
 						<Apex progress={creditScore} />
 						<ApexCircle progress={42} />
-						{/* <ProgressCircle progress={92} /> */}
 						<ScoreSummary />
 					</div>
-					<button className="confirm-accept" onClick={toggleAcceptPopup}>
+
+					<button className={`confirm-accept ${rejectOpen ? "disabled" : ""}`}
+					onClick={toggleAcceptPopup}>
 						Accept
 					</button>
 					{acceptOpen && (
@@ -53,9 +57,12 @@ const CreditScoreResult = ({ creditScore }) => {
 						/>
 					)}
 
-					<button className="confirm-reject" onClick={toggleRejectPopUp}>
+					<button className={`confirm-reject ${acceptOpen ? "disabled" : ""}`}
+					 onClick={toggleRejectPopUp}
+					 disabled = {acceptOpen}>
 						Reject
 					</button>
+
 					{rejectOpen && (
 						<Popup
 							content={
@@ -85,6 +92,7 @@ const CreditScoreResult = ({ creditScore }) => {
 							type="rejected"
 						/>
 					)}
+
 				</div>
 			</div>
 		</>
