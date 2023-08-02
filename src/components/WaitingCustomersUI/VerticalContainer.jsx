@@ -53,7 +53,11 @@ const VerticalContainer = (props) => {
 					</div>
 
 					<div className="vert-button-container">
-						<button className="vert-button">Accepted</button>
+						<button className="vert-button" onClick={handleAccepted}>
+							Accepted{" "}
+							<span className="customer-count">{props.customers.length}</span>
+							
+						</button>
 						<div className="line"></div>
 					</div>
 

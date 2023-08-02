@@ -6,6 +6,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
 import { useState, useEffect } from "react";
+import AcceptedUI from "./components/WaitingCustomersUI/AcceptedUI"
 
 function App() {
 	const [customers, setCustomers] = useState([]);
@@ -62,6 +63,15 @@ function App() {
 						<>
 							<HorizontalContainer />
 							<CreditScoreContainer customers={customers} />
+						</>
+					}
+				/>
+				<Route 
+					path = "/AcceptedUI"
+					element={
+						<>
+						<HorizontalContainer />
+						<AcceptedUI customers={customers}/>
 						</>
 					}
 				/>
