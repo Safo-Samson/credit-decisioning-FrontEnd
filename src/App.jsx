@@ -5,7 +5,6 @@ import ReviewInformation from "./components/ReviewInformation/ReviewInformation"
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
-import { useState, useEffect } from "react";
 import AcceptedUI from "./components/WaitingCustomersUI/AcceptedUI";
 import { useState, useEffect, useCallback } from "react";
 
