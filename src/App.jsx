@@ -38,7 +38,7 @@ function App() {
 
 	useEffect(() => {
 		getWaitingCustomers(); // Call the function when the App component is mounted
-	}, [getWaitingCustomers, customers]); // The empty dependency array ensures the function is only called once on mount
+	}, [getWaitingCustomers]); // The empty dependency array ensures the function is only called once on mount
 
 	return (
 		<>
@@ -52,7 +52,8 @@ function App() {
 							{!isLoading && customers.length > 0 && (
 								<AppUI customers={customers} />
 							)}
-							{!isLoading && (
+
+							{!isLoading && customers.length === 0 && (
 								<p className="waiting-loading">Fetching customer info ...</p>
 							)}
 						</>
