@@ -3,7 +3,7 @@ import "../WaitingCustomersUI/ApplicationUI.css";
 import CusApplication from "../WaitingCustomersUI/CusApplication";
 import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
 
-const AppUI = (props) => {
+const AcceptedUI = (props) => {
 	const customersPerPage = 9; // Number of customers to display per page
 	const totalPages = Math.ceil(props.customers.length / customersPerPage);
 
@@ -66,4 +66,4 @@ const AppUI = (props) => {
 	);
 };
 
-export default AppUI;
+export default AcceptedUI;
