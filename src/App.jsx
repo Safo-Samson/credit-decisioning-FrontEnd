@@ -38,7 +38,7 @@ function App() {
 
 	useEffect(() => {
 		getWaitingCustomers(); // Call the function when the App component is mounted
-	}, [getWaitingCustomers]); // The empty dependency array ensures the function is only called once on mount
+	}, [getWaitingCustomers, customers]); // The empty dependency array ensures the function is only called once on mount
 
 	return (
 		<>
