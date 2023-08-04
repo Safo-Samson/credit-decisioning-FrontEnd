@@ -11,16 +11,17 @@ function ReviewInformation(props) {
 	const handleClick = (e) => {
 		e.preventDefault();
 		navigate("/CreditScore", {
-			state: {
-                // firstName: firstName,
-				// lastName: lastName,
-                loanType: loanType,
-				AccountNo: AccountNo,
-				dateApplied: dateApplied,
-				creditScore: creditScore,
-               
-			},
-		});
+      state: {
+        // firstName: firstName,
+        // lastName: lastName,
+        loanType: loanType,
+        AccountNo: AccountNo,
+        dateApplied: dateApplied,
+        creditScore: creditScore,
+        loanAmount: loanAmount,
+        birthDate: birthDate,
+      },
+    });
 	};
 
 	const location = useLocation();

@@ -28,42 +28,40 @@ const AcceptedUI = (props) => {
 	};
 
 	return (
-		<div className="app-container">
-			<VerticalContainer customers={props.customers} />
+    <div className="app-container">
+      <VerticalContainer customers={props.customers} />
 
-			<div className="remaining-content">
-				{displayedCustomers.map((customer) => (
-					<CusApplication
-						key={customer.id} // very important to add key
-						AccountNo={customer.id} //Account number
-						dateApplied={customer.dateApplied}
-						amount={customer.amount}
-						loanType={customer.loanType}
-						name={customer.name}
-						creditScore={customer.creditScore}
-					/>
-				))}
+      <div className="remaining-content">
+        {displayedCustomers.map((customer) => (
+          <CusApplication
+            key={customer.id} // very important to add key
+            AccountNo={customer.id} //Account number
+            dateApplied={customer.dateApplied}
+            amount={customer.amount}
+            loanType={customer.loanType}
+            // name={customer.name} name not needed cah might introduce bias
+            creditScore={customer.creditScore}
+          />
+        ))}
 
-				<div className="pagination">
-					<button
-						className="prev-pagination"
-						disabled={currentPage === 1}
-						onClick={handlePrevPage}
-					>
-						Prev
-					</button>
-					<span>{`Page ${currentPage} of ${totalPages}`}</span>
-					<button
-						className="next-pagination"
-						disabled={currentPage === totalPages}
-						onClick={handleNextPage}
-					>
-						Next
-					</button>
-				</div>
-			</div>
-		</div>
-	);
+        <div className="pagination">
+          <button
+            className="prev-pagination"
+            disabled={currentPage === 1}
+            onClick={handlePrevPage}>
+            Prev
+          </button>
+          <span>{`Page ${currentPage} of ${totalPages}`}</span>
+          <button
+            className="next-pagination"
+            disabled={currentPage === totalPages}
+            onClick={handleNextPage}>
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default AcceptedUI;

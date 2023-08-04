@@ -24,45 +24,45 @@ const CusApplication = (props) => {
 	const navigate = useNavigate();
 
 	const handleClick = () => {
-		navigate("/ReviewInformation", {
-			state: {
-				firstName: props.name,
-				loanType: props.loanType,
-				AccountNo: props.AccountNo,
-				dateApplied: props.dateApplied,
-				amount: props.amount,
-				creditScore: props.creditScore,
-				birthDate: props.birthDate,
-			},
-		});
-	};
+    navigate("/ReviewInformation", {
+      state: {
+        // firstName: props.name, name not needed because of bias
+        loanType: props.loanType,
+        AccountNo: props.AccountNo,
+        dateApplied: props.dateApplied,
+        amount: props.amount,
+        creditScore: props.creditScore,
+        birthDate: props.birthDate,
+      },
+    });
+  };
 
-	return (
-		<div className="customer-item" onClick={handleClick}>
-			<div className="icon-type">{loanIcon}</div>
+  return (
+    <div className="customer-item" onClick={handleClick}>
+      <div className="icon-type">{loanIcon}</div>
 
-			<div className="details-page-name "> {props.name}</div>
-			<div className="details-page">
-				<b>Account No:</b> <br></br>
-				{props.AccountNo}
-			</div>
+      {/* <div className="details-page-name "> {props.name}</div> */}
+      <div className="details-page">
+        <b>Account No:</b> <br></br>
+        {props.AccountNo}
+      </div>
 
-			<div className="details-page-extended">
-				<b>Date Applied:</b>
-				<br></br>
-				{props.dateApplied.toLocaleString()}
-			</div>
+      <div className="details-page-extended">
+        <b>Date Applied:</b>
+        <br></br>
+        {props.dateApplied.toLocaleString()}
+      </div>
 
-			<div className="details-page">
-				<b>Amount: </b> <br></br>£{props.amount}
-			</div>
+      <div className="details-page">
+        <b>Amount: </b> <br></br>£{props.amount}
+      </div>
 
-			<div className="details-page">
-				<b>Loan Type:</b> <br></br>
-				{props.loanType}
-			</div>
-		</div>
-	);
+      <div className="details-page">
+        <b>Loan Type:</b> <br></br>
+        {props.loanType}
+      </div>
+    </div>
+  );
 };
 
 export default CusApplication;
