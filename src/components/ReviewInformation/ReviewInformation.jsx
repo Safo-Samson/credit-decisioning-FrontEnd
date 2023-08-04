@@ -24,6 +24,7 @@ function ReviewInformation(props) {
         creditScore: creditScore,
         loanAmount: loanAmount,
         birthDate: birthDate,
+        // we need send the following to the next page - credit score and affordability
       },
     });
 	};

@@ -6,89 +6,100 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
 import AcceptedUI from "./components/WaitingCustomersUI/AcceptedUI";
+import RejectedUI from "./components/WaitingCustomersUI/RejectedUI";
 import { useState, useEffect, useCallback } from "react";
 
 function App() {
-	const [customers, setCustomers] = useState([]);
-	const [isLoading, setLoading] = useState(true);
+  const [customers, setCustomers] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
-	const getWaitingCustomers = useCallback(async () => {
-		setLoading(true);
-		fetch("http://77.91.124.124:5000/waiting-users")
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				// Sort the data based on the date in ascending order
+  const getWaitingCustomers = useCallback(async () => {
+    setLoading(true);
+    fetch("http://77.91.124.124:5000/waiting-users")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // Sort the data based on the date in ascending order
 
-				const sortedCustomers = data.sort(
-					(a, b) => new Date(a.dateApplied) - new Date(b.dateApplied),
-				);
+        const sortedCustomers = data.sort(
+          (a, b) => new Date(a.dateApplied) - new Date(b.dateApplied)
+        );
 
-				// Take the first 7 customers from the sorted data
-				const firstSevenCustomers = sortedCustomers.slice(408, 500);
-				setCustomers(firstSevenCustomers);
-				console.log(firstSevenCustomers);
-			})
-			.catch((error) => {
-				console.error("Error fetching data:", error);
-			});
-		setLoading(false);
-	}, []);
+        // Take the first 7 customers from the sorted data
+        const firstFewCustomers = sortedCustomers.slice(470, 490);
+        setCustomers(firstFewCustomers);
+        console.log(firstFewCustomers);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+    setLoading(false);
+  }, []);
 
-	useEffect(() => {
-		getWaitingCustomers(); // Call the function when the App component is mounted
-	}, [getWaitingCustomers]); // The empty dependency array ensures the function is only called once on mount
+  useEffect(() => {
+    getWaitingCustomers(); // Call the function when the App component is mounted
+  }, [getWaitingCustomers]); // The empty dependency array ensures the function is only called once on mount
 
-	return (
-		<>
-			<Routes>
-				<Route path="/" element={<LoginForm />} />
-				<Route
-					path="/AppUI"
-					element={
-						<>
-							<HorizontalContainer />
-							{!isLoading && customers.length > 0 && (
-								<AppUI customers={customers} />
-							)}
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route
+          path="/AppUI"
+          element={
+            <>
+              <HorizontalContainer />
+              {!isLoading && customers.length > 0 && (
+                <AppUI customers={customers} />
+              )}
 
-							{!isLoading && customers.length === 0 && (
-								<p className="waiting-loading">Fetching customer info ...</p>
-							)}
-						</>
-					}
-				/>
-				<Route
-					path="/ReviewInformation"
-					element={
-						<>
-							<HorizontalContainer />{" "}
-							<ReviewInformation customers={customers} />
-						</>
-					}
-				/>
-				<Route
-					path="/CreditScore"
-					element={
-						<>
-							<HorizontalContainer />
-							<CreditScoreContainer customers={customers} />
-						</>
-					}
-				/>
-				<Route
-					path="/AcceptedUI"
-					element={
-						<>
-							<HorizontalContainer />
-							<AcceptedUI customers={customers} />
-						</>
-					}
-				/>
-			</Routes>
-		</>
-	);
+              {!isLoading && customers.length === 0 && (
+                <p className="waiting-loading">Fetching customer info ...</p>
+              )}
+            </>
+          }
+        />
+        <Route
+          path="/ReviewInformation"
+          element={
+            <>
+              <HorizontalContainer />{" "}
+              <ReviewInformation customers={customers} />
+            </>
+          }
+        />
+        <Route
+          path="/CreditScore"
+          element={
+            <>
+              <HorizontalContainer />
+              <CreditScoreContainer customers={customers} />
+            </>
+          }
+        />
+        <Route
+          path="/AcceptedUI"
+          element={
+            <>
+              <HorizontalContainer />
+              <AcceptedUI customers={customers} />
+            </>
+          }
+        />
+
+        <Route
+          path="/RejectedUI"
+          element={
+            <>
+              <HorizontalContainer />
+              <RejectedUI customers={customers} />
+            </>
+          }
+        />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

@@ -13,74 +13,82 @@ const VerticalContainer = (props) => {
 	const toggleVisibility = () => {
 		setIsVisible(!isVisible);
 	};
+
 	const navigate = useNavigate();
-	const handleClick = (e) => {
-		e.preventDefault();
-		navigate("/");
-	};
-	const handleWaiting = (e) => {
-		e.preventDefault();
-		navigate("/AppUI");
-	};
 
-	const handleAccepted = (e) => {
-		e.preventDefault();
-		navigate("/AcceptedUI")
-	}
+  const handleLogoutClick = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
 
-	return (
-		<div className="vertical-container">
-			{/* The button to toggle visibility */}
-			<button
-				className={`toggle-button ${isVisible ? "visible" : "hidden"}`}
-				onClick={toggleVisibility}
-			>
-				{isVisible ? (
-					<FontAwesomeIcon icon={faCircleChevronLeft} />
-				) : (
-					<FontAwesomeIcon icon={faCircleChevronRight} />
-				)}
-			</button>
+  const handleWaiting = (e) => {
+    e.preventDefault();
+    navigate("/AppUI");
+  };
 
-			{isVisible && ( // Show VerticalContainer only when isVisible is true
-				<div>
-					<div className="vert-button-container">
-						<button className="vert-button" onClick={handleWaiting}>
-							Waiting{" "}
-							<span className="customer-count">{props.customers.length}</span>
-						</button>
-						<div className="line"></div>
-					</div>
+  const handleAccepted = (e) => {
+    e.preventDefault();
+    navigate("/AcceptedUI");
+  };
 
-					<div className="vert-button-container">
-						<button className="vert-button" onClick={handleAccepted}>
-							Accepted{" "}
-							
-						</button>
-						<div className="line"></div>
-					</div>
+  const handleRejected = (e) => {
+    e.preventDefault();
+    navigate("/RejectedUI");
+  };
 
-					<div className="vert-button-container">
-						<button className="vert-button">Rejected</button>
-						<div className="line"></div>
-					</div>
+  return (
+    <div className="vertical-container">
+      {/* The button to toggle visibility */}
+      <button
+        className={`toggle-button ${isVisible ? "visible" : "hidden"}`}
+        onClick={toggleVisibility}>
+        {isVisible ? (
+          <FontAwesomeIcon icon={faCircleChevronLeft} />
+        ) : (
+          <FontAwesomeIcon icon={faCircleChevronRight} />
+        )}
+      </button>
 
-					<div className="vert-button-container">
-						<button className="vert-button">Help</button>
-					</div>
-				</div>
-			)}
+      {isVisible && ( // Show VerticalContainer only when isVisible is true
+        <div>
+          <div className="vert-button-container">
+            <button className="vert-button" onClick={handleWaiting}>
+              Waiting{" "}
+              <span className="customer-count">{props.customers.length}</span>
+            </button>
+            <div className="line"></div>
+          </div>
 
-			{isVisible && (
-				<>
-					<button className="logout-button" onClick={handleClick}>
-						Logout
-					</button>
-					<div className="line"></div>
-				</>
-			)}
-		</div>
-	);
+          <div className="vert-button-container">
+            <button className="vert-button" onClick={handleAccepted}>
+              Accepted{" "}
+            </button>
+            <div className="line"></div>
+          </div>
+
+          <div className="vert-button-container">
+            <button className="vert-button" onClick={handleRejected}>
+              Rejected
+            </button>
+            <div className="line"></div>
+          </div>
+
+          <div className="vert-button-container">
+            <button className="vert-button">Help</button>
+          </div>
+        </div>
+      )}
+
+      {isVisible && (
+        <>
+          <button className="logout-button" onClick={handleLogoutClick}>
+            Logout
+          </button>
+          <div className="line"></div>
+        </>
+      )}
+    </div>
+  );
 };
 
 export default VerticalContainer;

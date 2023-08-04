@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../WaitingCustomersUI/ApplicationUI.css";
-import CusApplication from "../WaitingCustomersUI/CusApplication";
-import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+import CusApplication from "./CusApplication";
+import VerticalContainer from "./VerticalContainer";
 
-const AcceptedUI = (props) => {
+const RejectedUI = (props) => {
   const customersPerPage = 5; // Number of customers to display per page
   const totalPages = Math.ceil(props.customers.length / customersPerPage);
 
@@ -64,4 +64,4 @@ const AcceptedUI = (props) => {
   );
 };
 
-export default AcceptedUI;
+export default RejectedUI;
