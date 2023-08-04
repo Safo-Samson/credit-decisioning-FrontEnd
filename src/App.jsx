@@ -5,14 +5,15 @@ import ReviewInformation from "./components/ReviewInformation/ReviewInformation"
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CreditScoreContainer from "./components/Credit Score/CreditScoreContainer";
-import { useState, useEffect } from "react";
-import AcceptedUI from "./components/WaitingCustomersUI/AcceptedUI"
+import AcceptedUI from "./components/WaitingCustomersUI/AcceptedUI";
+import { useState, useEffect, useCallback } from "react";
 
 function App() {
 	const [customers, setCustomers] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 
-	function getWaitingCustomers() {
+	const getWaitingCustomers = useCallback(async () => {
+		setLoading(true);
 		fetch("http://77.91.124.124:5000/waiting-users")
 			.then((response) => {
 				return response.json();
@@ -25,7 +26,7 @@ function App() {
 				);
 
 				// Take the first 7 customers from the sorted data
-				const firstSevenCustomers = sortedCustomers.slice(450, 500);
+				const firstSevenCustomers = sortedCustomers.slice(408, 500);
 				setCustomers(firstSevenCustomers);
 				console.log(firstSevenCustomers);
 			})
@@ -33,28 +34,28 @@ function App() {
 				console.error("Error fetching data:", error);
 			});
 		setLoading(false);
-	}
+	}, []);
 
 	useEffect(() => {
 		getWaitingCustomers(); // Call the function when the App component is mounted
-	}, []); // The empty dependency array ensures the function is only called once on mount
+	}, [getWaitingCustomers]); // The empty dependency array ensures the function is only called once on mount
 
 	return (
 		<>
 			<Routes>
 				<Route path="/" element={<LoginForm />} />
 				<Route
-					path="AppUI"
+					path="/AppUI"
 					element={
 						<>
-							<HorizontalContainer />{" "}
+							<HorizontalContainer />
 							{!isLoading && customers.length > 0 && (
 								<AppUI customers={customers} />
 							)}
+
 							{!isLoading && customers.length === 0 && (
-								<p>No waiting customers</p>
+								<p className="waiting-loading">Fetching customer info ...</p>
 							)}
-							{isLoading && <p>Fetching customer info...</p>}
 						</>
 					}
 				/>
@@ -76,12 +77,12 @@ function App() {
 						</>
 					}
 				/>
-				<Route 
-					path = "/AcceptedUI"
+				<Route
+					path="/AcceptedUI"
 					element={
 						<>
-						<HorizontalContainer />
-						<AcceptedUI customers={customers}/>
+							<HorizontalContainer />
+							<AcceptedUI customers={customers} />
 						</>
 					}
 				/>
