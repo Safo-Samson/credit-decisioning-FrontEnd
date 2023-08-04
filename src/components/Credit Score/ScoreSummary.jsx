@@ -33,7 +33,7 @@ const ScoreSummary = (props) => {
 
 											<b>Summary</b>
 										<div className="summary-rest">
-											<p>Main factors impacting credit score: </p></div>
+											<p>Main factors impacting results: </p></div>
 											<div className="explanation">
 												
 												<div className="negatives">

@@ -51,7 +51,7 @@
     
     
 }
-.dateApplied{
+.dateApplied {
     display: flex;
     flex-direction: column; /* Display label and input field in a column */
     justify-content: space-evenly;
@@ -59,12 +59,52 @@
     margin-top: 50px;
 }
 
+.residentialStatus{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.employmentStatus{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.dependents{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+.income{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.defaults{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.loyaltyDays{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 40px;
+}
 .firstRow{
     display: flex;
     flex-direction: row;
     
 }
 .secondRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.thirdRow{
     display: flex;
     flex-direction: row;
 }
@@ -80,6 +120,10 @@
 }
 
 .loanAmount input{
+    height: 10px;
+    width: 101px;
+}
+.dependents input{
     height: 10px;
     width: 101px;
 }
@@ -133,4 +177,12 @@
     text-align: center;
     width: 50px;
     height: 50px; 
+}
+
+.documents-container{
+    border: 1px solid black;
+    width: 459px;
+    height: 126.391px;
+    margin-top: 100px;
+
 }
