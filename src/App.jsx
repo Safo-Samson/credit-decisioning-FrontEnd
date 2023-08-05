@@ -35,11 +35,17 @@ function App() {
         console.error("Error fetching data:", error);
       });
     setLoading(false);
-  }, []);
+  }, [customers]);
 
   useEffect(() => {
-    getWaitingCustomers(); // Call the function when the App component is mounted
-  }, [getWaitingCustomers]); // The empty dependency array ensures the function is only called once on mount
+    const identifier = setTimeout(() => {
+      getWaitingCustomers();
+    }, 600);
+
+    return () => {
+      clearTimeout(identifier);
+    }; //cleanup function
+  }, [getWaitingCustomers, customers]);
 
   return (
     <>
