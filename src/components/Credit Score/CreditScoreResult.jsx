@@ -30,7 +30,7 @@ const CreditScoreResult = ({ creditScore, account }) => {
   };
 
   // update status of customer after acepting or rejecting
-  async function sendPut(num, user_id) {
+  async function sendupdate(num, user_id) {
     const data = {
       status: num, // status 0 = waiting, 1 = accepted, 2 = rejected
     };
@@ -52,20 +52,20 @@ const CreditScoreResult = ({ creditScore, account }) => {
   // handling the accept button with update to waiting queue
   function accept(account) {
     const num = 1;
-    sendPut(num, account + "");
+    sendupdate(num, account + "");
   }
 
   // handling the reject button with update to rejected queue
   function rejected(account) {
     const num = 2;
-    sendPut(num, account + ""); // send the account number to the sendPut function
+    sendupdate(num, account + ""); // send the account number to the sendupdate function
     navigate("/AppUI");
     <RejectedUI customers={customers} />;
   }
 
   function waiting(account) {
     const num = 0;
-    sendPut(num, account + "");
+    sendupdate(num, account + "");
     navigate("/AppUI");
   }
 
