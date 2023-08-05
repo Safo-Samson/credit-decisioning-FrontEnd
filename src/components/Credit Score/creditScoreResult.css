@@ -98,3 +98,14 @@
 	margin-top: 27px;
 
   }
+
+  .confirmAcceptBtn{
+	position: absolute;
+		background-color: #2d8259;
+	color: #ffffff;
+	width: 218px;
+	height: 48px;
+	font-size: 16px;
+	margin-top: 210px;
+
+  }

@@ -1,11 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../WaitingCustomersUI/ApplicationUI.css";
-import CusApplication from "../WaitingCustomersUI/CusApplication";
-import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
+import CusApplication from "./CusApplication";
+import VerticalContainer from "./VerticalContainer";
+import { useLocation } from "react-router-dom";
 
 const AcceptedUI = (props) => {
+  const location = useLocation();
+  const [customerArray, setCustomerArray] = useState([]);
+
+  useEffect(() => {
+    // When the component mounts, retrieve the customer data from localStorage (if any)
+    const storedCustomers = JSON.parse(
+      localStorage.getItem("customers-accepted")
+    );
+    if (storedCustomers && customerArray.length === 0) {
+      // checking length to prevent duplicates
+      setCustomerArray(storedCustomers);
+    }
+  }, []);
+
+  useEffect(() => {
+    // When a new customer is received from the state, add it to the existing customer array
+    if (location.state && location.state.customer) {
+      setCustomerArray((prevCustomers) => [
+        location.state.customer,
+        ...prevCustomers,
+      ]);
+    }
+  }, [location.state]);
+
+  useEffect(() => {
+    // Store the updated customerArray in localStorage whenever it changes
+    localStorage.setItem("customers-accepted", JSON.stringify(customerArray));
+  }, [customerArray]);
+
+  // Pagination
   const customersPerPage = 5; // Number of customers to display per page
-  const totalPages = Math.ceil(props.customers.length / customersPerPage);
+  const totalPages = Math.ceil(customerArray.length / customersPerPage);
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -13,11 +44,11 @@ const AcceptedUI = (props) => {
   const startIndex = (currentPage - 1) * customersPerPage;
   const endIndex = Math.min(
     startIndex + customersPerPage,
-    props.customers.length
+    customerArray.length
   );
 
-  // Slice the customers array based on the current page
-  const displayedCustomers = props.customers.slice(startIndex, endIndex);
+  // Slice the customer array based on the current page
+  const displayedCustomers = customerArray.slice(startIndex, endIndex);
 
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
@@ -34,9 +65,10 @@ const AcceptedUI = (props) => {
     fontWeight: "bold",
     color: "#333",
   };
+
   return (
     <div className="app-container">
-      <VerticalContainer customers={props.customers} />
+      <VerticalContainer customers={customerArray} />
 
       <div className="remaining-content">
         <h5 style={headingStyle}>Accepted Applications</h5>
@@ -47,7 +79,6 @@ const AcceptedUI = (props) => {
             dateApplied={customer.dateApplied}
             amount={customer.amount}
             loanType={customer.loanType}
-            // name={customer.name} name not needed cah might introduce bias
             creditScore={customer.creditScore}
           />
         ))}

@@ -5,7 +5,7 @@
 	padding: 10px;
 	visibility: block;
 	position: relative;
-	height: 100vh;
+	height: 87vh;
 	max-width: 200px;
 }
 
@@ -73,7 +73,7 @@
 .logout-button {
 	margin-top: auto;
 	/* Push the logout button to the bottom */
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	border: 1px solid transparent;
 	background-color: #3caf7794;
 	color: white;

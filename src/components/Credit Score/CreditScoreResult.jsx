@@ -2,26 +2,23 @@ import Apex from "./Apex";
 import ApexCircle from "./ApexCircle";
 import "./CreditScoreResult.css";
 import ScoreSummary from "./ScoreSummary";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Popup from "../PopUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import RejectedUI from "../WaitingCustomersUI/RejectedUI";
-import AcceptedUI from "../WaitingCustomersUI/AcceptedUI";
 
-const CreditScoreResult = ({ creditScore, account }) => {
+const CreditScoreResult = ({ creditScore, account, customers }) => {
   const [acceptOpen, setAcceptOpen] = useState(false);
   const [rejectOpen, setRejectOpen] = useState(false);
   const [comments, setComments] = useState("");
+
   const navigate = useNavigate();
 
-  const toggleAcceptPopup = (props) => {
+  const toggleAcceptPopup = () => {
     if (!rejectOpen) {
       setAcceptOpen(!acceptOpen);
     }
-
-    //
   };
 
   const toggleRejectPopUp = () => {
@@ -31,7 +28,7 @@ const CreditScoreResult = ({ creditScore, account }) => {
   };
 
   // update status of customer after acepting or rejecting
-  async function sendupdate(num, user_id) {
+  async function sendUpdate(num, user_id) {
     const data = {
       status: num, // status 0 = waiting, 1 = accepted, 2 = rejected
     };
@@ -45,40 +42,46 @@ const CreditScoreResult = ({ creditScore, account }) => {
     const response = await fetch(
       `http://77.91.124.124:5000/update-status/${user_id}`,
       requestOptions
-    ); // Handle the response here if needed
+    );
 
-    console.log(response);
+    const responseData = await response.json();
+    console.log(responseData);
 
-    // if its accepted update the customer status to accepted in the list, else update the customer status to rejected in the list
+    // If it's accepted, navigate to the AcceptedUI page passing the updated customer as a prop
     if (num === 1) {
-      <RejectedUI customer={customer} />;
+      navigate("/AcceptedUI", { state: { customer: responseData } });
     } else if (num === 2) {
-      <AcceptedUI customer={customer} />;
+      // If it's rejected, navigate to the RejectedUI page passing the updated customer as a prop
+      navigate("/RejectedUI", { state: { customer: responseData } });
+      // }
     }
   }
 
-  // handling the accept button with update to waiting queue
-  function accept(account) {
+  async function accept(account) {
     const num = 1;
-    sendupdate(num, account + "");
+    await sendUpdate(num, account + ""); // send the account number to the sendUpdate function
   }
 
   // handling the reject button with update to rejected queue
-  function rejected(account) {
+  async function rejected(account) {
     const num = 2;
-    sendupdate(num, account + ""); // send the account number to the sendupdate function
-    navigate("/AppUI");
+    await sendUpdate(num, account + ""); // send the account number to the sendUpdate function
   }
 
   function waiting(account) {
     const num = 0;
-    sendupdate(num, account + "");
+    sendUpdate(num, account + "");
     navigate("/AppUI");
   }
 
   // handling the reject button
   const handleRejectConfirmation = () => {
     rejected(account);
+  };
+
+  // handling the accept button
+  const handleAcceptConfirmation = () => {
+    accept(account);
   };
 
   return (
@@ -104,6 +107,11 @@ const CreditScoreResult = ({ creditScore, account }) => {
                   <div className="gold-icon">
                     <FontAwesomeIcon icon={faCoins} />
                   </div>
+                  <button
+                    className="confirmAcceptBtn"
+                    onClick={handleAcceptConfirmation}>
+                    Continue
+                  </button>
                 </>
               }
               handleClose={toggleAcceptPopup}

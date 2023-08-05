@@ -27,7 +27,7 @@ function App() {
         );
 
         // Take the first 7 customers from the sorted data
-        const firstFewCustomers = sortedCustomers.slice(470, 490);
+        const firstFewCustomers = sortedCustomers.slice(370, 490);
         setCustomers(firstFewCustomers);
         console.log(firstFewCustomers);
       })
@@ -99,7 +99,7 @@ function App() {
           element={
             <>
               <HorizontalContainer />
-              <RejectedUI customers={customers} />
+              <RejectedUI />
             </>
           }
         />
