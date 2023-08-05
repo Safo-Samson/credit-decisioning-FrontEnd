@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import RejectedUI from "../WaitingCustomersUI/RejectedUI";
+import AcceptedUI from "../WaitingCustomersUI/AcceptedUI";
 
 const CreditScoreResult = ({ creditScore, account }) => {
   const [acceptOpen, setAcceptOpen] = useState(false);
@@ -47,6 +48,13 @@ const CreditScoreResult = ({ creditScore, account }) => {
     ); // Handle the response here if needed
 
     console.log(response);
+
+    // if its accepted update the customer status to accepted in the list, else update the customer status to rejected in the list
+    if (num === 1) {
+      <RejectedUI customer={customer} />;
+    } else if (num === 2) {
+      <AcceptedUI customer={customer} />;
+    }
   }
 
   // handling the accept button with update to waiting queue
@@ -60,7 +68,6 @@ const CreditScoreResult = ({ creditScore, account }) => {
     const num = 2;
     sendupdate(num, account + ""); // send the account number to the sendupdate function
     navigate("/AppUI");
-    <RejectedUI customers={customers} />;
   }
 
   function waiting(account) {

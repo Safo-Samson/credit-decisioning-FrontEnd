@@ -27,11 +27,19 @@ const AcceptedUI = (props) => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
   };
 
+  // normal styling for the header
+  const headingStyle = {
+    textAlign: "center",
+    fontSize: "24px",
+    fontWeight: "bold",
+    color: "#333",
+  };
   return (
     <div className="app-container">
       <VerticalContainer customers={props.customers} />
 
       <div className="remaining-content">
+        <h5 style={headingStyle}>Accepted Applications</h5>
         {displayedCustomers.map((customer) => (
           <CusApplication
             key={customer.id} // very important to add key
