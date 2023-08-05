@@ -70,8 +70,9 @@
 	background-color: #45a049;
 }
 .vert-button.active {
-  color: #fff; /* White text color */
+  color: #3fd113; /* White text color */
   border: 2px solid #3fd113; 
+  border-right: none;
 }
 .logout-button {
 	margin-top: auto;

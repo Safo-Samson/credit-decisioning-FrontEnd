@@ -25,7 +25,6 @@ const VerticalContainer = (props) => {
   const handleButtonClick = (buttonName) => (e) => {
     e.preventDefault();
     setActiveButton(buttonName); // Set the active button when it is clicked
-    console.log(buttonName);
     // Perform the navigation based on the clicked button
     if (buttonName === "Waiting") {
       navigate("/AppUI");
@@ -49,41 +48,46 @@ const VerticalContainer = (props) => {
         )}
       </button>
 
-      {isVisible && ( // Show VerticalContainer only when isVisible is true
+      {isVisible && (
         <div>
           <div className="vert-button-container">
-            {/* Add a conditional className for the Waiting button */}
             <button
               className={`vert-button ${
                 activeButton === "Waiting" ? "active" : ""
               }`}
               onClick={handleButtonClick("Waiting")}>
               Waiting{" "}
-              <span className="customer-count">{props.customers.length}</span>
+              {activeButton === "Waiting" && (
+                <span className="customer-count">{props.customers.length}</span>
+              )}
             </button>
             <div className="line"></div>
           </div>
 
           <div className="vert-button-container">
-            {/* Add a conditional className for the Accepted button */}
             <button
               className={`vert-button ${
                 activeButton === "Accepted" ? "active" : ""
               }`}
               onClick={handleButtonClick("Accepted")}>
               Accepted{" "}
+              {activeButton === "Accepted" && (
+                <span className="customer-count">{props.customers.length}</span>
+              )}
             </button>
             <div className="line"></div>
           </div>
 
           <div className="vert-button-container">
-            {/* Add a conditional className for the Rejected button */}
             <button
               className={`vert-button ${
                 activeButton === "Rejected" ? "active" : ""
               }`}
               onClick={handleButtonClick("Rejected")}>
-              Rejected
+              Rejected{" "}
+              {activeButton === "Rejected" && (
+                <span className="customer-count">{props.customers.length}</span>
+              )}
             </button>
             <div className="line"></div>
           </div>
