@@ -71,7 +71,9 @@ const RejectedUI = (props) => {
       <VerticalContainer customers={customerArray} activeButton={"Rejected"} />
 
       <div className="remaining-content">
-        <h5 style={headingStyle}>Rejected Applications</h5>
+        <h5 style={headingStyle}>
+          Rejected Applications ({customerArray.length})
+        </h5>
         {displayedCustomers.map((customer) => (
           <CusApplication
             key={customer.id} // very important to add key

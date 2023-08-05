@@ -38,7 +38,9 @@ const AppUI = (props) => {
       <VerticalContainer customers={props.customers} activeButton={"Waiting"} />
 
       <div className="remaining-content">
-        <h5 style={headingStyle}>Waiting Applications</h5>
+        <h5 style={headingStyle}>
+          Waiting Applications ({props.customers.length})
+        </h5>
         {displayedCustomers.map((customer) => (
           <CusApplication
             key={customer.id} // very important to add key

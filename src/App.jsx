@@ -27,7 +27,7 @@ function App() {
         );
 
         // Take the first 7 customers from the sorted data
-        const firstFewCustomers = sortedCustomers.slice(370, 490);
+        const firstFewCustomers = sortedCustomers.slice(100, 500);
         setCustomers(firstFewCustomers);
         console.log(firstFewCustomers);
       })
@@ -61,7 +61,7 @@ function App() {
               )}
 
               {!isLoading && customers.length === 0 && (
-                <p className="waiting-loading">Fetching customer info ...</p>
+                <AppUI customers={customers} />
               )}
             </>
           }

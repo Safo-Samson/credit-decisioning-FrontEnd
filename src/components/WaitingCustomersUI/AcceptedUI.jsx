@@ -71,7 +71,9 @@ const AcceptedUI = (props) => {
       <VerticalContainer customers={customerArray} activeButton={"Accepted"} />
 
       <div className="remaining-content">
-        <h5 style={headingStyle}>Accepted Applications</h5>
+        <h5 style={headingStyle}>
+          Accepted Applications ({customerArray.length})
+        </h5>
         {displayedCustomers.map((customer) => (
           <CusApplication
             key={customer.id} // very important to add key
