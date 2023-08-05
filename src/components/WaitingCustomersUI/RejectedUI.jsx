@@ -68,7 +68,7 @@ const RejectedUI = (props) => {
 
   return (
     <div className="app-container">
-      <VerticalContainer customers={customerArray} />
+      <VerticalContainer customers={customerArray} activeButton={"Rejected"} />
 
       <div className="remaining-content">
         <h5 style={headingStyle}>Rejected Applications</h5>

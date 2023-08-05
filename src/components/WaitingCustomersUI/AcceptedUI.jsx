@@ -68,7 +68,7 @@ const AcceptedUI = (props) => {
 
   return (
     <div className="app-container">
-      <VerticalContainer customers={customerArray} />
+      <VerticalContainer customers={customerArray} activeButton={"Accepted"} />
 
       <div className="remaining-content">
         <h5 style={headingStyle}>Accepted Applications</h5>

@@ -1,39 +1,39 @@
-import "./VerticalContainer.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faCircleChevronLeft,
-	faCircleChevronRight,
+  faCircleChevronLeft,
+  faCircleChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import "./VerticalContainer.css";
 
 const VerticalContainer = (props) => {
-	const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  const [activeButton, setActiveButton] = useState(props.activeButton); // Initialize the active button state
 
-	const toggleVisibility = () => {
-		setIsVisible(!isVisible);
-	};
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
 
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleLogoutClick = (e) => {
     e.preventDefault();
     navigate("/");
   };
 
-  const handleWaiting = (e) => {
+  const handleButtonClick = (buttonName) => (e) => {
     e.preventDefault();
-    navigate("/AppUI");
-  };
-
-  const handleAccepted = (e) => {
-    e.preventDefault();
-    navigate("/AcceptedUI");
-  };
-
-  const handleRejected = (e) => {
-    e.preventDefault();
-    navigate("/RejectedUI");
+    setActiveButton(buttonName); // Set the active button when it is clicked
+    console.log(buttonName);
+    // Perform the navigation based on the clicked button
+    if (buttonName === "Waiting") {
+      navigate("/AppUI");
+    } else if (buttonName === "Accepted") {
+      navigate("/AcceptedUI");
+    } else if (buttonName === "Rejected") {
+      navigate("/RejectedUI");
+    }
   };
 
   return (
@@ -52,7 +52,12 @@ const VerticalContainer = (props) => {
       {isVisible && ( // Show VerticalContainer only when isVisible is true
         <div>
           <div className="vert-button-container">
-            <button className="vert-button" onClick={handleWaiting}>
+            {/* Add a conditional className for the Waiting button */}
+            <button
+              className={`vert-button ${
+                activeButton === "Waiting" ? "active" : ""
+              }`}
+              onClick={handleButtonClick("Waiting")}>
               Waiting{" "}
               <span className="customer-count">{props.customers.length}</span>
             </button>
@@ -60,14 +65,24 @@ const VerticalContainer = (props) => {
           </div>
 
           <div className="vert-button-container">
-            <button className="vert-button" onClick={handleAccepted}>
+            {/* Add a conditional className for the Accepted button */}
+            <button
+              className={`vert-button ${
+                activeButton === "Accepted" ? "active" : ""
+              }`}
+              onClick={handleButtonClick("Accepted")}>
               Accepted{" "}
             </button>
             <div className="line"></div>
           </div>
 
           <div className="vert-button-container">
-            <button className="vert-button" onClick={handleRejected}>
+            {/* Add a conditional className for the Rejected button */}
+            <button
+              className={`vert-button ${
+                activeButton === "Rejected" ? "active" : ""
+              }`}
+              onClick={handleButtonClick("Rejected")}>
               Rejected
             </button>
             <div className="line"></div>

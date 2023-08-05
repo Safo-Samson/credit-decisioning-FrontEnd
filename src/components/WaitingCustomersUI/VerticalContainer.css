@@ -69,7 +69,10 @@
 .vert-button:hover {
 	background-color: #45a049;
 }
-
+.vert-button.active {
+  color: #fff; /* White text color */
+  border: 2px solid #3fd113; 
+}
 .logout-button {
 	margin-top: auto;
 	/* Push the logout button to the bottom */

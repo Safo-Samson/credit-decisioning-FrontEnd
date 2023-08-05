@@ -34,44 +34,42 @@ const AppUI = (props) => {
 		color: "#333",
 	};
 	return (
-		<div className="app-container">
-			<VerticalContainer customers={props.customers} />
+    <div className="app-container">
+      <VerticalContainer customers={props.customers} activeButton={"Waiting"} />
 
-			<div className="remaining-content">
-				<h5 style={headingStyle}>Waiting Applications</h5>
-				{displayedCustomers.map((customer) => (
-					<CusApplication
-						key={customer.id} // very important to add key
-						AccountNo={customer.id} //Account number
-						dateApplied={customer.dateApplied}
-						amount={customer.amount}
-						loanType={customer.loanType}
-						name={customer.name}
-						creditScore={customer.creditScore}
-						birthDate={customer.birthDate}
-					/>
-				))}
+      <div className="remaining-content">
+        <h5 style={headingStyle}>Waiting Applications</h5>
+        {displayedCustomers.map((customer) => (
+          <CusApplication
+            key={customer.id} // very important to add key
+            AccountNo={customer.id} //Account number
+            dateApplied={customer.dateApplied}
+            amount={customer.amount}
+            loanType={customer.loanType}
+            name={customer.name}
+            creditScore={customer.creditScore}
+            birthDate={customer.birthDate}
+          />
+        ))}
 
-				<div className="pagination">
-					<button
-						className="prev-pagination"
-						disabled={currentPage === 1}
-						onClick={handlePrevPage}
-					>
-						Prev
-					</button>
-					<span>{`Page ${currentPage} of ${totalPages}`}</span>
-					<button
-						className="next-pagination"
-						disabled={currentPage === totalPages}
-						onClick={handleNextPage}
-					>
-						Next
-					</button>
-				</div>
-			</div>
-		</div>
-	);
+        <div className="pagination">
+          <button
+            className="prev-pagination"
+            disabled={currentPage === 1}
+            onClick={handlePrevPage}>
+            Prev
+          </button>
+          <span>{`Page ${currentPage} of ${totalPages}`}</span>
+          <button
+            className="next-pagination"
+            disabled={currentPage === totalPages}
+            onClick={handleNextPage}>
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default AppUI;
