@@ -43,3 +43,67 @@ body {
 	background-color: #006a4c;
 	color: #ffffff;
 }
+
+.filter-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 25px;
+}
+
+.filter-container label {
+	color: rgb(0, 0, 0);
+	padding: 5px;
+	margin-right: 10px;
+	border-radius: 5px;
+	font-size: smaller;
+}
+
+.filter-container input {
+	background-color: rgb(199, 199, 203);
+	color: rgb(0, 0, 0);
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-right: 10px;
+	max-width: 50px;
+}
+
+.filter-button {
+	color: white;
+	background-color: #006a4c;
+	margin-left: auto;
+	font-size: 14px;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	padding: 6px 14px;
+}
+.filter-button:hover {
+	background-color: #049613;
+}
+.toggle-filter-button {
+	color: white;
+	background-color: #006a4c;
+	margin-left: 25px;
+	font-size: 14px;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	padding: 6px 14px;
+}
+.toggle-filter-button:hover {
+	background-color: #049613;
+}
+
+.no-results-message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: larger;
+	font-weight: bolder;
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
