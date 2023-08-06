@@ -33,7 +33,7 @@ function CreditScoreContainer(props) {
             loanType={loanType}
             birthDate={birthDate}
           />
-          <CreditScoreResult creditScore={creditScore} />
+          <CreditScoreResult creditScore={creditScore} account={account} />
         </div>
       </div>
     </div>

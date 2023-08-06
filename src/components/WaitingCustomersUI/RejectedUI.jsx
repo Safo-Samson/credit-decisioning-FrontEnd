@@ -4,14 +4,14 @@ import CusApplication from "./CusApplication";
 import VerticalContainer from "./VerticalContainer";
 import { useLocation } from "react-router-dom";
 
-const AcceptedUI = (props) => {
+const RejectedUI = (props) => {
   const location = useLocation();
   const [customerArray, setCustomerArray] = useState([]);
 
   useEffect(() => {
     // When the component mounts, retrieve the customer data from localStorage (if any)
     const storedCustomers = JSON.parse(
-      localStorage.getItem("customers-accepted")
+      localStorage.getItem("customers-rejected")
     );
     if (storedCustomers && customerArray.length === 0) {
       // checking length to prevent duplicates
@@ -31,7 +31,7 @@ const AcceptedUI = (props) => {
 
   useEffect(() => {
     // Store the updated customerArray in localStorage whenever it changes
-    localStorage.setItem("customers-accepted", JSON.stringify(customerArray));
+    localStorage.setItem("customers-rejected", JSON.stringify(customerArray));
   }, [customerArray]);
 
   // Pagination
@@ -68,11 +68,11 @@ const AcceptedUI = (props) => {
 
   return (
     <div className="app-container">
-      <VerticalContainer customers={customerArray} activeButton={"Accepted"} />
+      <VerticalContainer customers={customerArray} activeButton={"Rejected"} />
 
       <div className="remaining-content">
         <h5 style={headingStyle}>
-          Accepted Applications ({customerArray.length})
+          Rejected Applications ({customerArray.length})
         </h5>
         {displayedCustomers.map((customer) => (
           <CusApplication
@@ -105,4 +105,4 @@ const AcceptedUI = (props) => {
   );
 };
 
-export default AcceptedUI;
+export default RejectedUI;
