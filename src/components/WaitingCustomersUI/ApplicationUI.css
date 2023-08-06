@@ -107,3 +107,9 @@ body {
 	margin-top: 70px;
 	margin-bottom: 70px;
 }
+
+.results-number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

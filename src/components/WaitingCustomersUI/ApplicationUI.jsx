@@ -44,7 +44,7 @@ const AppUI = (props) => {
 	const [filterLoanType, setFilterLoanType] = useState("");
 
 	// Filter the displayed customers based on the filter options
-	const filteredCustomers = displayedCustomers.filter((customer) => {
+	let filteredCustomers = props.customers.filter((customer) => {
 		if (!filterYear && !filterMonth && !filterDay && !filterLoanType)
 			return true;
 
@@ -77,6 +77,9 @@ const AppUI = (props) => {
 
 		return true;
 	});
+	const resultsFound = filteredCustomers.length;
+	// pagination for the filtered customers
+	filteredCustomers = filteredCustomers.slice(startIndex, endIndex);
 
 	const generateNumberArray = (start, end) => {
 		const numbers = [];
@@ -97,7 +100,7 @@ const AppUI = (props) => {
 		setYearsArray(years);
 	}, []);
 
-	const noResultsMessage = "No results for the applied filters on this page...";
+	const noResultsMessage = "No results for the applied filters.";
 	const noCustomersMessage = "There is currently no customers waiting...";
 
 	// normal styling for the header
@@ -119,6 +122,7 @@ const AppUI = (props) => {
 				<button className="toggle-filter-button" onClick={toggleShowFilters}>
 					{showFilters ? "Hide Filters" : "Apply Filters"}
 				</button>
+
 				{showFilters && (
 					<>
 						<div className="filter-container">
@@ -194,6 +198,9 @@ const AppUI = (props) => {
 							>
 								Clear Filter
 							</button>
+						</div>
+						<div className="results-number">
+							{resultsFound} results found on current filter.
 						</div>
 					</>
 				)}
