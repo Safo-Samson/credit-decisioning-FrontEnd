@@ -94,19 +94,41 @@
     margin-top: 50px;
     margin-left: 40px;
 }
-.firstRow{
+.personalInfo{
     display: flex;
     flex-direction: row;
+    border: 1px solid black;
+    width: 1150px;
+    height: 126px;
     
 }
-.secondRow{
+.personalInfoTXT{
+    width: 1024px;
+    height: 24px;
+    border: 1px solid black;
+    
+}
+.financialInfo{
     display: flex;
     flex-direction: row;
+    width: 1024px;
+    height: 24px;
+    border: 1px solid black;
+    width: 1150px;
+    height: 245px;
+    margin-top: 87px;
+
 }
 
-.thirdRow{
+.loanInfo{
     display: flex;
     flex-direction: row;
+    border: 1px solid black;
+    width: 1150px;
+    height: 126px;
+    margin-top: 58px;
+
+
 }
 
 .form-container input{

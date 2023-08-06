@@ -65,7 +65,10 @@ function ReviewInformation(props) {
 							<FontAwesomeIcon icon={faIdBadge} />
 						</div>
 
-						<div className="firstRow">
+						<div className="personalInfo">
+                            <div className="personalInfoTxt">
+                                <h5>CUSTOMER INFORMATION</h5>
+                            </div>
 							<div className="AccountNo">
 								<label htmlFor="AccountNo"> Account Number</label>
 								<input
@@ -78,17 +81,6 @@ function ReviewInformation(props) {
 								/>
 							</div>
 
-							<div className="loanType">
-								<label htmlFor="loanType"> Loan Type</label>
-								<input
-									value={loanType}
-									onChange={(e) => setType(e.target.value)}
-									type="loanType"
-									placeholder=""
-									id="loanType"
-									name="loanType"
-								/>
-							</div>
                             <div className="birthDate">
 								<label htmlFor="birthDate"> Birth date</label>
 								<input
@@ -101,7 +93,35 @@ function ReviewInformation(props) {
 									name="birthDate"
 								/>
 							</div>
-							<div className="loanAmount">
+                            <div className="loyaltyDays">
+                                <label htmlFor="loyaltyDays"> Loyalty Days</label>
+                                <input
+                                    value={loyaltyDays}
+                                    onChange={(e) => setLoyalty(e.target.value)}
+                                    type = "loyaltyDays"
+                                    placeholder=""
+                                    id="loyaltyDays"
+                                    name="loyaltyDays"
+                                />
+
+                            </div>
+
+						</div>
+
+						<div className="loanInfo">
+
+							<div className="loanType">
+								<label htmlFor="loanType"> Loan Type</label>
+								<input
+									value={loanType}
+									onChange={(e) => setType(e.target.value)}
+									type="loanType"
+									placeholder=""
+									id="loanType"
+									name="loanType"
+								/>
+							</div>
+                            <div className="loanAmount">
 								<label htmlFor="loanAmount"> Loan Amount</label>
 								<input
 									value={loanAmount}
@@ -112,9 +132,6 @@ function ReviewInformation(props) {
 									name="loanAmount"
 								/>
 							</div>
-						</div>
-
-						<div className="secondRow">
 							<div className="dateApplied">
 								<label htmlFor="dateApplied"> Date Applied </label>
 								<input
@@ -126,18 +143,13 @@ function ReviewInformation(props) {
 									name="dateApplied"
 								/>
 							</div>
-                            <div className="residentialStatus">
-                                <label htmlFor="residentialStatus"> Residential Status</label>
-                                <input
-                                    value={residentialStatus}
-                                    onChange={(e) => setResidential(e.target.value)}
-                                    type = "residentialStatus"
-                                    placeholder=""
-                                    id="residentialStatus"
-                                    name="residentialStatus"
-                                />
-                            </div>
-                            <div className="employmentStatus">
+
+
+                            
+						</div>
+                        <div className="financialInfo">
+
+                        <div className="employmentStatus">
                                 <label htmlFor="employmentStatus"> Employment Status</label>
                                 <input
                                     value={employmentStatus}
@@ -148,7 +160,7 @@ function ReviewInformation(props) {
                                     name="employmentStatus"
                                 />
                             </div>
-                            <div className="dependents">
+                        <div className="dependents">
                                 <label htmlFor="dependents"> Dependents</label>
                                 <input
                                     value={dependents}
@@ -159,9 +171,6 @@ function ReviewInformation(props) {
                                     name="dependents"
                                 />
                             </div>
-                            
-						</div>
-                        <div className="thirdRow">
                             <div className="income">
                                 <label htmlFor="income"> Income</label>
                                 <input
@@ -173,6 +182,17 @@ function ReviewInformation(props) {
                                     name="income"
                                 />
 
+                            </div>
+                            <div className="residentialStatus">
+                                <label htmlFor="residentialStatus"> Residential Status</label>
+                                <input
+                                    value={residentialStatus}
+                                    onChange={(e) => setResidential(e.target.value)}
+                                    type = "residentialStatus"
+                                    placeholder=""
+                                    id="residentialStatus"
+                                    name="residentialStatus"
+                                />
                             </div>
                             <div className="defaults">
                                 <label htmlFor="defaults"> Defaults</label>
@@ -186,18 +206,7 @@ function ReviewInformation(props) {
                                 />
 
                             </div>
-                            <div className="loyaltyDays">
-                                <label htmlFor="loyaltyDays"> Loyalty Days</label>
-                                <input
-                                    value={loyaltyDays}
-                                    onChange={(e) => setLoyalty(e.target.value)}
-                                    type = "loyaltyDays"
-                                    placeholder=""
-                                    id="loyaltyDays"
-                                    name="loyaltyDays"
-                                />
 
-                            </div>
                         </div>
 						<button className="closeBTN" onClick={handleClose}>Close</button>
 						<button className="calculateBTN" onClick={handleClick}>
