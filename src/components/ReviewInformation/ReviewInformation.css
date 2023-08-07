@@ -40,30 +40,46 @@
     border-radius: 5px;
 }
 
-
-.firstName .lastName .loanType .loanAmount {
+/* 
+.AccountNo .birthDate .loanType .loanAmount {
     display: flex;
-    flex-direction: column; /* Display label and input field in a column */
+    flex-direction: column; /* Display label and input field in a column 
     gap: 58px; 
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 90px;
     
     
+} */
+
+.AccountNo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    /* margin-left: 17px; */
+    /* margin-right: 90px; */
+}
+.birthDate{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    /* margin-left: 17px; */
+
 }
 .dateApplied {
     display: flex;
     flex-direction: column; /* Display label and input field in a column */
-    justify-content: space-evenly;
+
     /* align-items: center; */
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .residentialStatus{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-left: 70px;
+    margin-top: 140px;
+    margin-left: -1053px;
+
 }
 .employmentStatus{
     display: flex;
@@ -81,34 +97,90 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    margin-left: 10px;
+}
+.income input{
+    width: 128px;
 }
 .defaults{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    margin-left: 70px;
+    margin-left: 20px;
 }
 .loyaltyDays{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-left: 40px;
+    margin-top: 30px;
+    /* margin-left: 40px; */
 }
-.personalInfo{
+.loanAmount{
+    display: flex;
+    flex-direction: column;
+ 
+    margin-top: 30px;
+}
+.loanAmount input{
+    width: 128px;
+}
+.loanType{
+    display: flex;
+    flex-direction: column;
+ 
+    margin-top: 30px;
+}
+.loanTerm{
+    display: flex;
+    flex-direction: column;
+ 
+    margin-top: 30px;
+}
+.loanTerm input{
+    width: 108px;
+    height: 10px;
+}
+.personalFields{
     display: flex;
     flex-direction: row;
     border: 1px solid black;
     width: 1150px;
     height: 126px;
+    justify-content: space-evenly;
+
+    
     
 }
-.personalInfoTXT{
-    width: 1024px;
+.personalInfo .personalInfoTxt{
+    /* display: flex; */
+    /* align-items: start; */
+    display: block; /* or inline-block */
+    box-sizing: border-box;
+
+    max-width: 1150px;
     height: 24px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: #99C3B7;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
     
 }
-.financialInfo{
+.loanInfo .loanInfoTxt{
+    background-color: #99C3B7;
+    width: 1150px;
+    margin-top: 58px;
+
+    height: 24px;
+}
+
+.financialInfo .financialInfoTxt{
+    background-color: #99C3B7;
+    width: 1150px;
+    height: 24px;
+    margin-top: 47px;
+}
+.financialFields{
     display: flex;
     flex-direction: row;
     width: 1024px;
@@ -116,17 +188,20 @@
     border: 1px solid black;
     width: 1150px;
     height: 245px;
-    margin-top: 87px;
+    /* justify-content: space-evenly; */
+
+    
 
 }
 
-.loanInfo{
+.loanFields{
     display: flex;
     flex-direction: row;
     border: 1px solid black;
     width: 1150px;
     height: 126px;
-    margin-top: 58px;
+    justify-content: space-evenly;
+    /* margin-top: 58px; */
 
 
 }
@@ -144,6 +219,7 @@
 .loanAmount input{
     height: 10px;
     width: 101px;
+   
 }
 .dependents input{
     height: 10px;
