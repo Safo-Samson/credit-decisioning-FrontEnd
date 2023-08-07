@@ -96,8 +96,9 @@ const AppUI = (props) => {
 
 		return true;
 	});
-	const resultsFound = filteredCustomers.length;
+
 	// pagination for the filtered customers
+	const resultsFound = filteredCustomers.length;
 	filteredCustomers = filteredCustomers.slice(startIndex, endIndex);
 
 	const generateNumberArray = (start, end) => {
@@ -113,6 +114,7 @@ const AppUI = (props) => {
 	const monthsArray = generateNumberArray(1, 12);
 	const [yearsArray, setYearsArray] = useState([]);
 
+	// update the year to the current year and rerun the component
 	useEffect(() => {
 		const currentYear = new Date().getFullYear();
 		const years = generateNumberArray(2000, currentYear);
