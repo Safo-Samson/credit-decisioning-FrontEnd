@@ -42,16 +42,25 @@ const AppUI = (props) => {
 	const [filterMonth, setFilterMonth] = useState("");
 	const [filterDay, setFilterDay] = useState("");
 	const [filterLoanType, setFilterLoanType] = useState("");
+	const [filterAccount, setFilterAccount] = useState("");
 
 	// Filter the displayed customers based on the filter options
 	let filteredCustomers = props.customers.filter((customer) => {
-		if (!filterYear && !filterMonth && !filterDay && !filterLoanType)
+		if (
+			!filterYear &&
+			!filterMonth &&
+			!filterDay &&
+			!filterLoanType &&
+			!filterAccount
+		)
 			return true;
 
 		const customerDate = new Date(customer.dateApplied);
 		const customerYear = customerDate.getFullYear();
 		const customerMonth = customerDate.getMonth() + 1;
 		const customerDay = customerDate.getDate();
+		const customerLoanType = customer.loanType.toLowerCase();
+		const customerFilteredAccount = customer.id; // for customer id filter
 
 		if (filterYear && filterMonth && filterDay && filterLoanType) {
 			// filtering by full date and loan type
@@ -59,10 +68,22 @@ const AppUI = (props) => {
 				customerYear === Number(filterYear) &&
 				customerMonth === Number(filterMonth) &&
 				customerDay === Number(filterDay) &&
-				customer.loanType.toLowerCase().includes(filterLoanType.toLowerCase())
+				customerLoanType.includes(filterLoanType.toLowerCase())
 			);
-		}
-		if (filterYear && filterMonth && filterDay) {
+		} else if (filterYear && filterMonth && filterLoanType) {
+			// filtering by year,monthh and loan type
+			return (
+				customerYear === Number(filterYear) &&
+				customerMonth === Number(filterMonth) &&
+				customerLoanType.includes(filterLoanType.toLowerCase())
+			);
+		} else if (filterYear && filterLoanType) {
+			// filtering by year and loan type
+			return (
+				customerYear === Number(filterYear) &&
+				customerLoanType.includes(filterLoanType.toLowerCase())
+			);
+		} else if (filterYear && filterMonth && filterDay) {
 			// filtering by full date
 			return (
 				customerYear === Number(filterYear) &&
@@ -90,10 +111,14 @@ const AppUI = (props) => {
 		}
 
 		if (filterLoanType) {
-			const customerLoanType = customer.loanType.toLowerCase();
+			//filtering by loantype only
 			return customerLoanType.includes(filterLoanType.toLowerCase());
 		}
 
+		if (filterAccount) {
+			//filtering by account No only
+			return customerFilteredAccount.includes(filterAccount);
+		}
 		return true;
 	});
 
@@ -220,6 +245,24 @@ const AppUI = (props) => {
 								Clear Filter
 							</button>
 						</div>
+
+						<div className="filter-container">
+							<h4>Account Number:</h4>
+							<label htmlFor="filterAccount"></label>
+							<input
+								id="filterAccount"
+								value={filterAccount}
+								onChange={(e) => setFilterAccount(e.target.value)}
+							></input>
+
+							<button
+								className="filter-button"
+								onClick={() => setFilterAccount("")}
+							>
+								Clear Filter
+							</button>
+						</div>
+
 						<div className="results-number">
 							{resultsFound} results found on current filter.
 						</div>
