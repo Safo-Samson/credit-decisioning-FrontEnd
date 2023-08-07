@@ -53,6 +53,15 @@ const AppUI = (props) => {
 		const customerMonth = customerDate.getMonth() + 1;
 		const customerDay = customerDate.getDate();
 
+		if (filterYear && filterMonth && filterDay && filterLoanType) {
+			// filtering by full date and loan type
+			return (
+				customerYear === Number(filterYear) &&
+				customerMonth === Number(filterMonth) &&
+				customerDay === Number(filterDay) &&
+				customer.loanType.toLowerCase().includes(filterLoanType.toLowerCase())
+			);
+		}
 		if (filterYear && filterMonth && filterDay) {
 			// filtering by full date
 			return (
@@ -66,10 +75,20 @@ const AppUI = (props) => {
 				customerYear === Number(filterYear) &&
 				customerMonth === Number(filterMonth)
 			);
+		} else if (filterMonth && filterDay && !filterYear) {
+			//filtering by day and month only
+			return (
+				customerDay === Number(filterDay) &&
+				customerMonth === Number(filterMonth)
+			);
 		} else if (filterYear) {
 			// filtering by only year
 			return customerYear === Number(filterYear);
+		} else if (filterMonth) {
+			// filterting by month only
+			return customerMonth === Number(filterMonth);
 		}
+
 		if (filterLoanType) {
 			const customerLoanType = customer.loanType.toLowerCase();
 			return customerLoanType.includes(filterLoanType.toLowerCase());
