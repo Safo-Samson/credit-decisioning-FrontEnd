@@ -52,6 +52,7 @@ function ReviewInformation(props) {
     const [income, setIncome] = useState("");
     const[defaults, setDefaults] = useState("");
     const[loyaltyDays, setLoyalty] = useState("");
+    const[loanTerm, setTerm] = useState("");
 
 	return (
 		<div className="review-main-container">
@@ -66,10 +67,13 @@ function ReviewInformation(props) {
 							<FontAwesomeIcon icon={faIdBadge} />
 						</div>
 
+
+
 						<div className="personalInfo">
-                            <div className="personalInfoTxt">
-                                <h5>CUSTOMER INFORMATION</h5>
+                        <div className="personalInfoTxt">
+                                CUSTOMER INFORMATION
                             </div>
+                            <div className="personalFields">
 							<div className="AccountNo">
 								<label htmlFor="AccountNo"> Account Number</label>
 								<input
@@ -106,10 +110,25 @@ function ReviewInformation(props) {
                                 />
 
                             </div>
+                            </div>
+
 
 						</div>
 
 						<div className="loanInfo">
+                            <div className="loanInfoTxt">Loan Information</div>
+                            <div className="loanFields">
+                            <div className="dateApplied">
+								<label htmlFor="dateApplied"> Date Applied </label>
+								<input
+									value={dateApplied}
+									onChange={(e) => setValue(e.target.value)}
+									type="date"
+									placeholder=""
+									id="dateApplied"
+									name="dateApplied"
+								/>
+							</div>
 
 							<div className="loanType">
 								<label htmlFor="loanType"> Loan Type</label>
@@ -133,22 +152,26 @@ function ReviewInformation(props) {
 									name="loanAmount"
 								/>
 							</div>
-							<div className="dateApplied">
-								<label htmlFor="dateApplied"> Date Applied </label>
-								<input
-									value={dateApplied}
-									onChange={(e) => setValue(e.target.value)}
-									type="date"
-									placeholder=""
-									id="dateApplied"
-									name="dateApplied"
-								/>
-							</div>
+
+                            <div className="loanTerm">
+                                <label htmlFor="loanTerm">Loan Term</label>
+                                <input
+                                    value={loanTerm}
+                                    onChange={(e)=> setTerm(e.target.value)}
+                                    type="loanTerm"
+                                    placeholder="months"
+                                    id="loanterm"
+                                    name="loanTerm"
+                                    />
+                            </div>
+                            </div>
 
 
                             
 						</div>
                         <div className="financialInfo">
+                            <div className="financialInfoTxt">Financial Information</div>
+                        <div className="financialFields">
 
                         <div className="employmentStatus">
                                 <label htmlFor="employmentStatus"> Employment Status</label>
@@ -161,18 +184,19 @@ function ReviewInformation(props) {
                                     name="employmentStatus"
                                 />
                             </div>
-                        <div className="dependents">
-                                <label htmlFor="dependents"> Dependents</label>
+                        <div className="defaults">
+                                <label htmlFor="defaults"> Defaults</label>
                                 <input
-                                    value={dependents}
-                                    onChange={(e) => setDependents(e.target.value)}
-                                    type = "dependents"
+                                    value={defaults}
+                                    onChange={(e) => setDefaults(e.target.value)}
+                                    type = "defaults"
                                     placeholder=""
-                                    id="dependents"
-                                    name="dependents"
+                                    id="defaults"
+                                    name="defaults"
                                 />
-                            </div>
-                            <div className="income">
+
+                        </div>
+                        <div className="income">
                                 <label htmlFor="income"> Income</label>
                                 <input
                                     value={income}
@@ -184,6 +208,18 @@ function ReviewInformation(props) {
                                 />
 
                             </div>
+                        <div className="dependents">
+                                <label htmlFor="dependents"> Dependents</label>
+                                <input
+                                    value={dependents}
+                                    onChange={(e) => setDependents(e.target.value)}
+                                    type = "dependents"
+                                    placeholder=""
+                                    id="dependents"
+                                    name="dependents"
+                                />
+                            </div>
+
                             <div className="residentialStatus">
                                 <label htmlFor="residentialStatus"> Residential Status</label>
                                 <input
@@ -195,16 +231,6 @@ function ReviewInformation(props) {
                                     name="residentialStatus"
                                 />
                             </div>
-                            <div className="defaults">
-                                <label htmlFor="defaults"> Defaults</label>
-                                <input
-                                    value={defaults}
-                                    onChange={(e) => setDefaults(e.target.value)}
-                                    type = "defaults"
-                                    placeholder=""
-                                    id="defaults"
-                                    name="defaults"
-                                />
 
                             </div>
 
