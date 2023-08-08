@@ -10,102 +10,102 @@ import RejectedUI from "./components/WaitingCustomersUI/RejectedUI";
 import { useState, useEffect, useCallback } from "react";
 
 function App() {
-	const [customers, setCustomers] = useState([]);
-	const [isLoading, setLoading] = useState(true);
+  const [customers, setCustomers] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
-	const getWaitingCustomers = useCallback(async () => {
-		setLoading(true);
-		fetch("http://77.91.124.124:5000/waiting-users")
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				// Sort the data based on the date in ascending order
+  const getWaitingCustomers = useCallback(async () => {
+    setLoading(true);
+    fetch("http://77.91.124.124:5000/waiting-users")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // Sort the data based on the date in ascending order
 
-				const sortedCustomers = data.sort(
-					(a, b) => new Date(a.dateApplied) - new Date(b.dateApplied),
-				);
+        const sortedCustomers = data.sort(
+          (a, b) => new Date(a.dateApplied) - new Date(b.dateApplied)
+        );
 
-				// Take the first 7 customers from the sorted data
-				const firstFewCustomers = sortedCustomers.slice(100, 500);
-				setCustomers(firstFewCustomers);
-				console.log(firstFewCustomers);
-			})
-			.catch((error) => {
-				console.error("Error fetching data:", error);
-			});
-		setLoading(false);
-	}, [customers]);
+        // Take the first 7 customers from the sorted data
+        const firstFewCustomers = sortedCustomers.slice(100, 500);
+        setCustomers(firstFewCustomers);
+        console.log(firstFewCustomers);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+    setLoading(false);
+  }, [customers]);
 
-	useEffect(() => {
-		const identifier = setTimeout(() => {
-			getWaitingCustomers();
-		}, 600);
+  useEffect(() => {
+    const identifier = setTimeout(() => {
+      getWaitingCustomers();
+    }, 15000);
 
-		return () => {
-			clearTimeout(identifier);
-		}; //cleanup function
-	}, [getWaitingCustomers, customers]);
+    return () => {
+      clearTimeout(identifier);
+    }; //cleanup function
+  }, [getWaitingCustomers, customers]);
 
-	return (
-		<>
-			<Routes>
-				<Route path="/" element={<LoginForm />} />
-				<Route
-					path="/AppUI"
-					element={
-						<>
-							<HorizontalContainer />
-							{!isLoading && customers.length > 0 && (
-								<AppUI customers={customers} />
-							)}
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route
+          path="/AppUI"
+          element={
+            <>
+              <HorizontalContainer />
+              {!isLoading && customers.length > 0 && (
+                <AppUI customers={customers} />
+              )}
 
-							{!isLoading && customers.length === 0 && (
-								<AppUI customers={customers} />
-							)}
-						</>
-					}
-				/>
-				<Route
-					path="/ReviewInformation"
-					element={
-						<>
-							<HorizontalContainer />{" "}
-							<ReviewInformation customers={customers} />
-						</>
-					}
-				/>
-				<Route
-					path="/CreditScore"
-					element={
-						<>
-							<HorizontalContainer />
-							<CreditScoreContainer customers={customers} />
-						</>
-					}
-				/>
-				<Route
-					path="/AcceptedUI"
-					element={
-						<>
-							<HorizontalContainer />
-							<AcceptedUI customers={customers} />
-						</>
-					}
-				/>
+              {!isLoading && customers.length === 0 && (
+                <AppUI customers={customers} />
+              )}
+            </>
+          }
+        />
+        <Route
+          path="/ReviewInformation"
+          element={
+            <>
+              <HorizontalContainer />{" "}
+              <ReviewInformation customers={customers} />
+            </>
+          }
+        />
+        <Route
+          path="/CreditScore"
+          element={
+            <>
+              <HorizontalContainer />
+              <CreditScoreContainer customers={customers} />
+            </>
+          }
+        />
+        <Route
+          path="/AcceptedUI"
+          element={
+            <>
+              <HorizontalContainer />
+              <AcceptedUI customers={customers} />
+            </>
+          }
+        />
 
-				<Route
-					path="/RejectedUI"
-					element={
-						<>
-							<HorizontalContainer />
-							<RejectedUI />
-						</>
-					}
-				/>
-			</Routes>
-		</>
-	);
+        <Route
+          path="/RejectedUI"
+          element={
+            <>
+              <HorizontalContainer />
+              <RejectedUI />
+            </>
+          }
+        />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
