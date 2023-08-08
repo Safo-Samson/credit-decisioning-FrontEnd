@@ -23,7 +23,7 @@ const ScoreSummary = (props) => {
 					loanDecision === "Rejected" ? "rejected" : "Accepted"
 				}`}
 			>
-				<div className="loan-decision">{loanDecision}</div>
+				<div className="loan-decision">{'Model Decision: '+ loanDecision}</div>
 				<button className="summary-button" onClick={toggleSummaryPopup}>View Summary</button>
 				{summaryOpen && (
 						<Popup
