@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+
+artifacts:
+  files:
+    - public/**/*        # Include everything in the "public" directory
+    - src/**/*           # Include everything in the "src" directory
+    - index.html         # Include the index.html file
+    - package.json       # Include the package.json file
