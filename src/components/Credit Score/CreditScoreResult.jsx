@@ -103,14 +103,14 @@ const CreditScoreResult = ({ creditScore, account, customers }) => {
             <Popup
               content={
                 <>
-                  <b>Accepted!</b>
+                  <b>Do you want to accept the loan?</b>
                   <div className="gold-icon">
                     <FontAwesomeIcon icon={faCoins} />
                   </div>
                   <button
                     className="confirmAcceptBtn"
                     onClick={handleAcceptConfirmation}>
-                    Continue
+                    Accept
                   </button>
                 </>
               }
