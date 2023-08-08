@@ -4,13 +4,13 @@ import VerticalContainer from "../WaitingCustomersUI/VerticalContainer";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
-import income_statement from "./income_statement.pdf"
+
 
 
 function ReviewInformation(props) {
-    const HARDCODED_DOCUMENT = income_statement;
+    
 	const navigate = useNavigate();
-    const [uploadedDocuments, setUploadedDocuments] = useState([HARDCODED_DOCUMENT]);
+     
 
 	const handleClick = (e) => {
 		e.preventDefault();
@@ -83,6 +83,7 @@ function ReviewInformation(props) {
 									placeholder=""
 									id="AccountNo"
 									name="AccountNo"
+                                    readOnly
 								/>
 							</div>
 
@@ -96,6 +97,7 @@ function ReviewInformation(props) {
 									placeholder=""
 									id="birthDate"
 									name="birthDate"
+                                    readOnly
 								/>
 							</div>
                             <div className="loyaltyDays">
@@ -107,6 +109,7 @@ function ReviewInformation(props) {
                                     placeholder=""
                                     id="loyaltyDays"
                                     name="loyaltyDays"
+                                    readOnly
                                 />
 
                             </div>
@@ -127,6 +130,7 @@ function ReviewInformation(props) {
 									placeholder=""
 									id="dateApplied"
 									name="dateApplied"
+                                    readOnly
 								/>
 							</div>
 
@@ -139,6 +143,7 @@ function ReviewInformation(props) {
 									placeholder=""
 									id="loanType"
 									name="loanType"
+                                    readOnly
 								/>
 							</div>
                             <div className="loanAmount">
@@ -150,6 +155,7 @@ function ReviewInformation(props) {
 									placeholder=""
 									id="loanAmount"
 									name="loanAmount"
+                                    readOnly
 								/>
 							</div>
 
@@ -162,6 +168,7 @@ function ReviewInformation(props) {
                                     placeholder="months"
                                     id="loanterm"
                                     name="loanTerm"
+                                    readOnly
                                     />
                             </div>
                             </div>
@@ -182,6 +189,7 @@ function ReviewInformation(props) {
                                     placeholder=""
                                     id="employmentStatus"
                                     name="employmentStatus"
+                                    readOnly
                                 />
                             </div>
                         <div className="defaults">
@@ -193,6 +201,7 @@ function ReviewInformation(props) {
                                     placeholder=""
                                     id="defaults"
                                     name="defaults"
+                                    readOnly
                                 />
 
                         </div>
@@ -205,6 +214,7 @@ function ReviewInformation(props) {
                                     placeholder=""
                                     id="income"
                                     name="income"
+                                    readOnly
                                 />
 
                             </div>
@@ -217,6 +227,7 @@ function ReviewInformation(props) {
                                     placeholder=""
                                     id="dependents"
                                     name="dependents"
+                                    readOnly
                                 />
                             </div>
 
@@ -229,6 +240,7 @@ function ReviewInformation(props) {
                                     placeholder=""
                                     id="residentialStatus"
                                     name="residentialStatus"
+                                    readOnly
                                 />
                             </div>
 
