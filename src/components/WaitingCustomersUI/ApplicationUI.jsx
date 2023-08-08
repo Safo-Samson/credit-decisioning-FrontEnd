@@ -285,6 +285,15 @@ const AppUI = (props) => {
 							name={customer.name}
 							creditScore={customer.creditScore}
 							birthDate={customer.birthDate}
+							defaults={customer.defaults}
+							residentialStatus={customer.residentialStatus}
+							employmentStatus={customer.occupation}
+							income={customer.income}
+							dependents={customer.dependents}
+							loanTerm={customer.loanTerm}
+							loyaltyDays={customer.loyaltyDays}
+							
+
 						/>
 					))
 				)}

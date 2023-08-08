@@ -33,6 +33,13 @@ const CusApplication = (props) => {
         amount: props.amount,
         creditScore: props.creditScore,
         birthDate: props.birthDate,
+        defaults:props.defaults,
+        residentialStatus:props.residentialStatus,
+        employmentStatus:props.employmentStatus,
+        income:props.income,
+        dependents:props.dependents,
+        loanTerm:props.loanTerm,
+        loyaltyDays:props.loyaltyDays
       },
     });
   };

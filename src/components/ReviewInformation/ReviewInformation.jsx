@@ -36,23 +36,18 @@ function ReviewInformation(props) {
 	const location = useLocation();
 
 	const [loanType, setType] = useState(location.state?.loanType || "undefined");
-
-	const [loanAmount, setAmount] = useState(
-		location.state?.amount || "undefined",
-	);
+	const [loanAmount, setAmount] = useState(location.state?.amount || "undefined");
 	const [dateApplied, setValue] = useState(location.state?.dateApplied || "undefined");
-
 	const [AccountNo, setAccount] = useState(location.state?.AccountNo || "none");
 	const [creditScore, setScore] = useState(location.state?.creditScore);
-
     const [birthDate, setBirth] = useState(location.state?.birthDate);
-    const[residentialStatus, setResidential] = useState("");
-    const[employmentStatus, setEmployment] = useState("");
-    const[dependents, setDependents] = useState("");
-    const [income, setIncome] = useState("");
-    const[defaults, setDefaults] = useState("");
-    const[loyaltyDays, setLoyalty] = useState("");
-    const[loanTerm, setTerm] = useState("");
+    const[residentialStatus, setResidential] = useState(location.state?.residentialStatus);
+    const[employmentStatus, setEmployment] = useState(location.state?.employmentStatus);
+    const[dependents, setDependents] = useState(location.state?.dependents || '3');
+    const [income, setIncome] = useState(location.state?.income || '200000');
+    const[defaults, setDefaults] = useState(location.state?.defaults);
+    const[loyaltyDays, setLoyalty] = useState(location.state?.loyaltyDays || '729');
+    const[loanTerm, setTerm] = useState(location.state?.loanTerm || '3');
 
 	return (
 		<div className="review-main-container">
