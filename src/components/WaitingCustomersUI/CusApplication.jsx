@@ -26,20 +26,19 @@ const CusApplication = (props) => {
 	const handleClick = () => {
     navigate("/ReviewInformation", {
       state: {
-        // firstName: props.name, name not needed because of bias
         loanType: props.loanType,
         AccountNo: props.AccountNo,
         dateApplied: props.dateApplied,
         amount: props.amount,
         creditScore: props.creditScore,
         birthDate: props.birthDate,
-        defaults:props.defaults,
-        residentialStatus:props.residentialStatus,
-        employmentStatus:props.employmentStatus,
-        income:props.income,
-        dependents:props.dependents,
-        loanTerm:props.loanTerm,
-        loyaltyDays:props.loyaltyDays
+        defaults: props.defaults,
+        residentialStatus: props.residentialStatus,
+        employmentStatus: props.employmentStatus,
+        income: props.income,
+        dependents: props.dependents,
+        loanTerm: props.loanTerm,
+        loyaltyDays: props.loyaltyDays,
       },
     });
   };
@@ -48,7 +47,6 @@ const CusApplication = (props) => {
     <div className="customer-item" onClick={handleClick}>
       <div className="icon-type">{loanIcon}</div>
 
-      {/* <div className="details-page-name "> {props.name}</div> */}
       <div className="details-page">
         <b>Account No:</b> <br></br>
         {props.AccountNo}
