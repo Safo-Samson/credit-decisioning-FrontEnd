@@ -102,6 +102,9 @@
 	margin-top: 30px;
 	/* margin-left: 40px; */
 }
+.loyaltyDays input{
+	width: 68px !important;
+}
 .loanAmount {
 	display: flex;
 	flex-direction: column;
@@ -124,7 +127,7 @@
 	margin-top: 30px;
 }
 .loanTerm input {
-	width: 108px;
+	width: 68px !important;
 	height: 10px;
 }
 .personalFields {
