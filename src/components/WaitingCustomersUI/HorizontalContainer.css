@@ -44,3 +44,34 @@
     align-items: flex-start; /* Align items to the left on phones */
   }
 }
+.custom-dropdown {
+  display: inline-block;
+  position: relative;
+   z-index: 1; /* Set a higher z-index value for the dropdown container */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: #006a4c;
+  /* border: 1px solid #ccc; */
+
+  width: 100%;
+   z-index: 2; /* Set an even higher z-index value for the dropdown content */
+
+}
+.custom-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #05980e;
+}

@@ -11,7 +11,17 @@ const HorizontalContainer = () => {
 				<div className="logo-text">Lloyds bank</div>
 			</div>
 			<SearchBox />
-			<i className="fa fa-user profile-icon"></i>
+			{/* <i className="fa fa-user profile-icon"></i> */}
+
+			<div className="custom-dropdown">
+				<div className="dropdown-header"><i className="fa fa-user profile-icon"></i></div>
+					<div className="dropdown-content">
+						<a href="#">My Account</a>
+						<a href="#">Privacy & Security</a>
+						<a href="#">Help</a>
+						<a href="#">Logout</a>
+					</div>
+			</div>
 		</div>
 	);
 };
