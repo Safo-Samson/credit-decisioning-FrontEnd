@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const identifier = setTimeout(() => {
       getWaitingCustomers();
-    }, 15000);
+    }, 1000);
 
     return () => {
       clearTimeout(identifier);
