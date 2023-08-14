@@ -96,6 +96,7 @@
 	font-size: 16px;
 	margin-top: 27px;
 		border: none;
+		cursor: pointer;
 
   }
 
@@ -108,5 +109,6 @@
 	font-size: 16px;
 	margin-top: 210px;
 	border: none;
+	cursor: pointer;
 
   }

@@ -63,6 +63,16 @@ function App() {
               {!isLoading && customers.length === 0 && (
                 <AppUI customers={customers} />
               )}
+
+              {isLoading && customers.length === 0 && (
+                <>
+                  {" "}
+                  <h1 className="waiting-loading">
+                    Fetching waiting customers...
+                  </h1>
+                  <h1 className="loading-spinner"></h1>
+                </>
+              )}
             </>
           }
         />

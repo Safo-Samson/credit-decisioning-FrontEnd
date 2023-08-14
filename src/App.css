@@ -16,26 +16,29 @@
 .loading-spinner {
 	border: 9px solid rgba(0, 106, 76, 0.3);
 	border-radius: 50%;
-	border-top: 4px solid #006a4c;
-	width: 90px;
-	height: 90px;
-	animation: spin linear infinite;
-	margin: 90px auto;
+	border-top: 9px solid #006a4c;
+	width: 40px;
+	height: 40px;
+	 animation: spin 1s infinite linear; 
+	margin:  auto;
 }
 
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
+	
 	}
 	100% {
 		transform: rotate(360deg);
+	
 	}
 }
 
 .waiting-loading {
 	font-size: 20px;
-	margin-left: 42%;
+	margin-left: 38%;
 	margin-top: 20%;
 	color: #006a4c;
 	font-size: 30px;
+	
 }
