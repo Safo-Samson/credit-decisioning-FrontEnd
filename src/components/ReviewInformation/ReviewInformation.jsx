@@ -119,7 +119,7 @@ function ReviewInformation(props) {
 						</div>
 
 						<div className="loanInfo">
-                            <div className="loanInfoTxt">Loan Information</div>
+                            <div className="loanInfoTxt">LOAN INFORMATION</div>
                             <div className="loanFields">
                             <div className="dateApplied">
 								<label htmlFor="dateApplied"> Date Applied </label>
@@ -177,7 +177,7 @@ function ReviewInformation(props) {
                             
 						</div>
                         <div className="financialInfo">
-                            <div className="financialInfoTxt">Financial Information</div>
+                            <div className="financialInfoTxt">FINANCIAL INFORMATION</div>
                         <div className="financialFields">
 
                         <div className="employmentStatus">
@@ -247,11 +247,14 @@ function ReviewInformation(props) {
                             </div>
 
                         </div>
-						<button className="closeBTN" onClick={handleClose}>Close</button>
-						<button className="calculateBTN" onClick={handleClick}>
-							Show Results
-						</button>
+                        <div className="reviewInformation-buttons">
+
+                        <button className="closeBTN" onClick={handleClose}>Close</button>
+                        <button className="calculateBTN" onClick={handleClick}>Show Results</button>
+                        </div>
+
 					</form>
+
 				</div>
 			</div>
 		</div>
