@@ -8,6 +8,7 @@
 	background-color: #cccccc;
 	margin-left: 25px;
 	cursor: pointer;
+	margin-right: 150px;
 }
 .customer-item:hover {
 	background-color: #51a33c;

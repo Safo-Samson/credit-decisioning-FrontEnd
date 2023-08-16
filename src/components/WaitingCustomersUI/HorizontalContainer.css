@@ -4,6 +4,8 @@
     flex-direction: row; /* By default, Flexbox arranges items in a row */
     background-color: #006A4C;
     padding: 10px;
+    min-width: 1659px;
+  
 }
   
 .bank-logo{
@@ -55,10 +57,12 @@
   position: absolute;
   color: white;
   background-color: #006a4c;
+  min-width: 200px;
   /* border: 1px solid #ccc; */
 
   width: 100%;
-   z-index: 2; /* Set an even higher z-index value for the dropdown content */
+   z-index: 2;
+   left: -268%; /* Set an even higher z-index value for the dropdown content */
 
 }
 .custom-dropdown:hover .dropdown-content {
