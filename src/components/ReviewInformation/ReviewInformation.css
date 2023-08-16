@@ -103,7 +103,7 @@
 	/* margin-left: 40px; */
 }
 .loyaltyDays input{
-	width: 68px !important;
+	/* width: 68px !important; */
 }
 .loanAmount {
 	display: flex;
@@ -191,9 +191,9 @@
 	height: 10px;
 	width: 252px;
 	border: none;
-	border-bottom: 1px solid black;
-	border-radius: 4px;
-	display: inline-block;
+	border-bottom: 1px solid gray;
+	/* border-radius: 4px; */
+	/* display: inline-block; */
 }
 
 .loanAmount input {
