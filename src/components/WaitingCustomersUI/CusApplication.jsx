@@ -1,29 +1,29 @@
 import "./CusApplication.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faCreditCard,
-	faUser,
-	faCar,
-	faHouse,
+  faCreditCard,
+  faUser,
+  faCar,
+  faHouse,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const CusApplication = (props) => {
-	let loanIcon;
+  let loanIcon;
 
-	if (props.loanType === "Credit Card") {
-		loanIcon = <FontAwesomeIcon icon={faCreditCard} />;
-	} else if (props.loanType === "Personal Loan") {
-		loanIcon = <FontAwesomeIcon icon={faUser} />;
-	} else if (props.loanType === "Mortgage") {
-		loanIcon = <FontAwesomeIcon icon={faHouse} />;
-	} else if (props.loanType === "Car Loan") {
-		loanIcon = <FontAwesomeIcon icon={faCar} />;
-	}
+  if (props.loanType === "Credit Card") {
+    loanIcon = <FontAwesomeIcon icon={faCreditCard} />;
+  } else if (props.loanType === "Personal") {
+    loanIcon = <FontAwesomeIcon icon={faUser} />;
+  } else if (props.loanType === "Mortgage") {
+    loanIcon = <FontAwesomeIcon icon={faHouse} />;
+  } else if (props.loanType === "Car") {
+    loanIcon = <FontAwesomeIcon icon={faCar} />;
+  }
 
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	const handleClick = () => {
+  const handleClick = () => {
     navigate("/ReviewInformation", {
       state: {
         loanType: props.loanType,
