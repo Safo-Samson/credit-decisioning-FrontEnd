@@ -4,17 +4,18 @@
   background-color: #006a4c;
   padding: 10px;
   min-width: 1659px;
+  height: 70px;
 }
 
 .bank-logo {
-  width: 60px; /* Adjust the width of the logo as needed */
+  width: 50px; /* Adjust the width of the logo as needed */
   height: 50px; /* Adjust the height of the logo as needed */
   margin-right: 10px; /* Add some spacing between the logo and the items */
   margin-bottom: 5px;
 }
 
 .logo-text {
-  font-size: larger;
+  /* font-size: large; */
   text-transform: uppercase; /* Convert text to uppercase */
   font-weight: bold; /* Make text bold */
   color: white;
@@ -32,7 +33,7 @@
   flex-direction: row;
   justify-content: space-around;
   width: 200px;
-  margin: 25px 8px 10px 30px;
+  margin: 16px 8px 10px 30px;
   color: #ffffff;
   font-size: larger;
   margin-left: auto;

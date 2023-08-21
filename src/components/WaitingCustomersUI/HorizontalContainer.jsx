@@ -37,7 +37,7 @@ const HorizontalContainer = () => {
                   marginRight: "30px",
                 }}>
                 <FontAwesomeIcon icon={faUser} />
-                Profile
+                <div style={{ fontSize: "15px" }}>Profile </div>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ const HorizontalContainer = () => {
             icon={faMagnifyingGlass}
             onClick={toggleSearchVisibility}
           />
-          search
+          <div style={{ fontSize: "15px" }}> search </div>
         </div>
         <div
           style={{
@@ -67,7 +67,7 @@ const HorizontalContainer = () => {
             marginRight: "30px",
           }}>
           <FontAwesomeIcon icon={faQuestion} />
-          Help
+          <div style={{ fontSize: "15px" }}> Help </div>
         </div>
 
         <div
@@ -77,7 +77,7 @@ const HorizontalContainer = () => {
             marginRight: "30px",
           }}>
           <FontAwesomeIcon icon={faLocationDot} />
-          Branch
+          <div style={{ fontSize: "15px" }}>Branch </div>
         </div>
       </div>
     </div>
