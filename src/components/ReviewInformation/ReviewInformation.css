@@ -30,7 +30,7 @@
 }
 .form-container {
 	width: 85%;
-	height: 80%;
+	height: 70%;
 	background-color: white;
 	top: 7%;
 	left: 48%;
@@ -64,16 +64,16 @@
 	/* margin-right: 90px; */
 }
 .employmentStatus {
-	margin-left: 10px;
+	/* margin-left: 10px; */
 }
 .defaults {
-	margin-left: 20px;
+	/* margin-left: 20px; */
 }
 .dependents {
-	margin-left: 25px;
+	/* margin-left: 25px; */
 }
 .income {
-	margin-left: 10px;
+	/* margin-left: 10px; */
 }
 
 .employmentStatus, .dependents, .income, .defaults{
@@ -85,15 +85,22 @@
 
 	display: flex;
 	flex-direction: column;
-	margin-top: 120px;
-	margin-left: -1060px;
+	margin-top: 30px;
+	/* margin-left: -1060px; */
 }
 
 
+.residentialStatus input{
+	width: 28px;
+}
 
 
 .income input {
-	width: 128px;
+	width: 28px;
+}
+
+.defaults input{
+	width: 58px !important;
 }
 
 .loyaltyDays {
@@ -178,12 +185,13 @@
 .financialFields {
 	display: flex;
 	flex-direction: row;
-	/* justify-content: space-evenly; */
+	justify-content: space-evenly;
+
 	
 
 	border: 1px solid black;
 	width: 1150px;
-	height: 245px;
+	height: 145px;
 	/* justify-content: space-evenly; */
 }
 
@@ -199,7 +207,7 @@
 
 .form-container input {
 	background-color: white;
-	height: 10px;
+	height: 20px;
 	width: 252px;
 	border: none;
 	border-bottom: 1px solid gray;
@@ -208,11 +216,11 @@
 }
 
 .loanAmount input {
-	height: 10px;
+	height: 20px;
 	width: 101px;
 }
 .dependents input {
-	height: 10px;
+	height: 20px;
 	width: 101px;
 }
 
