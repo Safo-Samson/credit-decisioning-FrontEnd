@@ -70,8 +70,8 @@ function ReviewInformation(props) {
 
 
 						<div className="personalInfo">
-                        <div className="personalInfoTxt">
-                                CUSTOMER INFORMATION
+                        <div className="personalInfoTxt"><p>
+                                CUSTOMER INFORMATION</p>
                             </div>
                             <div className="personalFields">
 							<div className="AccountNo">
@@ -119,7 +119,7 @@ function ReviewInformation(props) {
 						</div>
 
 						<div className="loanInfo">
-                            <div className="loanInfoTxt">LOAN INFORMATION</div>
+                            <div className="loanInfoTxt"> <p>LOAN INFORMATION</p></div>
                             <div className="loanFields">
                             <div className="dateApplied">
 								<label htmlFor="dateApplied"> Date Applied </label>
@@ -177,7 +177,7 @@ function ReviewInformation(props) {
                             
 						</div>
                         <div className="financialInfo">
-                            <div className="financialInfoTxt">FINANCIAL INFORMATION</div>
+                            <div className="financialInfoTxt"> <p>FINANCIAL INFORMATION</p></div>
                         <div className="financialFields">
 
                         <div className="employmentStatus">

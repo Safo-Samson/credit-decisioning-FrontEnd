@@ -150,19 +150,30 @@
 	background-color: #99c3b7;
 
 }
+
+.personalInfo .personalInfoTxt p{
+	margin-left: 10px;
+}
 .loanInfo .loanInfoTxt {
 	background-color: #99c3b7;
 	width: 1152px;
 	margin-top: 38px;
+	/* margin-left: 20px; */
 
 	height: 24px;
 }
-
+.loanInfo .loanInfoTxt p{
+	margin-left: 10px;
+}
 .financialInfo .financialInfoTxt {
 	background-color: #99c3b7;
 	width: 1152px;
 	height: 24px;
 	margin-top: 27px;
+}
+
+.financialInfo .financialInfoTxt p{
+	margin-left: 10px;
 }
 .financialFields {
 	display: flex;
