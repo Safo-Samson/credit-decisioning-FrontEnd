@@ -6,7 +6,7 @@
   visibility: block;
   position: relative;
   height: 90vh;
-  min-width: 200px;
+  /* min-width: 200px; */
 }
 
 .toggle-button {
@@ -88,6 +88,8 @@
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
+  /* margin-right: 120px; */
+  width: 200px;
 }
 
 .logout-button:hover {
