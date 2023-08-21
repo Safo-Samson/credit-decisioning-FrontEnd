@@ -1,36 +1,45 @@
-
 .horizontal-container {
-    display: flex; /* This enables Flexbox layout */
-    flex-direction: row; /* By default, Flexbox arranges items in a row */
-    background-color: #006A4C;
-    padding: 10px;
-    min-width: 1659px;
-  
-}
-  
-.bank-logo{
-    width: 50px; /* Adjust the width of the logo as needed */
-    height: 40px; /* Adjust the height of the logo as needed */
-    margin-right: 10px; /* Add some spacing between the logo and the items */
-    margin-bottom: 5px
+  display: flex; /* This enables Flexbox layout */
+  flex-direction: row; /* By default, Flexbox arranges items in a row */
+  background-color: #006a4c;
+  padding: 10px;
+  min-width: 1659px;
 }
 
+.bank-logo {
+  width: 60px; /* Adjust the width of the logo as needed */
+  height: 50px; /* Adjust the height of the logo as needed */
+  margin-right: 10px; /* Add some spacing between the logo and the items */
+  margin-bottom: 5px;
+}
 
 .logo-text {
-    text-transform: uppercase; /* Convert text to uppercase */
-    font-weight: bold; /* Make text bold */
-    color: white;
-  }
+  font-size: larger;
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold; /* Make text bold */
+  color: white;
+}
 
-  .logo-container {
-    display: flex; /* Nested flex container to align logo and text horizontally */
-    flex-direction: column; /* Arrange logo and text in a column */
-    align-items: center; /* Center items horizontally */
-    margin-left: 30px;
-  }
+.logo-container {
+  display: flex; /* Nested flex container to align logo and text horizontally */
+  flex-direction: column; /* Arrange logo and text in a column */
+  align-items: center; /* Center items horizontally */
+  margin-left: 30px;
+}
 
-  /* Responsive styles for phones and small screens(up to 767px) */
-@media (max-width:1280px) {
+.fontIcons-Display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 200px;
+  margin: 25px 8px 10px 30px;
+  color: #ffffff;
+  font-size: larger;
+  margin-left: auto;
+  margin-right: 90px;
+}
+/* Responsive styles for phones and small screens(up to 767px) */
+@media (max-width: 1280px) {
   .horizontal-container {
     flex-direction: column; /* Stack items vertically on phones */
     padding: 5px; /* Reduce padding for phones */
@@ -49,7 +58,7 @@
 .custom-dropdown {
   display: inline-block;
   position: relative;
-   z-index: 1; /* Set a higher z-index value for the dropdown container */
+  z-index: 1; /* Set a higher z-index value for the dropdown container */
 }
 
 .dropdown-content {
@@ -59,11 +68,10 @@
   background-color: #006a4c;
   min-width: 200px;
   /* border: 1px solid #ccc; */
-
+  font-size: medium;
   width: 100%;
-   z-index: 2;
-   left: -268%; /* Set an even higher z-index value for the dropdown content */
-
+  z-index: 2;
+  left: -68%; /* Set an even higher z-index value for the dropdown content */
 }
 .custom-dropdown:hover .dropdown-content {
   display: block;
@@ -71,7 +79,7 @@
 
 .dropdown-content a {
   display: block;
-  padding: 10px;
+  padding: 7px;
   text-decoration: none;
   color: white;
 }

@@ -1,111 +1,111 @@
 .vertical-container {
-	display: flex;
-	flex-direction: column;
-	background-color: #2d8259;
-	padding: 10px;
-	visibility: block;
-	position: relative;
-	height: 90vh;
-	max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2d8259;
+  padding: 10px;
+  visibility: block;
+  position: relative;
+  height: 90vh;
+  min-width: 200px;
 }
 
 .toggle-button {
-	padding: 8px 12px;
-	background-color: #006a4c;
-	color: #2d8259;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	outline: none;
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: #006a4c;
+  color: #2d8259;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .toggle-button.visible {
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .toggle-button.hidden {
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 .vert-button-container {
-	position: relative;
-	/* display: inline-block; */
+  position: relative;
+  /* display: inline-block; */
 }
 
 .vert-button {
-	margin-bottom: 10px;
-	padding: 10px 20px;
-	font-size: 16px;
-	border: none;
-	border-radius: 5px;
-	background-color: #2d8259;
-	color: #ffffff;
-	cursor: pointer;
-	outline: none;
-	margin-right: 50px;
-	position: relative;
-	transition: background-color 0.3s ease;
-	/* made relative to position the customer count*/
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2d8259;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  margin-right: 50px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  /* made relative to position the customer count*/
 }
 
 .customer-count {
-	position: absolute;
-	top: 9px;
-	right: -40px;
-	background-color: #ffffff;
-	color: #000000;
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 14px;
-	font-weight: bold;
+  position: absolute;
+  top: 9px;
+  right: -40px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .vert-button:hover {
-	background-color: #45a049;
+  background-color: #45a049;
 }
 .vert-button.active {
   color: #3fd113; /* White text color */
-  border: 2px solid #3fd113; 
+  border: 2px solid #3fd113;
   border-right: none;
 }
 .logout-button {
-	margin-top: auto;
-	/* Push the logout button to the bottom */
-	margin-bottom: 50px;
-	border: 1px solid transparent;
-	background-color: #3caf7794;
-	color: white;
-	border-radius: 8px;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
-	font-weight: 500;
-	font-family: inherit;
-	cursor: pointer;
-	transition: border-color 0.25s;
+  margin-top: auto;
+  /* Push the logout button to the bottom */
+  margin-bottom: 50px;
+  border: 1px solid transparent;
+  background-color: #3caf7794;
+  color: white;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
 .logout-button:hover {
-	border-color: #ffffff;
+  border-color: #ffffff;
 }
 
 .line {
-	position: absolute;
-	bottom: -1px;
-	/* Adjust the distance between button and line */
-	left: 0;
-	width: 100%;
-	height: 1px;
-	background-color: #ffffff;
-	margin-bottom: 7px;
+  position: absolute;
+  bottom: -1px;
+  /* Adjust the distance between button and line */
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  margin-bottom: 7px;
 }
 
 .button.clicked {
-	background-color: #ff0000;
-	/* Change to red when clicked */
+  background-color: #ff0000;
+  /* Change to red when clicked */
 }
