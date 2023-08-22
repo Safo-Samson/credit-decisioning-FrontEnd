@@ -1,22 +1,12 @@
 steps:
-  # Step 0: Clean the workspace.
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args: ['-c', 'rm -rf *']
-  # Step 1: Check out the source code from your GitHub repository.
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', 'https://github.com/JamesBird02/credit-decisioning-FrontEnd.git', '.']
-
-  # Step 2: Install dependencies and build your frontend application.
-  - name: 'node'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        npm install
-        npm build
-
-  # Step 3: Deploy the built frontend to your VM server.
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['compute', 'ssh', 'pod-2-instance', '--command="rsync -avz build/ /var/www/html"']
+HEAD
+- name: node:10.15.1
+  entrypoint: npm
+  args: ["install"]
+- name: node:10.15.1
+  entrypoint: npm
+  args: ["run", "build"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy"]
+timeout: "1600s"
 
