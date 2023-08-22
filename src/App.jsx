@@ -20,14 +20,14 @@ function App() {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         // Sort the data based on the date in ascending order
-
         const sortedCustomers = data.sort(
           (a, b) => new Date(a.dateApplied) - new Date(b.dateApplied)
         );
 
         // Take the first 7 customers from the sorted data
-        const firstFewCustomers = sortedCustomers.slice(100, 500);
+        const firstFewCustomers = sortedCustomers.slice(350, 400);
         setCustomers(firstFewCustomers);
         console.log(firstFewCustomers);
       })
@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const identifier = setTimeout(() => {
       getWaitingCustomers();
-    }, 1000);
+    }, 100);
 
     return () => {
       clearTimeout(identifier);

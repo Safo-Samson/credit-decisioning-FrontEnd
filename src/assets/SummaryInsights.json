@@ -4,10 +4,11 @@
     "The applicant has a high yearly salary",
     "The applicant has successfully paid off 31 credit loans on time over the past year",
     "The applicant has made made 21 payments on time this year",
-    "The applicant has succesfully paid off 4 credit cards with 0 defaults",
-    "The applicant has 0 dependents and 0 defaults",
-    "The applicant owns thier own property"
+    "The applicant has succesfully paid off 4 credit cards with 0 defaults"
   ],
-  "negative": ["The applicant has missed 3 bill payments in the past year"],
+  "negative": [
+    "Applicant has changed 4 addresses in 6 months",
+    "The applicant has missed 3 bill payments in the past year"
+  ],
   "negative_suggestions": []
 }

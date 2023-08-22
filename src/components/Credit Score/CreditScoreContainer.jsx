@@ -6,10 +6,13 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
 function CreditScoreContainer(props) {
-	const location = useLocation();
+  const location = useLocation();
   const [date, setValue] = useState(location.state?.dateApplied || "undefined");
   const [account, setAccount] = useState(location.state?.AccountNo);
   const [creditScore, setScore] = useState(location.state?.creditScore);
+  const [affordability, setAffordability] = useState(
+    location.state?.affordability || 43
+  );
   const [loanAmount, setAmount] = useState(location.state?.loanAmount);
   const [birthDate, setBirth] = useState(location.state?.birthDate);
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
@@ -50,8 +53,13 @@ function CreditScoreContainer(props) {
             defaults={defaults}
             loyaltyDays={loyaltyDays}
             loanTerm={loanTerm}
+            affordability={affordability}
           />
-          <CreditScoreResult creditScore={creditScore} account={account} />
+          <CreditScoreResult
+            creditScore={creditScore}
+            account={account}
+            affordability={affordability}
+          />
         </div>
       </div>
     </div>

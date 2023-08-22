@@ -284,6 +284,7 @@ const AppUI = (props) => {
               dependents={customer.dependents}
               loanTerm={customer.loanTerm}
               loyaltyDays={customer.loyaltyDays}
+              affordability={customer.affordability}
             />
           ))
         )}

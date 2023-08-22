@@ -38,6 +38,7 @@
   font-size: larger;
   margin-left: auto;
   margin-right: 90px;
+  cursor: pointer;
 }
 /* Responsive styles for phones and small screens(up to 767px) */
 @media (max-width: 1280px) {
