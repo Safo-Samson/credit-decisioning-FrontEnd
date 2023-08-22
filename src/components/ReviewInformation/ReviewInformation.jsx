@@ -16,6 +16,7 @@ function ReviewInformation(props) {
         AccountNo: AccountNo,
         dateApplied: dateApplied,
         creditScore: creditScore,
+        affordability: affordability,
         loanAmount: loanAmount,
         birthDate: birthDate,
         defaults: defaults,
@@ -45,6 +46,9 @@ function ReviewInformation(props) {
   );
   const [AccountNo, setAccount] = useState(location.state?.AccountNo || "none");
   const [creditScore, setScore] = useState(location.state?.creditScore);
+  const [affordability, setAffordability] = useState(
+    Math.floor(location.state?.affordability)
+  );
   const [birthDate, setBirth] = useState(location.state?.birthDate);
   const [residentialStatus, setResidential] = useState(
     location.state?.residentialStatus

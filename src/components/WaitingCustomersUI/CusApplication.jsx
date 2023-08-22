@@ -39,6 +39,7 @@ const CusApplication = (props) => {
         dependents: props.dependents,
         loanTerm: props.loanTerm,
         loyaltyDays: props.loyaltyDays,
+        affordability: props.affordability,
       },
     });
   };
