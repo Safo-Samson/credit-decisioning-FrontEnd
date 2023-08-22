@@ -71,187 +71,98 @@ function ReviewInformation(props) {
       <VerticalContainer customers={props.customers} />
 
       <div className="test-container">
+      <h4 className="Review-text">Review Details</h4>
         <div className="review-information-container">
-          <h4 className="Review-text">Review Details</h4>
+          
 
           <form className="form-container">
             <div className="prof-icon">
               <FontAwesomeIcon icon={faIdBadge} />
             </div>
 
-            <div className="personalInfo">
-              <div className="personalInfoTxt">
-                <p>CUSTOMER INFORMATION</p>
-              </div>
-              <div className="personalFields">
+            <div className="loanInfo-Container">
+                <div className="loanInfo-left">
                 <div className="AccountNo">
-                  <label htmlFor="AccountNo"> Account Number</label>
-                  <input
-                    value={AccountNo}
-                    onChange={(e) => setAccount(e.target.value)}
-                    type="AccountNo"
-                    placeholder=""
-                    id="AccountNo"
-                    name="AccountNo"
-                    readOnly
-                  />
+                    <label htmlFor="AccountNo"> Account Number:</label>
+                    <div className="fields-loan">{AccountNo}</div>
                 </div>
-
-                <div className="birthDate">
-                  <label htmlFor="birthDate"> Birth date</label>
-                  <input
-                    value={birthDate}
-                    onChange={(e) => setBirth(e.target.value)}
-                    type="date"
-                    placeholder=""
-                    id="birthDate"
-                    name="birthDate"
-                    readOnly
-                  />
-                </div>
-                <div className="loyaltyDays">
-                  <label htmlFor="loyaltyDays"> Loyalty Days</label>
-                  <input
-                    value={loyaltyDays}
-                    onChange={(e) => setLoyalty(e.target.value)}
-                    type="loyaltyDays"
-                    placeholder=""
-                    id="loyaltyDays"
-                    name="loyaltyDays"
-                    readOnly
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="loanInfo">
-              <div className="loanInfoTxt">
-                {" "}
-                <p>LOAN INFORMATION</p>
-              </div>
-              <div className="loanFields">
                 <div className="dateApplied">
-                  <label htmlFor="dateApplied"> Date Applied </label>
-                  <input
-                    value={dateApplied}
-                    onChange={(e) => setValue(e.target.value)}
-                    type="date"
-                    placeholder=""
-                    id="dateApplied"
-                    name="dateApplied"
-                    readOnly
-                  />
+                  <label htmlFor="dateApplied"> Date Applied: </label>
+                  <div className="fields-loan">{dateApplied}</div>
                 </div>
+                </div>
+
+                <div className="loanInfo-right">
 
                 <div className="loanType">
-                  <label htmlFor="loanType"> Loan Type</label>
-                  <input
-                    value={loanType}
-                    onChange={(e) => setType(e.target.value)}
-                    type="loanType"
-                    placeholder=""
-                    id="loanType"
-                    name="loanType"
-                    readOnly
-                  />
+                  <label htmlFor="loanType"> Loan Type:</label>
+                  <div className="fields-loan">{loanType}</div>
+
                 </div>
                 <div className="loanAmount">
-                  <label htmlFor="loanAmount"> Loan Amount</label>
-                  <input
-                    value={loanAmount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    type="loanAmount"
-                    placeholder=""
-                    id="loanAmount"
-                    name="loanAmount"
-                    readOnly
-                  />
+                  <label htmlFor="loanAmount"> Loan Amount:</label>
+                  <div className="fields-loan">£{loanAmount}</div>
+
                 </div>
 
                 <div className="loanTerm">
-                  <label htmlFor="loanTerm">Loan Term</label>
-                  <input
-                    value={loanTerm}
-                    onChange={(e) => setTerm(e.target.value)}
-                    type="loanTerm"
-                    placeholder="months"
-                    id="loanterm"
-                    name="loanTerm"
-                    readOnly
-                  />
+                  <label htmlFor="loanTerm">Loan Term:</label>
+                  <div className="fields-loan">{loanTerm} Months</div>
+
                 </div>
-              </div>
+                </div>
             </div>
-            <div className="financialInfo">
-              <div className="financialInfoTxt">
-                {" "}
-                <p>FINANCIAL INFORMATION</p>
-              </div>
-              <div className="financialFields">
-                <div className="employmentStatus">
-                  <label htmlFor="employmentStatus"> Employment Status</label>
-                  <input
-                    value={employmentStatus}
-                    onChange={(e) => setEmployment(e.target.value)}
-                    type="employmentStatus"
-                    placeholder=""
-                    id="employmentStatus"
-                    name="employmentStatus"
-                    readOnly
-                  />
+
+            <div className="personal-financial">
+
+                <div className="personal-info">
+                    <div className="personalInfoTxt">
+                        <p>CUSTOMER INFORMATION</p>
+                    </div>
+
+                    <div className="birthDate">
+                        <label htmlFor="birthDate"> Birth date: </label>
+                        <div className="fields-loan">  {birthDate}</div>
+                    </div>
+
+                    <div className="loyaltyDays">
+                        <label htmlFor="loyaltyDays"> Loyalty Days:</label>
+                        <div className="fields-loan">{loyaltyDays} </div>
+                    </div>
+
                 </div>
-                <div className="defaults">
-                  <label htmlFor="defaults"> Defaults</label>
-                  <input
-                    value={defaults}
-                    onChange={(e) => setDefaults(e.target.value)}
-                    type="defaults"
-                    placeholder=""
-                    id="defaults"
-                    name="defaults"
-                    readOnly
-                  />
-                </div>
-                <div className="income">
-                  <label htmlFor="income"> Income</label>
-                  <input
-                    value={income}
-                    onChange={(e) => setIncome(e.target.value)}
-                    type="income"
-                    placeholder=""
-                    id="income"
-                    name="income"
-                    readOnly
-                  />
-                </div>
-                <div className="dependents">
-                  <label htmlFor="dependents"> Dependents</label>
-                  <input
-                    value={dependents}
-                    onChange={(e) => setDependents(e.target.value)}
-                    type="dependents"
-                    placeholder=""
-                    id="dependents"
-                    name="dependents"
-                    readOnly
-                  />
-                </div>
+                <div className="financial-info">
+                    <div className="financialInfoTxt">
+                        <p>FINANCIAL INFORMATION</p>
+                    </div>
+                    <div className="employmentStatus">
+                        <label htmlFor="employmentStatus"> Employment Status:</label>
+                        <div className="fields-loan">{employmentStatus} </div>
+                   </div>
+                   <div className="defaults">
+                      <label htmlFor="defaults"> Defaults:</label>
+                      <div className="fields-loan">{defaults} </div>
+                  </div>
+                  <div className="income">
+                       <label htmlFor="income"> Income:</label>
+                       <div className="fields-loan">{income} </div>
+                  </div>
+                  <div className="dependents">
+                    <label htmlFor="dependents"> Dependents:</label>
+                    <div className="fields-loan">{dependents} </div>
+                  </div>
 
                 <div className="residentialStatus">
-                  <label htmlFor="residentialStatus"> Residential Status</label>
-                  <input
-                    value={residentialStatus}
-                    onChange={(e) => setResidential(e.target.value)}
-                    type="residentialStatus"
-                    placeholder=""
-                    id="residentialStatus"
-                    name="residentialStatus"
-                    readOnly
-                  />
-                </div>
-              </div>
+                  <label htmlFor="residentialStatus"> Residential Status:</label>
+                  <div className="fields-loan">{loyaltyDays} </div>
+                </div> 
+
             </div>
-            <div className="reviewInformation-buttons">
+        </div>
+
+
+          </form>
+          <div className="reviewInformation-buttons">
               <button className="closeBTN" onClick={handleClose}>
                 Close
               </button>
@@ -259,7 +170,6 @@ function ReviewInformation(props) {
                 Show Results
               </button>
             </div>
-          </form>
         </div>
       </div>
     </div>
