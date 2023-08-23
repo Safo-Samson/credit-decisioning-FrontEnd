@@ -30,6 +30,12 @@ function ReviewInformation(props) {
       },
     });
   };
+
+  const formatMoney = (amount) => {
+    return parseFloat(amount)
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  };
   const handleClose = (e) => {
     e.preventDefault();
     navigate("/AppUI");
@@ -101,7 +107,7 @@ function ReviewInformation(props) {
                 </div>
                 <div className="loanAmount">
                   <label htmlFor="loanAmount"> Loan Amount:</label>
-                  <div className="fields-loan">£{loanAmount}</div>
+                  <div className="fields-loan">{formatMoney(loanAmount)}</div>
                 </div>
 
                 <div className="loanTerm">
@@ -141,7 +147,7 @@ function ReviewInformation(props) {
                 </div>
                 <div className="income">
                   <label htmlFor="income"> Income:</label>
-                  <div className="fields-loan">{income} </div>
+                  <div className="fields-loan">{formatMoney(income)} </div>
                 </div>
                 <div className="dependents">
                   <label htmlFor="dependents"> Dependents:</label>
