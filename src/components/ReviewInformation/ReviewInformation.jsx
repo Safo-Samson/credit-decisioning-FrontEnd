@@ -84,6 +84,7 @@ function ReviewInformation(props) {
         <h4 className="Review-text">Review Details</h4>
         <div className="review-information-container">
           <form className="form-container">
+            <div className="top-container"></div>
             <div className="prof-icon">
               <FontAwesomeIcon icon={faIdBadge} />
             </div>
@@ -147,7 +148,7 @@ function ReviewInformation(props) {
                 </div>
                 <div className="income">
                   <label htmlFor="income"> Income:</label>
-                  <div className="fields-loan">{formatMoney(income)} </div>
+                  <div className="fields-loan">£{income.toLocaleString()} </div>
                 </div>
                 <div className="dependents">
                   <label htmlFor="dependents"> Dependents:</label>
