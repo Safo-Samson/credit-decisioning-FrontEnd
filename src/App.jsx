@@ -27,7 +27,7 @@ function App() {
         );
 
         // Take the first 7 customers from the sorted data
-        const firstFewCustomers = sortedCustomers.slice(350, 400);
+        const firstFewCustomers = sortedCustomers.slice(870, 1000);
         setCustomers(firstFewCustomers);
         console.log(firstFewCustomers);
       })

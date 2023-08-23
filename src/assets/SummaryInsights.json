@@ -6,9 +6,6 @@
     "The applicant has made made 21 payments on time this year",
     "The applicant has succesfully paid off 4 credit cards with 0 defaults"
   ],
-  "negative": [
-    "Applicant has changed 4 addresses in 6 months",
-    "The applicant has missed 3 bill payments in the past year"
-  ],
+  "negative": ["The applicant has missed 3 bill payments in the past year"],
   "negative_suggestions": []
 }

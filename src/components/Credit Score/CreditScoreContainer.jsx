@@ -11,7 +11,7 @@ function CreditScoreContainer(props) {
   const [account, setAccount] = useState(location.state?.AccountNo);
   const [creditScore, setScore] = useState(location.state?.creditScore);
   const [affordability, setAffordability] = useState(
-    location.state?.affordability || 43
+    location.state?.affordability || 77.2
   );
   const [loanAmount, setAmount] = useState(location.state?.loanAmount);
   const [birthDate, setBirth] = useState(location.state?.birthDate);

@@ -4,8 +4,8 @@ import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const SelectedCustomer = (props) => {
-	const navigate = useNavigate();
-	const handleBack = (e) => {
+  const navigate = useNavigate();
+  const handleBack = (e) => {
     e.preventDefault();
 
     navigate("/ReviewInformation", {
@@ -17,6 +17,7 @@ const SelectedCustomer = (props) => {
         loanType: props.loanType,
         birthDate: props.birthDate,
         creditScore: props.creditScore,
+        affordability: props.affordability,
         defaults: props.defaults,
         residentialStatus: props.residentialStatus,
         employmentStatus: props.employmentStatus,

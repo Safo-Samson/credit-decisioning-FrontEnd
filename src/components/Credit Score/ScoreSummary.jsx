@@ -6,7 +6,7 @@ import { faExclamation, faCheck } from "@fortawesome/free-solid-svg-icons";
 import Insights from "../../assets/SummaryInsights.json";
 
 const ScoreSummary = (props) => {
-  let loanDecision = "Rejected"; // Assuming "Rejected" or "accepted" based on your logic
+  let loanDecision = "Accepted"; // Assuming "Rejected" or "accepted" based on your logic
   const [summaryOpen, setSummaryOpen] = useState(false);
   const toggleSummaryPopup = () => {
     setSummaryOpen(!summaryOpen);
