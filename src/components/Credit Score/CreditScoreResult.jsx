@@ -110,7 +110,7 @@ const CreditScoreResult = ({
                 <>
                   <b>Do you want to accept the loan?</b>
                   <div className="gold-icon">
-                    <FontAwesomeIcon icon={faCoins} />
+                    {/* <FontAwesomeIcon icon={faCoins} /> */}
                   </div>
                   <button
                     className="confirmAcceptBtn"
