@@ -108,7 +108,7 @@ function ReviewInformation(props) {
                 </div>
                 <div className="loanAmount">
                   <label htmlFor="loanAmount"> Loan Amount:</label>
-                  <div className="fields-loan">{formatMoney(loanAmount)}</div>
+                  <div className="fields-loan">£{formatMoney(loanAmount)}</div>
                 </div>
 
                 <div className="loanTerm">
@@ -148,7 +148,7 @@ function ReviewInformation(props) {
                 </div>
                 <div className="income">
                   <label htmlFor="income"> Income:</label>
-                  <div className="fields-loan">£{income.toLocaleString()} </div>
+                  <div className="fields-loan">£{formatMoney(income)} </div>
                 </div>
                 <div className="dependents">
                   <label htmlFor="dependents"> Dependents:</label>
