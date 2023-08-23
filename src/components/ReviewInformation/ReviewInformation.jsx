@@ -133,6 +133,7 @@ function ReviewInformation(props) {
                         <label htmlFor="loyaltyDays"> Loyalty Days:</label>
                         <div className="fields-loan">{loyaltyDays} </div>
                     </div>
+                    
 
                 </div>
                 <div className="financial-info">
@@ -158,7 +159,7 @@ function ReviewInformation(props) {
 
                 <div className="residentialStatus">
                   <label htmlFor="residentialStatus"> Residential Status:</label>
-                  <div className="fields-loan">{loyaltyDays} </div>
+                  <div className="fields-loan">{residentialStatus} </div>
                 </div> 
 
             </div>
