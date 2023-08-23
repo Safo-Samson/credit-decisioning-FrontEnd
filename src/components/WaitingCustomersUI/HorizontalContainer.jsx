@@ -58,7 +58,7 @@ const HorizontalContainer = () => {
             icon={faMagnifyingGlass}
             onClick={toggleSearchVisibility}
           />
-          <div style={{ fontSize: "15px" }}> search </div>
+          <div style={{ fontSize: "15px" }}> Search </div>
         </div>
         <div
           style={{

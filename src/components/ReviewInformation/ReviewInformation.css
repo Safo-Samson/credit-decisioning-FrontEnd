@@ -31,13 +31,15 @@
   top: 20%;
   /* background-color: #efedea; */
 }
-.loanInfo-right {
-  display: flex;
-  flex-direction: column;
+.loanInfo-left{
+	/* margin-right: 100px; */
+}
+.AccountNo{
+	margin-right: ;
 }
 .form-container {
-  width: 70%;
-  height: 60%;
+  width: 60%;
+  height: 50%;
   background-color: #cccccc7d;
   /* top: 7%; */
   left: 48%;
@@ -72,18 +74,23 @@
   display: flex;
   font-size: 15px;
 }
+.top-container{
+	/* background-color: red; */
+	width: 100%;
+}
 
 .personal-financial {
   display: flex;
   border-top: 1px solid #006a4c;
   justify-content: space-between;
   /* margin-right: 200px; */
-  margin-top: 60px;
+  margin-top: 70px;
   width: 70%;
   /* margin-left: 100px; */
   height: 70%;
-  padding-left: 80px;
-  padding-right: 100px;
+  padding-left: 180px;
+  padding-right: 170px;
+  margin-left: -89px;
 }
 .personal-info {
   /* border: 1px solid #006a4c; */
@@ -144,7 +151,7 @@
   justify-content: space-between;
   /* margin-top: 45px; */
   /* border: 1px solid black; */
-  margin-top: 670px;
+  margin-top: 570px;
   /* margin-left: -200px; */
   margin-right: 50px;
 }
