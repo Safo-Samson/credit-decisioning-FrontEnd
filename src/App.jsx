@@ -27,7 +27,7 @@ function App() {
         );
 
         // Take the first 7 customers from the sorted data
-        const firstFewCustomers = sortedCustomers.slice(970, 1000);
+        const firstFewCustomers = sortedCustomers.slice(980, 1000);
         setCustomers(firstFewCustomers);
         console.log(firstFewCustomers);
       })
@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const identifier = setTimeout(() => {
       getWaitingCustomers();
-    }, 100);
+    }, 1);
 
     return () => {
       clearTimeout(identifier);

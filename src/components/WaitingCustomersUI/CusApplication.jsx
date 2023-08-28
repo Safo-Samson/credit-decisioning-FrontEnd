@@ -20,7 +20,11 @@ const CusApplication = (props) => {
   } else if (props.loanType === "Car") {
     loanIcon = <FontAwesomeIcon icon={faCar} />;
   }
-
+  const formatMoney = (amount) => {
+    return parseFloat(amount)
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  };
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -60,7 +64,7 @@ const CusApplication = (props) => {
       </div>
 
       <div className="details-page">
-        <b>Amount: </b> <br></br>£{props.amount}
+        <b>Amount: </b> <br></br>£{formatMoney(props.amount)}
       </div>
 
       <div className="details-page">

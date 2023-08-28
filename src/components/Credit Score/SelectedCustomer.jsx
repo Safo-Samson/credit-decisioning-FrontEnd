@@ -5,6 +5,11 @@ import { useNavigate } from "react-router-dom";
 
 const SelectedCustomer = (props) => {
   const navigate = useNavigate();
+  const formatMoney = (amount) => {
+    return parseFloat(amount)
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  };
   const handleBack = (e) => {
     e.preventDefault();
 
@@ -51,7 +56,7 @@ const SelectedCustomer = (props) => {
         </div>
         <div className="text-container in-text">
           <b>Loan Amount</b>
-          <br></br>£{props.loanAmount}
+          <br></br>£{formatMoney(props.loanAmount)}
           <br></br>
           <div className="text-line "></div>
         </div>
