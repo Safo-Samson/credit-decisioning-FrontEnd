@@ -95,7 +95,7 @@ const CreditScoreResult = ({
         <div className="credit-remaining-content">
           <div className="progress-containers">
             {/* <Apex progress={creditScore || 200} /> */}
-            <Apex progress={731} />
+            <Apex progress={creditScore || 31} />
             <ApexCircle progress={affordability || 77.2} />
             <ScoreSummary />
           </div>
